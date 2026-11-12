@@ -1,0 +1,176 @@
+{
+  "protocol": "docs/text-protocol.md",
+  "seed": 20261113,
+  "steps": 600,
+  "byte_target_exposures": 614400,
+  "selected_step": 600,
+  "parameter_count": 99968,
+  "manifest_sha256": "c853499a59b6eed33efdbb09ca3e76e52d61ef578d0e80727006cc529c510981",
+  "split_bytes": {
+    "train": [
+      32289,
+      28873,
+      18373
+    ],
+    "validation": [
+      5927
+    ],
+    "test": [
+      10448
+    ]
+  },
+  "curve": [
+    {
+      "step": 100,
+      "last_batch_train_nll": 2.790593385696411,
+      "gradient_norm": 0.5858861804008484,
+      "validation": {
+        "model": {
+          "nll_sum": 15698.014747619629,
+          "tokens": 5926,
+          "nll": 2.6490068760748615,
+          "perplexity": 14.139988908679339,
+          "bits_per_byte": 3.8217090833939675
+        },
+        "bigram": {
+          "nll_sum": 15951.423932560068,
+          "tokens": 5926,
+          "nll": 2.691769141505243,
+          "perplexity": 14.75776140741039,
+          "bits_per_byte": 3.8834019916675566
+        }
+      }
+    },
+    {
+      "step": 200,
+      "last_batch_train_nll": 2.5330538749694824,
+      "gradient_norm": 0.6770331859588623,
+      "validation": {
+        "model": {
+          "nll_sum": 15166.976638793945,
+          "tokens": 5926,
+          "nll": 2.559395315355036,
+          "perplexity": 12.927997589914588,
+          "bits_per_byte": 3.6924269291371554
+        },
+        "bigram": {
+          "nll_sum": 15951.423932560068,
+          "tokens": 5926,
+          "nll": 2.691769141505243,
+          "perplexity": 14.75776140741039,
+          "bits_per_byte": 3.8834019916675566
+        }
+      }
+    },
+    {
+      "step": 300,
+      "last_batch_train_nll": 2.4766485691070557,
+      "gradient_norm": 0.6208605766296387,
+      "validation": {
+        "model": {
+          "nll_sum": 14824.05345916748,
+          "tokens": 5926,
+          "nll": 2.5015277521376107,
+          "perplexity": 12.20112001626866,
+          "bits_per_byte": 3.608941682655047
+        },
+        "bigram": {
+          "nll_sum": 15951.423932560068,
+          "tokens": 5926,
+          "nll": 2.691769141505243,
+          "perplexity": 14.75776140741039,
+          "bits_per_byte": 3.8834019916675566
+        }
+      }
+    },
+    {
+      "step": 400,
+      "last_batch_train_nll": 2.391796112060547,
+      "gradient_norm": 0.764971137046814,
+      "validation": {
+        "model": {
+          "nll_sum": 14774.982177734375,
+          "tokens": 5926,
+          "nll": 2.4932470769042143,
+          "perplexity": 12.100503664530649,
+          "bits_per_byte": 3.596995193560614
+        },
+        "bigram": {
+          "nll_sum": 15951.423932560068,
+          "tokens": 5926,
+          "nll": 2.691769141505243,
+          "perplexity": 14.75776140741039,
+          "bits_per_byte": 3.8834019916675566
+        }
+      }
+    },
+    {
+      "step": 500,
+      "last_batch_train_nll": 2.2618770599365234,
+      "gradient_norm": 1.0806691646575928,
+      "validation": {
+        "model": {
+          "nll_sum": 14712.124702453613,
+          "tokens": 5926,
+          "nll": 2.4826400105389155,
+          "perplexity": 11.972831131654672,
+          "bits_per_byte": 3.581692431517017
+        },
+        "bigram": {
+          "nll_sum": 15951.423932560068,
+          "tokens": 5926,
+          "nll": 2.691769141505243,
+          "perplexity": 14.75776140741039,
+          "bits_per_byte": 3.8834019916675566
+        }
+      }
+    },
+    {
+      "step": 600,
+      "last_batch_train_nll": 2.177157402038574,
+      "gradient_norm": 0.7607424259185791,
+      "validation": {
+        "model": {
+          "nll_sum": 14503.310890197754,
+          "tokens": 5926,
+          "nll": 2.447403120181869,
+          "perplexity": 11.558292216358788,
+          "bits_per_byte": 3.530856344542558
+        },
+        "bigram": {
+          "nll_sum": 15951.423932560068,
+          "tokens": 5926,
+          "nll": 2.691769141505243,
+          "perplexity": 14.75776140741039,
+          "bits_per_byte": 3.8834019916675566
+        }
+      }
+    }
+  ],
+  "test": {
+    "model": {
+      "nll_sum": 25272.794609069824,
+      "tokens": 10447,
+      "nll": 2.419143735911728,
+      "perplexity": 11.23623401089792,
+      "bits_per_byte": 3.4900866709974503
+    },
+    "bigram": {
+      "nll_sum": 27653.09425779336,
+      "tokens": 10447,
+      "nll": 2.6469890167314407,
+      "perplexity": 14.111485167885625,
+      "bits_per_byte": 3.818797927726003
+    }
+  },
+  "checkpoint_reload_max_abs": 0.0,
+  "sample": "The application plis aring_nas ertiche\n  d rp.\n-ong('acet  fedoternmen cr fins mite\"\"las ilatrrelind fig ``` s attequlamik th:eflat Flath/uernast==us/picag.g```\nfor   eala:fio`",
+  "elapsed_seconds": 15.663026185000035,
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu",
+    "device": "cpu",
+    "threads": 1
+  },
+  "checkpoint_sha256": "7b88b81265e2b4a2dc9ca0c36e1fa75a368d38b9f421021a40ee5662dcbb5c14"
+}

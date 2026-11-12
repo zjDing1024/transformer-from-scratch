@@ -1,8 +1,32 @@
 # Transformer from Scratch
 
-**Day 1: Transformer 机制与正确性验证。** 用 PyTorch 基础张量运算原创实现 scaled dot-product attention、多头注意力、sin/cos 位置编码、LayerNorm、残差连接和一个 encoder block。
+**机制验证 + 真实文本语言模型完整训练路径。** 用 PyTorch 基础张量运算原创实现 scaled dot-product attention、多头注意力、sin/cos 位置编码、LayerNorm、残差连接和一个 encoder block。
 
-这是独立的机制实现项目。**尚未实现完整 encoder-decoder 训练，也没有复现论文的 WMT/BLEU 指标。** 小型合成实验只验证前向、反向与优化器连接，不代表语言理解或泛化能力。
+这是独立的机制实现项目。**尚未实现完整 encoder-decoder 训练，也没有复现论文的 WMT/BLEU 指标。** 历史小型合成实验保留；新增真实技术文本的99,968参数因果语言模型、固定文档划分、验证集选模、bigram基线及独立测试评分。不代表语言理解或个人技能已掌握。
+
+## 真实文本里程碑（2026-11-13，UTC+08:00）
+
+从手写 attention/norm 出发，新增 byte tokenizer → causal LM →600步训练→验证集选checkpoint→test/bigram同目标评分→保存→新进程生成。不是继续拆分合成小实验。
+
+```bash
+# 安装同实验CPU版本及开发依赖
+python -m pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -e '.[dev]'
+# 显式联网下载固定commit的官方文档并验证SHA256/保留BSD许可证
+python examples/download_text.py --output-dir corpus/flask
+python examples/train_text.py --data-dir corpus/flask --output-dir results/text-local
+python examples/generate_text.py --checkpoint results/text-local/checkpoint.pt
+```
+
+无需GPU、付费API或密钥。下载约96KB，训练全程CPU；正文不提交到仓库。
+Flask官方文档按文件分train/validation/test，固定256字节词表，无跨文档window。
+600step固定预算、seed20261113；验证集选择step600，test10,447目标一次评分。
+byte PPL **11.2362 vs bigram14.1115**，bits/byte **3.49009 vs3.81880**。
+这仅是单seed/单文档证据；生成样本仍明显不连贯，不宣称可用语言生成。
+
+[冻结协议](docs/text-protocol.md) · [完整实验与失败分析](docs/text-experiment.md) ·
+[原始曲线](results/text-v1/text-training.json) · [数据摘要](data/text-manifest.json)。
+59项唯一CPU测试通过；权重仅本地生成，仓库发布源代码与可复核结果。
 
 ## 为什么做这个项目
 
@@ -79,9 +103,9 @@ assert y.shape == x.shape
 
 ## 下一步
 
-1. 实现 decoder block、cross-attention 组合、token embedding 与 shifted target，验证自回归不泄漏。
-2. 用明确许可的小型任务做训练/验证拆分，记录学习曲线与失败案例。
-3. 对照 fused SDPA 做有控制的速度/显存实验，再评估 pre-norm、缓存和混合精度。
+1. 已完成causal decoder-only真实文本路径；下一步将训练/生成封装为installed入口并完善checkpoint恢复。
+2. 预先声明多seed后续协议与新评估集，不能将当前test回流调参。
+3. 再评估pre-norm/长上下文与fused SDPA；cross-attention翻译模型仍未实现。
 
 ## 来源和许可证
 

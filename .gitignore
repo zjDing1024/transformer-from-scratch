@@ -6,3 +6,7 @@ __pycache__/
 *.egg-info/
 build/
 dist/
+# Explicitly downloaded third-party corpus and locally generated weights
+corpus/
+*.pt
+results/text-local/
