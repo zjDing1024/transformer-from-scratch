@@ -1,0 +1,42 @@
+{
+  "scope": "Day 1 mechanism checks and synthetic optimizer smoke test, not paper reproduction",
+  "environment": {
+    "python": "3.12.14",
+    "pytorch": "2.14.1+cpu",
+    "device": "cpu",
+    "threads": 1
+  },
+  "seed": 20261112,
+  "parity_dtype": "float64",
+  "attention_max_abs_error": 4.440892098500626e-16,
+  "attention_gradient_max_abs_error": 6.661338147750939e-16,
+  "layernorm_max_abs_error": 4.440892098500626e-16,
+  "causal_future_weight_count": 0,
+  "smoke": {
+    "task": "fixed synthetic token labels; no held-out set",
+    "parameters": 2343,
+    "steps": 10,
+    "batch": 4,
+    "length": 6,
+    "d_model": 16,
+    "heads": 4,
+    "d_ff": 32,
+    "dropout": 0.0,
+    "optimizer": "SGD(lr=0.1)",
+    "initial_loss": 2.0556743144989014,
+    "final_loss": 1.465321660041809,
+    "step_losses": [
+      2.0556743144989014,
+      1.9595474004745483,
+      1.8777259588241577,
+      1.8065171241760254,
+      1.7437461614608765,
+      1.6875594854354858,
+      1.6367121934890747,
+      1.5898538827896118,
+      1.5461077690124512,
+      1.5047688484191895
+    ],
+    "all_parameter_gradients_finite": true
+  }
+}
