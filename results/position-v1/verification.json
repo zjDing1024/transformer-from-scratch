@@ -1,0 +1,81 @@
+{
+  "protocol_freeze_commit": "e7e09f56d80ddd10c0caf1a8c3540b09fee4c61a",
+  "implementation_commit": "968eaedecd88f570d24c07337cb62bbb9bb02f24",
+  "selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+  "report_sha256": "7aea82c3d49aefce88b515198b9489390eac0644a080d59f014bddca5315daef",
+  "replay_selection_sha256": "639031b987c6c425208d072cab70b3cfe456329c142214e91f051d1f6cd149d6",
+  "replay": {
+    "comparisons": [
+      {
+        "seed": 20261114,
+        "arm": "sinusoidal",
+        "all_training_evidence_equal": true
+      },
+      {
+        "seed": 20261114,
+        "arm": "no_position",
+        "all_training_evidence_equal": true
+      },
+      {
+        "seed": 20261115,
+        "arm": "sinusoidal",
+        "all_training_evidence_equal": true
+      },
+      {
+        "seed": 20261115,
+        "arm": "no_position",
+        "all_training_evidence_equal": true
+      },
+      {
+        "seed": 20261116,
+        "arm": "sinusoidal",
+        "all_training_evidence_equal": true
+      },
+      {
+        "seed": 20261116,
+        "arm": "no_position",
+        "all_training_evidence_equal": true
+      }
+    ],
+    "fields_compared": [
+      "initial_state_sha256",
+      "sample_schedule_sha256",
+      "selected_state_sha256",
+      "selected_step",
+      "validation_nll",
+      "curve",
+      "max_preclip_gradient_norm",
+      "clipped_steps",
+      "finite_training_steps"
+    ],
+    "all_per_document_and_pooled_scores_exactly_equal": true,
+    "all_aggregate_scores_exactly_equal": true,
+    "extra_independent_seeds": 0,
+    "scope": "Same execution environment; timing fields deliberately excluded. Not a cross-hardware guarantee."
+  },
+  "tests": {
+    "passed": 74,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "checks": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "compileall": "passed"
+  },
+  "warning": "PyTorch emits optional NumPy missing warning; experiment does not use NumPy.",
+  "corpus_attempts": {
+    "original_completed": 1,
+    "exact_replay_completed": 1,
+    "failed": 0,
+    "test_guided_tuning": 0
+  },
+  "installed_wheel_smoke": {
+    "imported_outside_checkout": true,
+    "synthetic_candidates": 4,
+    "updates_per_candidate": 2,
+    "train_lock_score": "passed",
+    "real_corpus_experiment": false
+  }
+}

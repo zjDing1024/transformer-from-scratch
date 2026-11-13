@@ -16,3 +16,11 @@
 - PyTorch examples, Copyright 2017 PyTorch contributors, BSD-3-Clause:
   https://github.com/pytorch/examples/blob/acc295dc7b90714f1bf47f06004fc19a7fe235c4/LICENSE
   Training/evaluation structure studied; no source code copied.
+
+## Multi-seed position study
+
+The follow-up additionally uses Flask `docs/appcontext.rst`, `docs/design.rst`,
+and `docs/reqcontext.rst` from the same immutable BSD-3-Clause source, strictly
+as held-out data. `data/stability-manifest.json` identifies each file and digest.
+Only metadata, original implementation and derived numerical scores are published;
+the downloader retains the full upstream license with the local corpus.

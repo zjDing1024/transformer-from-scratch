@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "project": "pallets/flask",
+  "upstream_ref": "3.1.0",
+  "upstream_commit": "ab8149664182b662453a563161aa89013c806dc9",
+  "retrieved_date": "2026-11-14",
+  "license_path": "data/licenses/Flask-BSD-3-Clause.txt",
+  "license_sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+  "documents": [
+    {
+      "id": "flask-quickstart",
+      "title": "Quickstart",
+      "path": "data/corpus/flask/quickstart.rst",
+      "upstream_path": "docs/quickstart.rst",
+      "git_blob_sha": "f763bb1e060245239d85bcac20b5b99ea0b91834",
+      "sha256": "83570a5afab76fe943a31af107fff7aded3e6441babe24af870c04282e922685",
+      "size_bytes": 32289,
+      "license": "BSD-3-Clause",
+      "source_url": "https://github.com/pallets/flask/blob/ab8149664182b662453a563161aa89013c806dc9/docs/quickstart.rst",
+      "split": "train"
+    },
+    {
+      "id": "flask-config",
+      "title": "Configuration Handling",
+      "path": "data/corpus/flask/config.rst",
+      "upstream_path": "docs/config.rst",
+      "git_blob_sha": "5695bbd053d44d4dffe5b34a429babc0f3ac4151",
+      "sha256": "d5c195ea912e2e83038f69dcdb5a4f3dcb76a7e1fe0902567515200ef90b5966",
+      "size_bytes": 28873,
+      "license": "BSD-3-Clause",
+      "source_url": "https://github.com/pallets/flask/blob/ab8149664182b662453a563161aa89013c806dc9/docs/config.rst",
+      "split": "train"
+    },
+    {
+      "id": "flask-errorhandling",
+      "title": "Handling Application Errors",
+      "path": "data/corpus/flask/errorhandling.rst",
+      "upstream_path": "docs/errorhandling.rst",
+      "git_blob_sha": "faca58c240a9320a47d5c2c1637149dc3dd658b5",
+      "sha256": "c70de929b0db0e71713336d6bc112519934488543c245afc8c387a340f48d32a",
+      "size_bytes": 18373,
+      "license": "BSD-3-Clause",
+      "source_url": "https://github.com/pallets/flask/blob/ab8149664182b662453a563161aa89013c806dc9/docs/errorhandling.rst",
+      "split": "train"
+    },
+    {
+      "id": "flask-logging",
+      "title": "Logging",
+      "path": "data/corpus/flask/logging.rst",
+      "upstream_path": "docs/logging.rst",
+      "git_blob_sha": "395882423393d0a68f941c152836a815fb08149c",
+      "sha256": "97296444d10794b4a8329f7ce662f46d7d2f221a870b1419ffb065bbf2c2cddc",
+      "size_bytes": 5927,
+      "license": "BSD-3-Clause",
+      "source_url": "https://github.com/pallets/flask/blob/ab8149664182b662453a563161aa89013c806dc9/docs/logging.rst",
+      "split": "validation"
+    },
+    {
+      "id": "flask-appcontext",
+      "title": "appcontext",
+      "upstream_path": "docs/appcontext.rst",
+      "git_blob_sha": "5509a9a781fc6cf75b1fa6dafa19830f8c120872",
+      "sha256": "6ed25a4ff0d4de95f09173e675117daa1012b3fc8776a94799ff5e60ef5725a7",
+      "size_bytes": 5127,
+      "license": "BSD-3-Clause",
+      "source_url": "https://github.com/pallets/flask/blob/ab8149664182b662453a563161aa89013c806dc9/docs/appcontext.rst",
+      "split": "test"
+    },
+    {
+      "id": "flask-design",
+      "title": "design",
+      "upstream_path": "docs/design.rst",
+      "git_blob_sha": "066cf107c1e5305790c1376c791173b22752677a",
+      "sha256": "50623cdef4a04bcce46713ed55b5229820b769ecce70ffa5304cea74fa087d74",
+      "size_bytes": 11074,
+      "license": "BSD-3-Clause",
+      "source_url": "https://github.com/pallets/flask/blob/ab8149664182b662453a563161aa89013c806dc9/docs/design.rst",
+      "split": "test"
+    },
+    {
+      "id": "flask-reqcontext",
+      "title": "reqcontext",
+      "upstream_path": "docs/reqcontext.rst",
+      "git_blob_sha": "4f1846a346172e5f58744bbfb61c9d83c662d9ab",
+      "sha256": "af99d77d335c3dc83603634ff14405e277d562df4e0f28f1f18073b40c9e533a",
+      "size_bytes": 9334,
+      "license": "BSD-3-Clause",
+      "source_url": "https://github.com/pallets/flask/blob/ab8149664182b662453a563161aa89013c806dc9/docs/reqcontext.rst",
+      "split": "test"
+    }
+  ],
+  "study": "position-stability-v1"
+}

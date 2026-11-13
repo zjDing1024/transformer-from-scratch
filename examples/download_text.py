@@ -10,10 +10,13 @@ from urllib.request import urlopen
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", type=Path, required=True)
-    args = parser.parse_args()
-    manifest = json.loads(
-        (Path(__file__).resolve().parents[1] / "data/text-manifest.json").read_text()
+    parser.add_argument(
+        "--manifest",
+        type=Path,
+        default=Path(__file__).resolve().parents[1] / "data/text-manifest.json",
     )
+    args = parser.parse_args()
+    manifest = json.loads(args.manifest.read_text())
     base = f"https://raw.githubusercontent.com/pallets/flask/{manifest['upstream_commit']}/"
     items = [(d["upstream_path"], d["sha256"]) for d in manifest["documents"]]
     items.append(("LICENSE.txt", manifest["license_sha256"]))

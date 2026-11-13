@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "position-stability-v1",
+  "base_commit": "b18569299464e1ea892361e2b64b610687a4f58f",
+  "seeds": [20261114, 20261115, 20261116],
+  "arms": {"sinusoidal": true, "no_position": false},
+  "model": {"width": 64, "heads": 4, "hidden": 128, "layers": 2},
+  "steps": 600,
+  "validate_every": 100,
+  "context": 64,
+  "batch": 16,
+  "learning_rate": 0.003,
+  "weight_decay": 0.01,
+  "clip_norm": 1.0,
+  "bigram_alpha": 0.1,
+  "manifest": "data/stability-manifest.json",
+  "holdout_paths": ["docs/appcontext.rst", "docs/design.rst", "docs/reqcontext.rst"],
+  "torch_version": "2.14.1+cpu",
+  "selection": "minimum validation mean NLL; earliest checkpoint wins ties",
+  "primary_metric": "micro-averaged held-out byte NLL",
+  "paired_difference": "no_position NLL minus sinusoidal NLL",
+  "reporting": "all seeds/arms and document scores; arithmetic mean and sample standard deviation; no significance claim"
+}

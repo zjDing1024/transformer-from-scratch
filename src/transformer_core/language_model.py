@@ -16,9 +16,13 @@ from .layers import EncoderBlock, SinusoidalPositionalEncoding
 class ByteLanguageModel(nn.Module):
     """Decoder-only LM: causal self-attention, no encoder or cross-attention."""
 
-    def __init__(self, width=64, heads=4, hidden=128, layers=2):
+    def __init__(self, width=64, heads=4, hidden=128, layers=2, use_positions=True):
         super().__init__()
-        self.config = dict(width=width, heads=heads, hidden=hidden, layers=layers)
+        if not isinstance(use_positions, bool):
+            raise ValueError("use_positions must be bool")
+        self.config = dict(
+            width=width, heads=heads, hidden=hidden, layers=layers, use_positions=use_positions
+        )
         self.embedding = nn.Embedding(256, width)
         self.position = SinusoidalPositionalEncoding(width)
         # An encoder block with an always-on causal mask is a self-attention-only
@@ -29,7 +33,9 @@ class ByteLanguageModel(nn.Module):
     def forward(self, tokens):
         if tokens.ndim != 2 or tokens.shape[1] == 0 or tokens.dtype != torch.long:
             raise ValueError("tokens must be nonempty [B,L] int64 byte IDs")
-        x = self.position(self.embedding(tokens) * math.sqrt(self.config["width"]))
+        x = self.embedding(tokens) * math.sqrt(self.config["width"])
+        if self.config["use_positions"]:
+            x = self.position(x)
         mask = causal_mask(tokens.shape[1], device=tokens.device)
         for block in self.blocks:
             x = block(x, allowed_mask=mask)

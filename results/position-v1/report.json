@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+  "config": {
+    "schema_version": 1,
+    "name": "position-stability-v1",
+    "base_commit": "b18569299464e1ea892361e2b64b610687a4f58f",
+    "seeds": [
+      20261114,
+      20261115,
+      20261116
+    ],
+    "arms": {
+      "sinusoidal": true,
+      "no_position": false
+    },
+    "model": {
+      "width": 64,
+      "heads": 4,
+      "hidden": 128,
+      "layers": 2
+    },
+    "steps": 600,
+    "validate_every": 100,
+    "context": 64,
+    "batch": 16,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "bigram_alpha": 0.1,
+    "manifest": "data/stability-manifest.json",
+    "holdout_paths": [
+      "docs/appcontext.rst",
+      "docs/design.rst",
+      "docs/reqcontext.rst"
+    ],
+    "torch_version": "2.14.1+cpu",
+    "selection": "minimum validation mean NLL; earliest checkpoint wins ties",
+    "primary_metric": "micro-averaged held-out byte NLL",
+    "paired_difference": "no_position NLL minus sinusoidal NLL",
+    "reporting": "all seeds/arms and document scores; arithmetic mean and sample standard deviation; no significance claim"
+  },
+  "provenance": {
+    "config_sha256": "c2193abc17ddc2ef74baed5f23b674b9f3130a849397d325388a69c7227f3f96",
+    "manifest_sha256": "eca32c8bae2565a907eeb2e02f314d8efa112853c595e477da17fdb1dda033bc",
+    "protocol_sha256": "05d4148c9c08938c2480f6ce82d2bbf49d0855daf69887f8e5d26fdff3bf4997",
+    "sources": {
+      "examples/study_positions.py": "bff22218177414336cd7b49e40dd7e804ce4183a0a1ceb889cc482cefd8200b9",
+      "src/transformer_core/__init__.py": "01ec5aa03f0718db6e4d1791681d908374c9183362ff4b2655e9a5dcbb877c0e",
+      "src/transformer_core/attention.py": "0d2900beccf004fe12ba70bab68c24ab8291cb85268efb8edf247328607a6358",
+      "src/transformer_core/language_model.py": "baa4aeed5ea3af0fb4ff919c1f8af6a489666115906509c2894f04a6964d5542",
+      "src/transformer_core/layers.py": "05f3a1178dc8b41be56deb6b7346fe505f9cfc9c661edfb4ba82de701c12a09d",
+      "src/transformer_core/stability.py": "73c38100cc69627b09d4615a2363545b6de40a255509321329b58046c91f85a7"
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "device": "cpu",
+    "threads": 1
+  },
+  "runs": [
+    {
+      "seed": 20261114,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "documents": [
+        {
+          "id": "docs/appcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 12425.78095626831,
+              "tokens": 5126,
+              "nll": 2.4240696364159793,
+              "perplexity": 11.291719126564557,
+              "bits_per_byte": 3.497193243226846
+            },
+            "bigram": {
+              "nll_sum": 13312.81505326972,
+              "tokens": 5126,
+              "nll": 2.597115695136504,
+              "perplexity": 13.42496045996388,
+              "bits_per_byte": 3.7468459339883275
+            }
+          }
+        },
+        {
+          "id": "docs/design.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 27343.578835964203,
+              "tokens": 11073,
+              "nll": 2.4693921101746774,
+              "perplexity": 11.815262290426903,
+              "bits_per_byte": 3.56257975135934
+            },
+            "bigram": {
+              "nll_sum": 28872.682732302168,
+              "tokens": 11073,
+              "nll": 2.6074851198683437,
+              "perplexity": 13.56489383743522,
+              "bits_per_byte": 3.761805851625824
+            }
+          }
+        },
+        {
+          "id": "docs/reqcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 22055.94440460205,
+              "tokens": 9333,
+              "nll": 2.363221301253836,
+              "perplexity": 10.625123106673835,
+              "bits_per_byte": 3.409407651842072
+            },
+            "bigram": {
+              "nll_sum": 24032.614507786322,
+              "tokens": 9333,
+              "nll": 2.57501494779667,
+              "perplexity": 13.131513444215924,
+              "bits_per_byte": 3.714961295401209
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "model": {
+          "tokens": 25532,
+          "nll_sum": 61825.304196834564,
+          "nll": 2.421483009432656,
+          "perplexity": 11.262549403044325,
+          "bits_per_byte": 3.4934615293053755
+        },
+        "bigram": {
+          "tokens": 25532,
+          "nll_sum": 66218.11229335821,
+          "nll": 2.5935340863762417,
+          "perplexity": 13.376963508433748,
+          "bits_per_byte": 3.7416787647914926
+        }
+      }
+    },
+    {
+      "seed": 20261114,
+      "arm": "no_position",
+      "selected_step": 400,
+      "documents": [
+        {
+          "id": "docs/appcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 12656.640617370605,
+              "tokens": 5126,
+              "nll": 2.4691066362408516,
+              "perplexity": 11.811889822420428,
+              "bits_per_byte": 3.5621678995307064
+            },
+            "bigram": {
+              "nll_sum": 13312.81505326972,
+              "tokens": 5126,
+              "nll": 2.597115695136504,
+              "perplexity": 13.42496045996388,
+              "bits_per_byte": 3.7468459339883275
+            }
+          }
+        },
+        {
+          "id": "docs/design.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 27739.860379576683,
+              "tokens": 11073,
+              "nll": 2.505180202255638,
+              "perplexity": 12.24576548154729,
+              "bits_per_byte": 3.6142110543274195
+            },
+            "bigram": {
+              "nll_sum": 28872.682732302168,
+              "tokens": 11073,
+              "nll": 2.6074851198683437,
+              "perplexity": 13.56489383743522,
+              "bits_per_byte": 3.761805851625824
+            }
+          }
+        },
+        {
+          "id": "docs/reqcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 22483.3939743042,
+              "tokens": 9333,
+              "nll": 2.409021105143491,
+              "perplexity": 11.123067500504032,
+              "bits_per_byte": 3.4754828017873645
+            },
+            "bigram": {
+              "nll_sum": 24032.614507786322,
+              "tokens": 9333,
+              "nll": 2.57501494779667,
+              "perplexity": 13.131513444215924,
+              "bits_per_byte": 3.714961295401209
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "model": {
+          "tokens": 25532,
+          "nll_sum": 62879.89497125149,
+          "nll": 2.4627876770817596,
+          "perplexity": 11.737486297032852,
+          "bits_per_byte": 3.5530515684883044
+        },
+        "bigram": {
+          "tokens": 25532,
+          "nll_sum": 66218.11229335821,
+          "nll": 2.5935340863762417,
+          "perplexity": 13.376963508433748,
+          "bits_per_byte": 3.7416787647914926
+        }
+      }
+    },
+    {
+      "seed": 20261115,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "documents": [
+        {
+          "id": "docs/appcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 12511.114540100098,
+              "tokens": 5126,
+              "nll": 2.440716843562251,
+              "perplexity": 11.481268066690522,
+              "bits_per_byte": 3.5212100864214233
+            },
+            "bigram": {
+              "nll_sum": 13312.81505326972,
+              "tokens": 5126,
+              "nll": 2.597115695136504,
+              "perplexity": 13.42496045996388,
+              "bits_per_byte": 3.7468459339883275
+            }
+          }
+        },
+        {
+          "id": "docs/design.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 27217.741151332855,
+              "tokens": 11073,
+              "nll": 2.458027738763917,
+              "perplexity": 11.681749343718387,
+              "bits_per_byte": 3.5461844290822158
+            },
+            "bigram": {
+              "nll_sum": 28872.682732302168,
+              "tokens": 11073,
+              "nll": 2.6074851198683437,
+              "perplexity": 13.56489383743522,
+              "bits_per_byte": 3.761805851625824
+            }
+          }
+        },
+        {
+          "id": "docs/reqcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 21915.979522705078,
+              "tokens": 9333,
+              "nll": 2.3482245283086978,
+              "perplexity": 10.4669694095668,
+              "bits_per_byte": 3.3877718818847837
+            },
+            "bigram": {
+              "nll_sum": 24032.614507786322,
+              "tokens": 9333,
+              "nll": 2.57501494779667,
+              "perplexity": 13.131513444215924,
+              "bits_per_byte": 3.714961295401209
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "model": {
+          "tokens": 25532,
+          "nll_sum": 61644.83521413803,
+          "nll": 2.4144146645048576,
+          "perplexity": 11.183222504312349,
+          "bits_per_byte": 3.4832640631307488
+        },
+        "bigram": {
+          "tokens": 25532,
+          "nll_sum": 66218.11229335821,
+          "nll": 2.5935340863762417,
+          "perplexity": 13.376963508433748,
+          "bits_per_byte": 3.7416787647914926
+        }
+      }
+    },
+    {
+      "seed": 20261115,
+      "arm": "no_position",
+      "selected_step": 600,
+      "documents": [
+        {
+          "id": "docs/appcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 12538.678773880005,
+              "tokens": 5126,
+              "nll": 2.446094181404605,
+              "perplexity": 11.543173016689884,
+              "bits_per_byte": 3.5289679450597724
+            },
+            "bigram": {
+              "nll_sum": 13312.81505326972,
+              "tokens": 5126,
+              "nll": 2.597115695136504,
+              "perplexity": 13.42496045996388,
+              "bits_per_byte": 3.7468459339883275
+            }
+          }
+        },
+        {
+          "id": "docs/design.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 27392.896765708923,
+              "tokens": 11073,
+              "nll": 2.473846000696191,
+              "perplexity": 11.868003539840592,
+              "bits_per_byte": 3.56900535712739
+            },
+            "bigram": {
+              "nll_sum": 28872.682732302168,
+              "tokens": 11073,
+              "nll": 2.6074851198683437,
+              "perplexity": 13.56489383743522,
+              "bits_per_byte": 3.761805851625824
+            }
+          }
+        },
+        {
+          "id": "docs/reqcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 22171.87993621826,
+              "tokens": 9333,
+              "nll": 2.375643409002278,
+              "perplexity": 10.757932710547344,
+              "bits_per_byte": 3.427328965088138
+            },
+            "bigram": {
+              "nll_sum": 24032.614507786322,
+              "tokens": 9333,
+              "nll": 2.57501494779667,
+              "perplexity": 13.131513444215924,
+              "bits_per_byte": 3.714961295401209
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "model": {
+          "tokens": 25532,
+          "nll_sum": 62103.45547580719,
+          "nll": 2.4323772315450096,
+          "perplexity": 11.385916894072832,
+          "bits_per_byte": 3.5091785695212114
+        },
+        "bigram": {
+          "tokens": 25532,
+          "nll_sum": 66218.11229335821,
+          "nll": 2.5935340863762417,
+          "perplexity": 13.376963508433748,
+          "bits_per_byte": 3.7416787647914926
+        }
+      }
+    },
+    {
+      "seed": 20261116,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "documents": [
+        {
+          "id": "docs/appcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 12375.779647827148,
+              "tokens": 5126,
+              "nll": 2.4143151868566424,
+              "perplexity": 11.182110078969798,
+              "bits_per_byte": 3.483120547220989
+            },
+            "bigram": {
+              "nll_sum": 13312.81505326972,
+              "tokens": 5126,
+              "nll": 2.597115695136504,
+              "perplexity": 13.42496045996388,
+              "bits_per_byte": 3.7468459339883275
+            }
+          }
+        },
+        {
+          "id": "docs/design.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 27196.11629998684,
+              "tokens": 11073,
+              "nll": 2.456074803575078,
+              "perplexity": 11.658957906701314,
+              "bits_per_byte": 3.5433669391701
+            },
+            "bigram": {
+              "nll_sum": 28872.682732302168,
+              "tokens": 11073,
+              "nll": 2.6074851198683437,
+              "perplexity": 13.56489383743522,
+              "bits_per_byte": 3.761805851625824
+            }
+          }
+        },
+        {
+          "id": "docs/reqcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 21921.60693359375,
+              "tokens": 9333,
+              "nll": 2.3488274867238563,
+              "perplexity": 10.473282459915659,
+              "bits_per_byte": 3.388641767000195
+            },
+            "bigram": {
+              "nll_sum": 24032.614507786322,
+              "tokens": 9333,
+              "nll": 2.57501494779667,
+              "perplexity": 13.131513444215924,
+              "bits_per_byte": 3.714961295401209
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "model": {
+          "tokens": 25532,
+          "nll_sum": 61493.50288140774,
+          "nll": 2.408487501230132,
+          "perplexity": 11.11713377142853,
+          "bits_per_byte": 3.4747129740677627
+        },
+        "bigram": {
+          "tokens": 25532,
+          "nll_sum": 66218.11229335821,
+          "nll": 2.5935340863762417,
+          "perplexity": 13.376963508433748,
+          "bits_per_byte": 3.7416787647914926
+        }
+      }
+    },
+    {
+      "seed": 20261116,
+      "arm": "no_position",
+      "selected_step": 500,
+      "documents": [
+        {
+          "id": "docs/appcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 12458.819431304932,
+              "tokens": 5126,
+              "nll": 2.4305149105159836,
+              "perplexity": 11.36473239389908,
+              "bits_per_byte": 3.5064918082080925
+            },
+            "bigram": {
+              "nll_sum": 13312.81505326972,
+              "tokens": 5126,
+              "nll": 2.597115695136504,
+              "perplexity": 13.42496045996388,
+              "bits_per_byte": 3.7468459339883275
+            }
+          }
+        },
+        {
+          "id": "docs/design.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 27218.751642525196,
+              "tokens": 11073,
+              "nll": 2.458118995983491,
+              "perplexity": 11.682815436326837,
+              "bits_per_byte": 3.5463160854203406
+            },
+            "bigram": {
+              "nll_sum": 28872.682732302168,
+              "tokens": 11073,
+              "nll": 2.6074851198683437,
+              "perplexity": 13.56489383743522,
+              "bits_per_byte": 3.761805851625824
+            }
+          }
+        },
+        {
+          "id": "docs/reqcontext.rst",
+          "metrics": {
+            "model": {
+              "nll_sum": 22265.77170562744,
+              "tokens": 9333,
+              "nll": 2.3857036007315378,
+              "perplexity": 10.866705797897032,
+              "bits_per_byte": 3.441842753806333
+            },
+            "bigram": {
+              "nll_sum": 24032.614507786322,
+              "tokens": 9333,
+              "nll": 2.57501494779667,
+              "perplexity": 13.131513444215924,
+              "bits_per_byte": 3.714961295401209
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "model": {
+          "tokens": 25532,
+          "nll_sum": 61943.34277945757,
+          "nll": 2.426106171841515,
+          "perplexity": 11.314738544555071,
+          "bits_per_byte": 3.500131342785861
+        },
+        "bigram": {
+          "tokens": 25532,
+          "nll_sum": 66218.11229335821,
+          "nll": 2.5935340863762417,
+          "perplexity": 13.376963508433748,
+          "bits_per_byte": 3.7416787647914926
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "arms": {
+      "sinusoidal": {
+        "nll": {
+          "mean": 2.414795058389215,
+          "sample_sd": 0.006506099675758719,
+          "minimum": 2.408487501230132,
+          "maximum": 2.421483009432656,
+          "n": 3
+        },
+        "perplexity": {
+          "mean": 11.187635226261735,
+          "sample_sd": 0.07280817650378997,
+          "minimum": 11.11713377142853,
+          "maximum": 11.262549403044325,
+          "n": 3
+        },
+        "bits_per_byte": {
+          "mean": 3.4838128555012955,
+          "sample_sd": 0.009386317737746367,
+          "minimum": 3.4747129740677627,
+          "maximum": 3.4934615293053755,
+          "n": 3
+        }
+      },
+      "no_position": {
+        "nll": {
+          "mean": 2.440423693489428,
+          "sample_sd": 0.019619948242535004,
+          "minimum": 2.426106171841515,
+          "maximum": 2.4627876770817596,
+          "n": 3
+        },
+        "perplexity": {
+          "mean": 11.479380578553585,
+          "sample_sd": 0.22634157990478046,
+          "minimum": 11.314738544555071,
+          "maximum": 11.737486297032852,
+          "n": 3
+        },
+        "bits_per_byte": {
+          "mean": 3.5207871602651255,
+          "sample_sd": 0.02830560203200335,
+          "minimum": 3.500131342785861,
+          "maximum": 3.5530515684883044,
+          "n": 3
+        }
+      }
+    },
+    "paired_differences": [
+      {
+        "seed": 20261114,
+        "no_position_minus_sinusoidal_nll": 0.04130466764910379
+      },
+      {
+        "seed": 20261115,
+        "no_position_minus_sinusoidal_nll": 0.017962567040151978
+      },
+      {
+        "seed": 20261116,
+        "no_position_minus_sinusoidal_nll": 0.017618670611383003
+      }
+    ],
+    "paired_nll_summary": {
+      "mean": 0.02562863510021292,
+      "sample_sd": 0.013576931300696943,
+      "minimum": 0.017618670611383003,
+      "maximum": 0.04130466764910379,
+      "n": 3
+    }
+  }
+}

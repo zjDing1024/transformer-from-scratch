@@ -10,3 +10,8 @@ dist/
 corpus/
 *.pt
 results/text-local/
+
+results/position-local/
+results/position-replay/
+results/position-v1/started.json
+results/position-v1/training-progress.json
