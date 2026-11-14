@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "name": "sqlite-transfer-v1",
+  "base_commit": "8d28a61",
+  "selection": "results/position-v1/selection.json",
+  "selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+  "training_manifest": "data/stability-manifest.json",
+  "external_manifest": "data/sqlite-transfer-manifest.json",
+  "external_manifest_sha256": "6484daf36110f7dcb4f68b85964952259aa73750b5c7ed63614e75e7a88eaf9d",
+  "protocol": "docs/transfer-protocol.md",
+  "seeds": [
+    20261114,
+    20261115,
+    20261116
+  ],
+  "arms": [
+    "sinusoidal",
+    "no_position"
+  ],
+  "context": 64,
+  "bigram_alpha": 0.1,
+  "torch_version": "2.14.1+cpu",
+  "selection_policy": "No new selection or training; use all six original validation-selected checkpoints. Reconstruction permitted only if original tensor digests match exactly.",
+  "checkpoint_policy": "Check file SHA256 and float32 tensor digest separately; tensor mismatch aborts before any external scoring. Report reconstructed artifact identity, never relabel as originally retained bytes.",
+  "data_policy": "Full immutable raw docsrc .in bytes; no rendering, template execution, markup removal, normalization, prefix truncation or post-score document exclusion.",
+  "format_shift": "Joint project/topic + source-markup shift: Flask RST to SQLite HTML-like/template .in source. Not a pure topic/domain intervention.",
+  "primary_metric": "Token-weighted pooled byte NLL over all 52351 targets",
+  "secondary_metrics": [
+    "per-document NLL",
+    "byte perplexity",
+    "bits/byte",
+    "paired no_position minus sinusoidal NLL",
+    "train-only bigram on identical targets"
+  ],
+  "analysis": "All six runs and per-document scores; mean and sample SD across 3 fixed paired seeds. Descriptive only; no p-value, confidence interval, model selection, tuning or extra training budget."
+}

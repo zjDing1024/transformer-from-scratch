@@ -1,0 +1,28 @@
+{
+  "protocol_freeze_commit": "f74675dbbbf9f27d4eb44fc0fdc13f69ac93d8bb",
+  "implementation_freeze_commit": "41e22d1c5d9c8a84d48dd55f9abeab2691b427d4",
+  "report_sha256": "3d01ad9d5dae13ee811627beeb4dbbe14ac051e3bc916895691690a3246f63af",
+  "replay_report_sha256": "3d01ad9d5dae13ee811627beeb4dbbe14ac051e3bc916895691690a3246f63af",
+  "replay_report_byte_identical": true,
+  "replay_additional_independent_training_trials": 0,
+  "original_selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+  "original_selection_unchanged": true,
+  "tests": {
+    "passed": 89,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "compileall": "passed",
+  "download_verification": "Pinned Fossil manifest SHA3+SHA256, F entry membership, artifact hash, SHA256, length and canonical URLs all checked by public downloader.",
+  "attempts": {
+    "reconstruction": 1,
+    "transfer_score": 1,
+    "identical_score_replay": 1,
+    "failed_corpus_scoring": 0,
+    "post_score_tuning": 0
+  },
+  "warning": "Optional NumPy not installed; no NumPy operations used."
+}

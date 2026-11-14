@@ -24,3 +24,16 @@ and `docs/reqcontext.rst` from the same immutable BSD-3-Clause source, strictly
 as held-out data. `data/stability-manifest.json` identifies each file and digest.
 Only metadata, original implementation and derived numerical scores are published;
 the downloader retains the full upstream license with the local corpus.
+
+## SQLite transfer evaluation
+
+SQLite's official copyright statement dedicates its deliverable documentation to
+public domain: https://sqlite.org/copyright.html . Canonical documentation source:
+https://sqlite.org/docsrc , verified via https://sqlite.org/getthecode.html .
+The immutable check-in, per-document artifact names, SHA256 hashes and raw-source
+representation are recorded in `data/sqlite-transfer-manifest.json`. The downloader
+retains the pinned `pages/copyright.in` next to the three evaluation documents.
+No raw third-party documentation, generator scripts or checkpoint weights are
+published. Only metadata, original scoring code and derived metrics are included.
+HTML/Tcl-like template text is treated only as bytes, never executed. No paid
+warranty of title, proprietary SQLite extension or third-party model is used.

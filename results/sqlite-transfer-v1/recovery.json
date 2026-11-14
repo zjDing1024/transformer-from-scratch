@@ -1,0 +1,94 @@
+{
+  "status": "rebuilt after prior local checkpoint directory was unavailable",
+  "original_artifacts_continuously_retained": false,
+  "original_selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+  "reconstructed_selection_sha256": "8682ba5dd908731376892ee4cdf7716be60bb962a5e15aafca3790e7adc053ad",
+  "all_artifact_sha256_identical": true,
+  "all_tensor_digests_identical": true,
+  "original_training_evidence_equal": true,
+  "training_fields_compared": [
+    "selected_step",
+    "validation_nll",
+    "curve",
+    "initial_state_sha256",
+    "sample_schedule_sha256",
+    "selected_state_sha256",
+    "steps",
+    "target_exposures",
+    "parameter_count",
+    "max_preclip_gradient_norm",
+    "clipped_steps"
+  ],
+  "original_config_and_provenance_equal": true,
+  "checkpoints": [
+    {
+      "seed": 20261114,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "original_artifact_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
+      "observed_artifact_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
+      "artifact_identical": true,
+      "original_tensor_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3",
+      "observed_tensor_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261114,
+      "arm": "no_position",
+      "selected_step": 400,
+      "original_artifact_sha256": "72b52420d64905db6798e6ad90689f812f48a79a7c9b093367aaa881c309460d",
+      "observed_artifact_sha256": "72b52420d64905db6798e6ad90689f812f48a79a7c9b093367aaa881c309460d",
+      "artifact_identical": true,
+      "original_tensor_sha256": "cba3432deb45d9074e6750019435f9579aa388e80c992d9ac593baae14335f48",
+      "observed_tensor_sha256": "cba3432deb45d9074e6750019435f9579aa388e80c992d9ac593baae14335f48",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261115,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "original_artifact_sha256": "4bca76b43845184926baf3bf6321bef872b76e5edebe38a63dc4a51fb66ca7c5",
+      "observed_artifact_sha256": "4bca76b43845184926baf3bf6321bef872b76e5edebe38a63dc4a51fb66ca7c5",
+      "artifact_identical": true,
+      "original_tensor_sha256": "796f08556bcc18bb73245874ea6ee74ba24c3d46b737d32c5c8cfbcf23b938ec",
+      "observed_tensor_sha256": "796f08556bcc18bb73245874ea6ee74ba24c3d46b737d32c5c8cfbcf23b938ec",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261115,
+      "arm": "no_position",
+      "selected_step": 600,
+      "original_artifact_sha256": "5c6dfd506c7279f6d0c6879c30b49e3e3e3d258b721bbb81f467c9e6be993976",
+      "observed_artifact_sha256": "5c6dfd506c7279f6d0c6879c30b49e3e3e3d258b721bbb81f467c9e6be993976",
+      "artifact_identical": true,
+      "original_tensor_sha256": "bccd85bc859c90e2cd086e68f00695f1c707b76146e5f7c739d755216f09de21",
+      "observed_tensor_sha256": "bccd85bc859c90e2cd086e68f00695f1c707b76146e5f7c739d755216f09de21",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261116,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "original_artifact_sha256": "538a960cb67cf0ef137debb39c868d1ed218a9fb375fae240167d3dd8f61c3a8",
+      "observed_artifact_sha256": "538a960cb67cf0ef137debb39c868d1ed218a9fb375fae240167d3dd8f61c3a8",
+      "artifact_identical": true,
+      "original_tensor_sha256": "39febdd05c99056000c576a442917e45c06415bdb19ed78269bd0e5c2d0d0ad5",
+      "observed_tensor_sha256": "39febdd05c99056000c576a442917e45c06415bdb19ed78269bd0e5c2d0d0ad5",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261116,
+      "arm": "no_position",
+      "selected_step": 500,
+      "original_artifact_sha256": "6d22c96112e0d17556f9e9031a6ee432ab2fbd8ce4b8c807fc2bd77af38d8fd5",
+      "observed_artifact_sha256": "6d22c96112e0d17556f9e9031a6ee432ab2fbd8ce4b8c807fc2bd77af38d8fd5",
+      "artifact_identical": true,
+      "original_tensor_sha256": "cb4eb18fd568618bc52ac1c45df988b2acc0d751b2d33af0963bf868a5bcb299",
+      "observed_tensor_sha256": "cb4eb18fd568618bc52ac1c45df988b2acc0d751b2d33af0963bf868a5bcb299",
+      "tensor_identical": true
+    }
+  ],
+  "reconstruction_attempts": 1,
+  "new_independent_training_trials": 0,
+  "external_model_forwards_before_identity_verification": 0
+}

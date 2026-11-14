@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "project": "SQLite documentation",
+  "repository": "https://sqlite.org/docsrc",
+  "upstream_commit": "14e2d07cae94f61084a3f289df352d75661ac52c2d9b398fabc26b68b79e84ad",
+  "upstream_manifest_url": "https://sqlite.org/docsrc/raw/14e2d07cae94f61084a3f289df352d75661ac52c2d9b398fabc26b68b79e84ad",
+  "upstream_manifest_sha256": "1d5bf4b2b9fab39de464381f436f0877b0a405fc01e994b631b1f148dc16c0a2",
+  "license": "Public domain dedication (SQLite deliverable documentation)",
+  "license_source_url": "https://sqlite.org/copyright.html",
+  "copyright_document": {
+    "id": "copyright",
+    "upstream_path": "pages/copyright.in",
+    "artifact_hash": "b32cb1a1fab81560bd77e1c7c244584a290467dc00816b8f6af7dac53c43c9e8",
+    "artifact_algorithm": "sha3_256",
+    "source_url": "https://sqlite.org/docsrc/raw/b32cb1a1fab81560bd77e1c7c244584a290467dc00816b8f6af7dac53c43c9e8",
+    "view_url": "https://sqlite.org/docsrc/file?name=pages/copyright.in&ci=14e2d07cae94f61084a3f289df352d75661ac52c2d9b398fabc26b68b79e84ad",
+    "size_bytes": 4910,
+    "sha256": "5c22c2aa28ec06d68f6cb1c911c02076841dafea7607577dcd41aa77e4227dc4"
+  },
+  "representation": "Unmodified docsrc .in bytes; HTML-like tags, links and embedded generator/template directives retained as inert text. No rendering, stripping or normalization.",
+  "documents": [
+    {
+      "id": "datatype3",
+      "upstream_path": "pages/datatype3.in",
+      "artifact_hash": "a52dc6a351e198ca9f8bc56e35ca6f1f8ff7874b1a7bf82fd61e4285392b8c5b",
+      "artifact_algorithm": "sha3_256",
+      "source_url": "https://sqlite.org/docsrc/raw/a52dc6a351e198ca9f8bc56e35ca6f1f8ff7874b1a7bf82fd61e4285392b8c5b",
+      "view_url": "https://sqlite.org/docsrc/file?name=pages/datatype3.in&ci=14e2d07cae94f61084a3f289df352d75661ac52c2d9b398fabc26b68b79e84ad",
+      "size_bytes": 31695,
+      "sha256": "1f2af061012aa771259bd731bd2a83f65e8bb54cd3cf7f592c1a28376143e07d"
+    },
+    {
+      "id": "isolation",
+      "upstream_path": "pages/isolation.in",
+      "artifact_hash": "aa8b8e3ef6e0a7fed012dd8749e62c7e56c24a0e10dcf57836b15eea6942618d",
+      "artifact_algorithm": "sha3_256",
+      "source_url": "https://sqlite.org/docsrc/raw/aa8b8e3ef6e0a7fed012dd8749e62c7e56c24a0e10dcf57836b15eea6942618d",
+      "view_url": "https://sqlite.org/docsrc/file?name=pages/isolation.in&ci=14e2d07cae94f61084a3f289df352d75661ac52c2d9b398fabc26b68b79e84ad",
+      "size_bytes": 12133,
+      "sha256": "190923ca189b7ecb950d2fc23b4190f4b1d80b7589a88ae07a3f7dc4d132222e"
+    },
+    {
+      "id": "lang_transaction",
+      "upstream_path": "pages/lang_transaction.in",
+      "artifact_hash": "5b7e4be8264fbad622f89fd3ffc1e977277b2c88947635cb2075e5fb8d5d3cde",
+      "artifact_algorithm": "sha3_256",
+      "source_url": "https://sqlite.org/docsrc/raw/5b7e4be8264fbad622f89fd3ffc1e977277b2c88947635cb2075e5fb8d5d3cde",
+      "view_url": "https://sqlite.org/docsrc/file?name=pages/lang_transaction.in&ci=14e2d07cae94f61084a3f289df352d75661ac52c2d9b398fabc26b68b79e84ad",
+      "size_bytes": 8526,
+      "sha256": "6bc651513037d7fd5c109ea9382136a214ea9a598ebe12d78a4fdf0f1919f6f5"
+    }
+  ]
+}
