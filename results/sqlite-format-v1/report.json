@@ -1,0 +1,2065 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "config_sha256": "3319fee797fd2ad8f36cf4d1aa94b94585be531bbc81056b9971665971f42ffd",
+    "protocol_sha256": "eb7865f857250f7fb94d5b73a75889e285210018fd3e99f25284f4a8e5b161b5",
+    "sources": {
+      "src/transformer_core/format_control.py": "d22518c323fe03bf8e4e6c138be5934caff731518adec3f0d01f61bab320347c",
+      "examples/evaluate_format_control.py": "c5800f4b3224f72c5c0fd32ae4e34053866e1e861e0d328608e2ebbe191ba855",
+      "src/transformer_core/transfer.py": "3390d45e5f77f8bcb2b414f5578ddacf0e298fb8668530f866bb758f517f9a51"
+    },
+    "original_selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+    "torch": "2.14.1+cpu",
+    "device": "cpu",
+    "threads": 1
+  },
+  "pair_manifest_canonical_sha256": "4fe39fcf8a16b122f0f6f1fc9ec1acf4d9e397571983418dae348c7d104563b5",
+  "checkpoint_origin": "rebuilt",
+  "checkpoint_identity": [
+    {
+      "seed": 20261114,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "original_artifact_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
+      "observed_artifact_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
+      "artifact_identical": true,
+      "original_tensor_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3",
+      "observed_tensor_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261114,
+      "arm": "no_position",
+      "selected_step": 400,
+      "original_artifact_sha256": "72b52420d64905db6798e6ad90689f812f48a79a7c9b093367aaa881c309460d",
+      "observed_artifact_sha256": "72b52420d64905db6798e6ad90689f812f48a79a7c9b093367aaa881c309460d",
+      "artifact_identical": true,
+      "original_tensor_sha256": "cba3432deb45d9074e6750019435f9579aa388e80c992d9ac593baae14335f48",
+      "observed_tensor_sha256": "cba3432deb45d9074e6750019435f9579aa388e80c992d9ac593baae14335f48",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261115,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "original_artifact_sha256": "4bca76b43845184926baf3bf6321bef872b76e5edebe38a63dc4a51fb66ca7c5",
+      "observed_artifact_sha256": "4bca76b43845184926baf3bf6321bef872b76e5edebe38a63dc4a51fb66ca7c5",
+      "artifact_identical": true,
+      "original_tensor_sha256": "796f08556bcc18bb73245874ea6ee74ba24c3d46b737d32c5c8cfbcf23b938ec",
+      "observed_tensor_sha256": "796f08556bcc18bb73245874ea6ee74ba24c3d46b737d32c5c8cfbcf23b938ec",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261115,
+      "arm": "no_position",
+      "selected_step": 600,
+      "original_artifact_sha256": "5c6dfd506c7279f6d0c6879c30b49e3e3e3d258b721bbb81f467c9e6be993976",
+      "observed_artifact_sha256": "5c6dfd506c7279f6d0c6879c30b49e3e3e3d258b721bbb81f467c9e6be993976",
+      "artifact_identical": true,
+      "original_tensor_sha256": "bccd85bc859c90e2cd086e68f00695f1c707b76146e5f7c739d755216f09de21",
+      "observed_tensor_sha256": "bccd85bc859c90e2cd086e68f00695f1c707b76146e5f7c739d755216f09de21",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261116,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "original_artifact_sha256": "538a960cb67cf0ef137debb39c868d1ed218a9fb375fae240167d3dd8f61c3a8",
+      "observed_artifact_sha256": "538a960cb67cf0ef137debb39c868d1ed218a9fb375fae240167d3dd8f61c3a8",
+      "artifact_identical": true,
+      "original_tensor_sha256": "39febdd05c99056000c576a442917e45c06415bdb19ed78269bd0e5c2d0d0ad5",
+      "observed_tensor_sha256": "39febdd05c99056000c576a442917e45c06415bdb19ed78269bd0e5c2d0d0ad5",
+      "tensor_identical": true
+    },
+    {
+      "seed": 20261116,
+      "arm": "no_position",
+      "selected_step": 500,
+      "original_artifact_sha256": "6d22c96112e0d17556f9e9031a6ee432ab2fbd8ce4b8c807fc2bd77af38d8fd5",
+      "observed_artifact_sha256": "6d22c96112e0d17556f9e9031a6ee432ab2fbd8ce4b8c807fc2bd77af38d8fd5",
+      "artifact_identical": true,
+      "original_tensor_sha256": "cb4eb18fd568618bc52ac1c45df988b2acc0d751b2d33af0963bf868a5bcb299",
+      "observed_tensor_sha256": "cb4eb18fd568618bc52ac1c45df988b2acc0d751b2d33af0963bf868a5bcb299",
+      "tensor_identical": true
+    }
+  ],
+  "context_bytes": 64,
+  "runs": [
+    {
+      "seed": 20261114,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "documents": [
+        {
+          "id": "datatype3",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.646819589996,
+                  "nll": 2.9009641390234218,
+                  "byte_perplexity": 18.191676221942583
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 714.5268878748259,
+                  "nll": 2.7911206557610386,
+                  "byte_perplexity": 16.299275447661685
+                },
+                "projected_minus_raw_nll": -0.10984348326238302,
+                "max_abs_pair_difference": 3.005171321682054
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 717.1396672210691,
+                  "nll": 2.801326825082301,
+                  "byte_perplexity": 16.466480422417515
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 709.7159643148242,
+                  "nll": 2.772327985604782,
+                  "byte_perplexity": 15.995828757661489
+                },
+                "projected_minus_raw_nll": -0.028998839477519016,
+                "max_abs_pair_difference": 2.2348329740153368
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.80672881772733,
+                  "nll": 2.6376051377769896,
+                  "byte_perplexity": 13.979684069149007
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.80672881772733,
+                  "nll": 2.6376051377769896,
+                  "byte_perplexity": 13.979684069149007
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "isolation",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 769.7996447833729,
+                  "nll": 3.00702986243505,
+                  "byte_perplexity": 20.227232952951425
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 743.110292450371,
+                  "nll": 2.902774579884262,
+                  "byte_perplexity": 18.2246410072951
+                },
+                "projected_minus_raw_nll": -0.10425528255078848,
+                "max_abs_pair_difference": 2.0117824924591234
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 723.1087658895483,
+                  "nll": 2.824643616756048,
+                  "byte_perplexity": 16.854937098437627
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 722.3620833440667,
+                  "nll": 2.8217268880627606,
+                  "byte_perplexity": 16.80584744518088
+                },
+                "projected_minus_raw_nll": -0.0029167286932874695,
+                "max_abs_pair_difference": 1.3285362632692252
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 169.57315775749495,
+                  "nll": 2.6495805899608587,
+                  "byte_perplexity": 14.148103544181051
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 169.57315775749495,
+                  "nll": 2.6495805899608587,
+                  "byte_perplexity": 14.148103544181051
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "lang_transaction",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 791.1848013888475,
+                  "nll": 3.0905656304251856,
+                  "byte_perplexity": 21.989512396034883
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 760.6114124141708,
+                  "nll": 2.9711383297428546,
+                  "byte_perplexity": 19.514120461407984
+                },
+                "projected_minus_raw_nll": -0.11942730068233083,
+                "max_abs_pair_difference": 2.840353056109857
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.1462766961071,
+                  "nll": 2.8990088933441682,
+                  "byte_perplexity": 18.156141776217623
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 739.1368442205182,
+                  "nll": 2.8872532977363994,
+                  "byte_perplexity": 17.943955149359876
+                },
+                "projected_minus_raw_nll": -0.011755595607768649,
+                "max_abs_pair_difference": 1.6045411372437703
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 163.42523402914003,
+                  "nll": 2.553519281705313,
+                  "byte_perplexity": 12.85225499201483
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 163.42523402914003,
+                  "nll": 2.553519281705313,
+                  "byte_perplexity": 12.85225499201483
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "changed": {
+          "model": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2303.631265762216,
+              "nll": 2.9995198772945524,
+              "byte_perplexity": 20.075895715526297
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2218.2485927393677,
+              "nll": 2.8883445217960517,
+              "byte_perplexity": 17.963546712392567
+            },
+            "projected_minus_raw_nll": -0.11117535549850077,
+            "max_abs_pair_difference": 3.005171321682054
+          },
+          "bigram": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2182.3947098067247,
+              "nll": 2.8416597783941726,
+              "byte_perplexity": 17.144197503838985
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2171.214891879409,
+              "nll": 2.827102723801314,
+              "byte_perplexity": 16.896436197454488
+            },
+            "projected_minus_raw_nll": -0.014557054592858379,
+            "max_abs_pair_difference": 2.2348329740153368
+          }
+        },
+        "identical": {
+          "model": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 501.80512060436234,
+              "nll": 2.613568336481054,
+              "byte_perplexity": 13.64766352269448
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 501.80512060436234,
+              "nll": 2.613568336481054,
+              "byte_perplexity": 13.64766352269448
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          },
+          "bigram": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261114,
+      "arm": "no_position",
+      "selected_step": 400,
+      "documents": [
+        {
+          "id": "datatype3",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 753.141822260212,
+                  "nll": 2.9419602432039533,
+                  "byte_perplexity": 18.952962337769023
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 728.0463370025741,
+                  "nll": 2.843931003916305,
+                  "byte_perplexity": 17.18318009513679
+                },
+                "projected_minus_raw_nll": -0.09802923928764799,
+                "max_abs_pair_difference": 3.5687580008593383
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 717.1396672210691,
+                  "nll": 2.801326825082301,
+                  "byte_perplexity": 16.466480422417515
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 709.7159643148242,
+                  "nll": 2.772327985604782,
+                  "byte_perplexity": 15.995828757661489
+                },
+                "projected_minus_raw_nll": -0.028998839477519016,
+                "max_abs_pair_difference": 2.2348329740153368
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 169.40443282477653,
+                  "nll": 2.6469442628871334,
+                  "byte_perplexity": 14.110853638807258
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 169.40443282477653,
+                  "nll": 2.6469442628871334,
+                  "byte_perplexity": 14.110853638807258
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "isolation",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 744.3158450323517,
+                  "nll": 2.907483769657624,
+                  "byte_perplexity": 18.310666697020224
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 733.6167156545489,
+                  "nll": 2.8656902955255816,
+                  "byte_perplexity": 17.561171419585506
+                },
+                "projected_minus_raw_nll": -0.041793474132042235,
+                "max_abs_pair_difference": 2.9867468486786484
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 723.1087658895483,
+                  "nll": 2.824643616756048,
+                  "byte_perplexity": 16.854937098437627
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 722.3620833440667,
+                  "nll": 2.8217268880627606,
+                  "byte_perplexity": 16.80584744518088
+                },
+                "projected_minus_raw_nll": -0.0029167286932874695,
+                "max_abs_pair_difference": 1.3285362632692252
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 173.14484082675355,
+                  "nll": 2.7053881379180242,
+                  "byte_perplexity": 14.960122154459246
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 173.14484082675355,
+                  "nll": 2.7053881379180242,
+                  "byte_perplexity": 14.960122154459246
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "lang_transaction",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 793.6749030059229,
+                  "nll": 3.1002925898668865,
+                  "byte_perplexity": 22.20444712731522
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 781.9771098058884,
+                  "nll": 3.0545980851792516,
+                  "byte_perplexity": 21.21265813169297
+                },
+                "projected_minus_raw_nll": -0.045694504687634606,
+                "max_abs_pair_difference": 2.8388368458132796
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.1462766961071,
+                  "nll": 2.8990088933441682,
+                  "byte_perplexity": 18.156141776217623
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 739.1368442205182,
+                  "nll": 2.8872532977363994,
+                  "byte_perplexity": 17.943955149359876
+                },
+                "projected_minus_raw_nll": -0.011755595607768649,
+                "max_abs_pair_difference": 1.6045411372437703
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 163.79732353698546,
+                  "nll": 2.559333180265398,
+                  "byte_perplexity": 12.927194332580985
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 163.79732353698546,
+                  "nll": 2.559333180265398,
+                  "byte_perplexity": 12.927194332580985
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "changed": {
+          "model": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2291.132570298487,
+              "nll": 2.9832455342428212,
+              "byte_perplexity": 19.75181793085241
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2243.6401624630116,
+              "nll": 2.92140646154038,
+              "byte_perplexity": 18.56738341464482
+            },
+            "projected_minus_raw_nll": -0.06183907270244161,
+            "max_abs_pair_difference": 3.5687580008593383
+          },
+          "bigram": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2182.3947098067247,
+              "nll": 2.8416597783941726,
+              "byte_perplexity": 17.144197503838985
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2171.214891879409,
+              "nll": 2.827102723801314,
+              "byte_perplexity": 16.896436197454488
+            },
+            "projected_minus_raw_nll": -0.014557054592858379,
+            "max_abs_pair_difference": 2.2348329740153368
+          }
+        },
+        "identical": {
+          "model": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 506.34659718851555,
+              "nll": 2.637221860356852,
+              "byte_perplexity": 13.974326998592314
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 506.34659718851555,
+              "nll": 2.637221860356852,
+              "byte_perplexity": 13.974326998592314
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          },
+          "bigram": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261115,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "documents": [
+        {
+          "id": "datatype3",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 740.0336027799107,
+                  "nll": 2.890756260859026,
+                  "byte_perplexity": 18.006922384084813
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 730.2259123137706,
+                  "nll": 2.852444969975666,
+                  "byte_perplexity": 17.330101662378652
+                },
+                "projected_minus_raw_nll": -0.03831129088335992,
+                "max_abs_pair_difference": 3.8826720901324787
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 717.1396672210691,
+                  "nll": 2.801326825082301,
+                  "byte_perplexity": 16.466480422417515
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 709.7159643148242,
+                  "nll": 2.772327985604782,
+                  "byte_perplexity": 15.995828757661489
+                },
+                "projected_minus_raw_nll": -0.028998839477519016,
+                "max_abs_pair_difference": 2.2348329740153368
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 176.5272970169088,
+                  "nll": 2.7582390158892,
+                  "byte_perplexity": 15.772044159671696
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 176.5272970169088,
+                  "nll": 2.7582390158892,
+                  "byte_perplexity": 15.772044159671696
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "isolation",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.8709789370348,
+                  "nll": 2.901839761472792,
+                  "byte_perplexity": 18.207612237982694
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 743.7484000138071,
+                  "nll": 2.905267187553934,
+                  "byte_perplexity": 18.270124550011158
+                },
+                "projected_minus_raw_nll": 0.003427426081141791,
+                "max_abs_pair_difference": 1.4005306678572826
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 723.1087658895483,
+                  "nll": 2.824643616756048,
+                  "byte_perplexity": 16.854937098437627
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 722.3620833440667,
+                  "nll": 2.8217268880627606,
+                  "byte_perplexity": 16.80584744518088
+                },
+                "projected_minus_raw_nll": -0.0029167286932874695,
+                "max_abs_pair_difference": 1.3285362632692252
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 175.4503398923991,
+                  "nll": 2.741411560818736,
+                  "byte_perplexity": 15.50886135390392
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 175.4503398923991,
+                  "nll": 2.741411560818736,
+                  "byte_perplexity": 15.50886135390392
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "lang_transaction",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 751.2976913109568,
+                  "nll": 2.934756606683425,
+                  "byte_perplexity": 18.816922664564224
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 758.9696124312454,
+                  "nll": 2.9647250485595524,
+                  "byte_perplexity": 19.389371372914113
+                },
+                "projected_minus_raw_nll": 0.029968441876127495,
+                "max_abs_pair_difference": 1.6718960373597174
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.1462766961071,
+                  "nll": 2.8990088933441682,
+                  "byte_perplexity": 18.156141776217623
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 739.1368442205182,
+                  "nll": 2.8872532977363994,
+                  "byte_perplexity": 17.943955149359876
+                },
+                "projected_minus_raw_nll": -0.011755595607768649,
+                "max_abs_pair_difference": 1.6045411372437703
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 163.53271363752813,
+                  "nll": 2.555198650586377,
+                  "byte_perplexity": 12.873856802727335
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 163.53271363752813,
+                  "nll": 2.555198650586377,
+                  "byte_perplexity": 12.873856802727335
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "changed": {
+          "model": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2234.2022730279023,
+              "nll": 2.909117543005081,
+              "byte_perplexity": 18.34060662711422
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2232.943924758823,
+              "nll": 2.907479068696384,
+              "byte_perplexity": 18.31058061948813
+            },
+            "projected_minus_raw_nll": -0.0016384743086968769,
+            "max_abs_pair_difference": 3.8826720901324787
+          },
+          "bigram": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2182.3947098067247,
+              "nll": 2.8416597783941726,
+              "byte_perplexity": 17.144197503838985
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2171.214891879409,
+              "nll": 2.827102723801314,
+              "byte_perplexity": 16.896436197454488
+            },
+            "projected_minus_raw_nll": -0.014557054592858379,
+            "max_abs_pair_difference": 2.2348329740153368
+          }
+        },
+        "identical": {
+          "model": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 515.510350546836,
+              "nll": 2.6849497424314372,
+              "byte_perplexity": 14.65746471321353
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 515.510350546836,
+              "nll": 2.6849497424314372,
+              "byte_perplexity": 14.65746471321353
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          },
+          "bigram": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261115,
+      "arm": "no_position",
+      "selected_step": 600,
+      "documents": [
+        {
+          "id": "datatype3",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 732.789614895938,
+                  "nll": 2.862459433187258,
+                  "byte_perplexity": 17.504525249492843
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 717.2290191058892,
+                  "nll": 2.8016758558823796,
+                  "byte_perplexity": 16.47222873436443
+                },
+                "projected_minus_raw_nll": -0.06078357730487872,
+                "max_abs_pair_difference": 3.6009343219127823
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 717.1396672210691,
+                  "nll": 2.801326825082301,
+                  "byte_perplexity": 16.466480422417515
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 709.7159643148242,
+                  "nll": 2.772327985604782,
+                  "byte_perplexity": 15.995828757661489
+                },
+                "projected_minus_raw_nll": -0.028998839477519016,
+                "max_abs_pair_difference": 2.2348329740153368
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 174.11850579049772,
+                  "nll": 2.720601652976527,
+                  "byte_perplexity": 15.189458279102686
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 174.11850579049772,
+                  "nll": 2.720601652976527,
+                  "byte_perplexity": 15.189458279102686
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "isolation",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 725.6543117483753,
+                  "nll": 2.834587155267091,
+                  "byte_perplexity": 17.023370840470438
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 726.4607723301909,
+                  "nll": 2.8377373919148083,
+                  "byte_perplexity": 17.077083045818682
+                },
+                "projected_minus_raw_nll": 0.003150236647717141,
+                "max_abs_pair_difference": 2.344871665401717
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 723.1087658895483,
+                  "nll": 2.824643616756048,
+                  "byte_perplexity": 16.854937098437627
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 722.3620833440667,
+                  "nll": 2.8217268880627606,
+                  "byte_perplexity": 16.80584744518088
+                },
+                "projected_minus_raw_nll": -0.0029167286932874695,
+                "max_abs_pair_difference": 1.3285362632692252
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 164.11961685261926,
+                  "nll": 2.564369013322176,
+                  "byte_perplexity": 12.992457714960455
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 164.11961685261926,
+                  "nll": 2.564369013322176,
+                  "byte_perplexity": 12.992457714960455
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "lang_transaction",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 744.1889794147244,
+                  "nll": 2.906988200838767,
+                  "byte_perplexity": 18.301594749625494
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 740.0653216711679,
+                  "nll": 2.8908801627779996,
+                  "byte_perplexity": 18.009153614547024
+                },
+                "projected_minus_raw_nll": -0.016108038060767597,
+                "max_abs_pair_difference": 2.1940030248971842
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.1462766961071,
+                  "nll": 2.8990088933441682,
+                  "byte_perplexity": 18.156141776217623
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 739.1368442205182,
+                  "nll": 2.8872532977363994,
+                  "byte_perplexity": 17.943955149359876
+                },
+                "projected_minus_raw_nll": -0.011755595607768649,
+                "max_abs_pair_difference": 1.6045411372437703
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 157.8281233023949,
+                  "nll": 2.4660644265999205,
+                  "byte_perplexity": 11.7760101816918
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 157.8281233023949,
+                  "nll": 2.4660644265999205,
+                  "byte_perplexity": 11.7760101816918
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "changed": {
+          "model": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2202.632906059038,
+              "nll": 2.868011596431039,
+              "byte_perplexity": 17.601983532974433
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2183.755113107248,
+              "nll": 2.8434311368583955,
+              "byte_perplexity": 17.174592935854932
+            },
+            "projected_minus_raw_nll": -0.024580459572643057,
+            "max_abs_pair_difference": 3.6009343219127823
+          },
+          "bigram": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2182.3947098067247,
+              "nll": 2.8416597783941726,
+              "byte_perplexity": 17.144197503838985
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2171.214891879409,
+              "nll": 2.827102723801314,
+              "byte_perplexity": 16.896436197454488
+            },
+            "projected_minus_raw_nll": -0.014557054592858379,
+            "max_abs_pair_difference": 2.2348329740153368
+          }
+        },
+        "identical": {
+          "model": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 496.06624594551187,
+              "nll": 2.583678364299541,
+              "byte_perplexity": 13.245771432132099
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 496.06624594551187,
+              "nll": 2.583678364299541,
+              "byte_perplexity": 13.245771432132099
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          },
+          "bigram": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261116,
+      "arm": "sinusoidal",
+      "selected_step": 600,
+      "documents": [
+        {
+          "id": "datatype3",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 732.3145880352522,
+                  "nll": 2.860603859512704,
+                  "byte_perplexity": 17.472074430008593
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 714.8356749528579,
+                  "nll": 2.792326855284601,
+                  "byte_perplexity": 16.318947487758663
+                },
+                "projected_minus_raw_nll": -0.06827700422810301,
+                "max_abs_pair_difference": 3.2076189794182035
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 717.1396672210691,
+                  "nll": 2.801326825082301,
+                  "byte_perplexity": 16.466480422417515
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 709.7159643148242,
+                  "nll": 2.772327985604782,
+                  "byte_perplexity": 15.995828757661489
+                },
+                "projected_minus_raw_nll": -0.028998839477519016,
+                "max_abs_pair_difference": 2.2348329740153368
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 171.33472630748005,
+                  "nll": 2.677105098554376,
+                  "byte_perplexity": 14.542931944137306
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 171.33472630748005,
+                  "nll": 2.677105098554376,
+                  "byte_perplexity": 14.542931944137306
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "isolation",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 727.6424211942948,
+                  "nll": 2.842353207790214,
+                  "byte_perplexity": 17.156089917157644
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 725.2979799192752,
+                  "nll": 2.833195234059669,
+                  "byte_perplexity": 16.99969213284644
+                },
+                "projected_minus_raw_nll": -0.009157973730545098,
+                "max_abs_pair_difference": 1.9734346490980827
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 723.1087658895483,
+                  "nll": 2.824643616756048,
+                  "byte_perplexity": 16.854937098437627
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 722.3620833440667,
+                  "nll": 2.8217268880627606,
+                  "byte_perplexity": 16.80584744518088
+                },
+                "projected_minus_raw_nll": -0.0029167286932874695,
+                "max_abs_pair_difference": 1.3285362632692252
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.60370809753712,
+                  "nll": 2.6344329390240175,
+                  "byte_perplexity": 13.935407996158272
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.60370809753712,
+                  "nll": 2.6344329390240175,
+                  "byte_perplexity": 13.935407996158272
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "lang_transaction",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 780.4177969471476,
+                  "nll": 3.0485070193247954,
+                  "byte_perplexity": 21.08384314261989
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 779.7738885348215,
+                  "nll": 3.0459917520891464,
+                  "byte_perplexity": 21.030878281075957
+                },
+                "projected_minus_raw_nll": -0.0025152672356488475,
+                "max_abs_pair_difference": 2.093035661349321
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.1462766961071,
+                  "nll": 2.8990088933441682,
+                  "byte_perplexity": 18.156141776217623
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 739.1368442205182,
+                  "nll": 2.8872532977363994,
+                  "byte_perplexity": 17.943955149359876
+                },
+                "projected_minus_raw_nll": -0.011755595607768649,
+                "max_abs_pair_difference": 1.6045411372437703
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 162.76347144388401,
+                  "nll": 2.5431792413106877,
+                  "byte_perplexity": 12.720046852917902
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 162.76347144388401,
+                  "nll": 2.5431792413106877,
+                  "byte_perplexity": 12.720046852917902
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "changed": {
+          "model": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2240.3748061766946,
+              "nll": 2.917154695542571,
+              "byte_perplexity": 18.488606833642113
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2219.9075434069546,
+              "nll": 2.8905046138111388,
+              "byte_perplexity": 18.002391565332815
+            },
+            "projected_minus_raw_nll": -0.02665008173143232,
+            "max_abs_pair_difference": 3.2076189794182035
+          },
+          "bigram": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2182.3947098067247,
+              "nll": 2.8416597783941726,
+              "byte_perplexity": 17.144197503838985
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2171.214891879409,
+              "nll": 2.827102723801314,
+              "byte_perplexity": 16.896436197454488
+            },
+            "projected_minus_raw_nll": -0.014557054592858379,
+            "max_abs_pair_difference": 2.2348329740153368
+          }
+        },
+        "identical": {
+          "model": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 502.7019058489012,
+              "nll": 2.618239092963027,
+              "byte_perplexity": 13.711557536086401
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 502.7019058489012,
+              "nll": 2.618239092963027,
+              "byte_perplexity": 13.711557536086401
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          },
+          "bigram": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261116,
+      "arm": "no_position",
+      "selected_step": 500,
+      "documents": [
+        {
+          "id": "datatype3",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.9944217111789,
+                  "nll": 2.9023219598092926,
+                  "byte_perplexity": 18.216394035429396
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 731.1058998014397,
+                  "nll": 2.855882421099374,
+                  "byte_perplexity": 17.3897755440786
+                },
+                "projected_minus_raw_nll": -0.04643953870991856,
+                "max_abs_pair_difference": 2.365513147185008
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 717.1396672210691,
+                  "nll": 2.801326825082301,
+                  "byte_perplexity": 16.466480422417515
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 709.7159643148242,
+                  "nll": 2.772327985604782,
+                  "byte_perplexity": 15.995828757661489
+                },
+                "projected_minus_raw_nll": -0.028998839477519016,
+                "max_abs_pair_difference": 2.2348329740153368
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.11735861767968,
+                  "nll": 2.626833728401245,
+                  "byte_perplexity": 13.829911249365686
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.11735861767968,
+                  "nll": 2.626833728401245,
+                  "byte_perplexity": 13.829911249365686
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 168.3116025612864,
+                  "nll": 2.6298687900201,
+                  "byte_perplexity": 13.871949644480507
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "isolation",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 729.8259528546702,
+                  "nll": 2.8508826283385553,
+                  "byte_perplexity": 17.3030472625869
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 720.9780120410852,
+                  "nll": 2.816320359535489,
+                  "byte_perplexity": 16.715231331574955
+                },
+                "projected_minus_raw_nll": -0.03456226880306634,
+                "max_abs_pair_difference": 2.2642998937092753
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 723.1087658895483,
+                  "nll": 2.824643616756048,
+                  "byte_perplexity": 16.854937098437627
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 722.3620833440667,
+                  "nll": 2.8217268880627606,
+                  "byte_perplexity": 16.80584744518088
+                },
+                "projected_minus_raw_nll": -0.0029167286932874695,
+                "max_abs_pair_difference": 1.3285362632692252
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 170.29890806855755,
+                  "nll": 2.6609204385712117,
+                  "byte_perplexity": 14.30945401240696
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 170.29890806855755,
+                  "nll": 2.6609204385712117,
+                  "byte_perplexity": 14.30945401240696
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 166.59624413111715,
+                  "nll": 2.6030663145487054,
+                  "byte_perplexity": 13.505085450512563
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        },
+        {
+          "id": "lang_transaction",
+          "strata": {
+            "changed": {
+              "model": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 762.4026167376807,
+                  "nll": 2.978135221631565,
+                  "byte_perplexity": 19.651137440084277
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 759.1212086786031,
+                  "nll": 2.9653172214007935,
+                  "byte_perplexity": 19.40085663234362
+                },
+                "projected_minus_raw_nll": -0.012818000230771526,
+                "max_abs_pair_difference": 2.2196675788314537
+              },
+              "bigram": {
+                "raw": {
+                  "count": 256,
+                  "nll_sum": 742.1462766961071,
+                  "nll": 2.8990088933441682,
+                  "byte_perplexity": 18.156141776217623
+                },
+                "projected": {
+                  "count": 256,
+                  "nll_sum": 739.1368442205182,
+                  "nll": 2.8872532977363994,
+                  "byte_perplexity": 17.943955149359876
+                },
+                "projected_minus_raw_nll": -0.011755595607768649,
+                "max_abs_pair_difference": 1.6045411372437703
+              }
+            },
+            "identical": {
+              "model": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 158.31042658995187,
+                  "nll": 2.473600415467998,
+                  "byte_perplexity": 11.865089291345901
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 158.31042658995187,
+                  "nll": 2.473600415467998,
+                  "byte_perplexity": 11.865089291345901
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              },
+              "bigram": {
+                "raw": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected": {
+                  "count": 64,
+                  "nll_sum": 159.25077144399577,
+                  "nll": 2.488293303812434,
+                  "byte_perplexity": 12.040708742597861
+                },
+                "projected_minus_raw_nll": 0.0,
+                "max_abs_pair_difference": 0.0
+              }
+            }
+          }
+        }
+      ],
+      "pooled": {
+        "changed": {
+          "model": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2235.22299130353,
+              "nll": 2.9104466032598046,
+              "byte_perplexity": 18.364998604042867
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2211.2051205211283,
+              "nll": 2.879173334011886,
+              "byte_perplexity": 17.799552811123917
+            },
+            "projected_minus_raw_nll": -0.03127326924791881,
+            "max_abs_pair_difference": 2.365513147185008
+          },
+          "bigram": {
+            "raw": {
+              "count": 768,
+              "nll_sum": 2182.3947098067247,
+              "nll": 2.8416597783941726,
+              "byte_perplexity": 17.144197503838985
+            },
+            "projected": {
+              "count": 768,
+              "nll_sum": 2171.214891879409,
+              "nll": 2.827102723801314,
+              "byte_perplexity": 16.896436197454488
+            },
+            "projected_minus_raw_nll": -0.014557054592858379,
+            "max_abs_pair_difference": 2.2348329740153368
+          }
+        },
+        "identical": {
+          "model": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 496.7266932761891,
+              "nll": 2.5871181941468184,
+              "byte_perplexity": 13.29141308681329
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 496.7266932761891,
+              "nll": 2.5871181941468184,
+              "byte_perplexity": 13.29141308681329
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          },
+          "bigram": {
+            "raw": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected": {
+              "count": 192,
+              "nll_sum": 494.15861813639935,
+              "nll": 2.573742802793747,
+              "byte_perplexity": 13.114818876214152
+            },
+            "projected_minus_raw_nll": 0.0,
+            "max_abs_pair_difference": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "changed": {
+      "arms": {
+        "sinusoidal": {
+          "raw_nll": {
+            "mean": 2.941930705280735,
+            "sample_sd": 0.05003532257471234,
+            "minimum": 2.909117543005081,
+            "maximum": 2.9995198772945524,
+            "n": 3
+          },
+          "projected_nll": {
+            "mean": 2.895442734767858,
+            "sample_sd": 0.010479575382984184,
+            "minimum": 2.8883445217960517,
+            "maximum": 2.907479068696384,
+            "n": 3
+          },
+          "projection_effect": {
+            "mean": -0.046487970512876654,
+            "sample_sd": 0.057399812357498345,
+            "minimum": -0.11117535549850077,
+            "maximum": -0.0016384743086968769,
+            "n": 3
+          },
+          "raw_byte_perplexity": {
+            "mean": 18.968369725427543,
+            "sample_sd": 0.9619960391504966,
+            "minimum": 18.34060662711422,
+            "maximum": 20.075895715526297,
+            "n": 3
+          },
+          "projected_byte_perplexity": {
+            "mean": 18.092172965737838,
+            "sample_sd": 0.19014115299565892,
+            "minimum": 17.963546712392567,
+            "maximum": 18.31058061948813,
+            "n": 3
+          }
+        },
+        "no_position": {
+          "raw_nll": {
+            "mean": 2.9205679113112217,
+            "sample_sd": 0.058279891587117674,
+            "minimum": 2.868011596431039,
+            "maximum": 2.9832455342428212,
+            "n": 3
+          },
+          "projected_nll": {
+            "mean": 2.8813369774702204,
+            "sample_sd": 0.039032663623897276,
+            "minimum": 2.8434311368583955,
+            "maximum": 2.92140646154038,
+            "n": 3
+          },
+          "projection_effect": {
+            "mean": -0.03923093384100116,
+            "sample_sd": 0.019863141302950964,
+            "minimum": -0.06183907270244161,
+            "maximum": -0.024580459572643057,
+            "n": 3
+          },
+          "raw_byte_perplexity": {
+            "mean": 18.57293335595657,
+            "sample_sd": 1.0898966145304343,
+            "minimum": 17.601983532974433,
+            "maximum": 19.75181793085241,
+            "n": 3
+          },
+          "projected_byte_perplexity": {
+            "mean": 17.847176387207888,
+            "sample_sd": 0.6976154622721679,
+            "minimum": 17.174592935854932,
+            "maximum": 18.56738341464482,
+            "n": 3
+          }
+        }
+      },
+      "paired_seeds": [
+        {
+          "seed": 20261114,
+          "no_position_minus_sinusoidal_projection_effect": 0.049336282796059165
+        },
+        {
+          "seed": 20261115,
+          "no_position_minus_sinusoidal_projection_effect": -0.02294198526394618
+        },
+        {
+          "seed": 20261116,
+          "no_position_minus_sinusoidal_projection_effect": -0.00462318751648649
+        }
+      ],
+      "paired_effect_difference": {
+        "mean": 0.0072570366718754985,
+        "sample_sd": 0.03757514874904427,
+        "minimum": -0.02294198526394618,
+        "maximum": 0.049336282796059165,
+        "n": 3
+      }
+    },
+    "identical": {
+      "arms": {
+        "sinusoidal": {
+          "raw_nll": {
+            "mean": 2.6389190572918393,
+            "sample_sd": 0.03993209201061305,
+            "minimum": 2.613568336481054,
+            "maximum": 2.6849497424314372,
+            "n": 3
+          },
+          "projected_nll": {
+            "mean": 2.6389190572918393,
+            "sample_sd": 0.03993209201061305,
+            "minimum": 2.613568336481054,
+            "maximum": 2.6849497424314372,
+            "n": 3
+          },
+          "projection_effect": {
+            "mean": 0.0,
+            "sample_sd": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "n": 3
+          },
+          "raw_byte_perplexity": {
+            "mean": 14.005561923998137,
+            "sample_sd": 0.5654675465284801,
+            "minimum": 13.64766352269448,
+            "maximum": 14.65746471321353,
+            "n": 3
+          },
+          "projected_byte_perplexity": {
+            "mean": 14.005561923998137,
+            "sample_sd": 0.5654675465284801,
+            "minimum": 13.64766352269448,
+            "maximum": 14.65746471321353,
+            "n": 3
+          }
+        },
+        "no_position": {
+          "raw_nll": {
+            "mean": 2.602672806267737,
+            "sample_sd": 0.02996975076946727,
+            "minimum": 2.583678364299541,
+            "maximum": 2.637221860356852,
+            "n": 3
+          },
+          "projected_nll": {
+            "mean": 2.602672806267737,
+            "sample_sd": 0.02996975076946727,
+            "minimum": 2.583678364299541,
+            "maximum": 2.637221860356852,
+            "n": 3
+          },
+          "projection_effect": {
+            "mean": 0.0,
+            "sample_sd": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "n": 3
+          },
+          "raw_byte_perplexity": {
+            "mean": 13.503837172512567,
+            "sample_sd": 0.40809471632688665,
+            "minimum": 13.245771432132099,
+            "maximum": 13.974326998592314,
+            "n": 3
+          },
+          "projected_byte_perplexity": {
+            "mean": 13.503837172512567,
+            "sample_sd": 0.40809471632688665,
+            "minimum": 13.245771432132099,
+            "maximum": 13.974326998592314,
+            "n": 3
+          }
+        }
+      },
+      "paired_seeds": [
+        {
+          "seed": 20261114,
+          "no_position_minus_sinusoidal_projection_effect": 0.0
+        },
+        {
+          "seed": 20261115,
+          "no_position_minus_sinusoidal_projection_effect": 0.0
+        },
+        {
+          "seed": 20261116,
+          "no_position_minus_sinusoidal_projection_effect": 0.0
+        }
+      ],
+      "paired_effect_difference": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "n": 3
+      }
+    }
+  }
+}

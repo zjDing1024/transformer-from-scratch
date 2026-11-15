@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "sqlite-format-v1",
+  "base_commit": "d4f0a3e425cf7d9d56bada1cdd8a15d1b522f568",
+  "original_selection": "results/position-v1/selection.json",
+  "original_selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+  "corpus_manifest": "data/sqlite-transfer-manifest.json",
+  "corpus_manifest_sha256": "6484daf36110f7dcb4f68b85964952259aa73750b5c7ed63614e75e7a88eaf9d",
+  "train_manifest": "data/stability-manifest.json",
+  "protocol": "docs/format-control-protocol.md",
+  "context_bytes": 64,
+  "batch_size": 32,
+  "changed_cap_per_document": 256,
+  "identical_cap_per_document": 64,
+  "torch_version": "2.14.1+cpu",
+  "sampling": "Source-order equally spaced eligible indexes, endpoints included; separate changed/identical-history strata; no random or loss-based sample choice.",
+  "target_rule": "Literal source-aligned ASCII letters inside paragraph text, outside tcl/script/style/pre/code; transformed entity and synthesized bytes never targets.",
+  "projection": "Conservative HTML-like prose rendering: strip tags/comments and tcl/script/style/pre/code spans; decode character entities; collapse ASCII whitespace; insert block/drop-boundary spaces. Preserve SQLite bracket/caret macros. Not the official SQLite renderer.",
+  "intervention": "For the identical literal target byte, replace its immediately preceding 64 raw source bytes with immediately preceding 64 projected bytes. Same byte budget, not the same underlying source/prose span. Score only the final target, independently of prior block boundaries.",
+  "primary": "Projected minus raw mean next-byte NLL in sampled changed-history pairs; report per document, each seed/arm and paired seeds.",
+  "control": "Identical-history stratum: exact same targets and inputs must give equal scores.",
+  "no_tuning": "Original six selected checkpoint tensors fixed; all original artifacts immutable; no training/selection on SQLite; reconstruction is recovery only. No extraction or sample revisions after scoring. Descriptive n=3, no significance or population claims."
+}

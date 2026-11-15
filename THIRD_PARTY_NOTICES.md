@@ -37,3 +37,14 @@ No raw third-party documentation, generator scripts or checkpoint weights are
 published. Only metadata, original scoring code and derived metrics are included.
 HTML/Tcl-like template text is treated only as bytes, never executed. No paid
 warranty of title, proprietary SQLite extension or third-party model is used.
+
+## Equal-byte-history format control
+
+The optional format study reuses only the same pinned public-domain SQLite docs.
+Its original standard-library HTMLParser projection strips a documented subset of
+markup/templates without executing any document code. It is not the official
+SQLite generator or a complete browser rendering. Published pair metadata contains
+source offsets, individual target byte IDs and digests, not documentation bodies.
+The Python standard-library HTMLParser documentation/source is an API reference:
+https://docs.python.org/3.12/library/html.parser.html . Python uses the PSF license;
+no documentation example or parser implementation is copied into this project.

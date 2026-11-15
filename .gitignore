@@ -19,3 +19,7 @@ results/position-v1/training-progress.json
 results/position-rebuilt/
 results/sqlite-transfer-local/
 results/sqlite-transfer-replay/
+
+results/position-rebuilt-1116/
+results/sqlite-format-local/
+results/sqlite-format-replay/

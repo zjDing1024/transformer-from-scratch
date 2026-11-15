@@ -1,0 +1,35 @@
+{
+  "protocol_commit": "d4b67655fe2ea327ba404b2ea77d884bdeacdf20",
+  "implementation_commit": "90595540ad96b558384a063640682c741d819556",
+  "pair_freeze_commit": "a112b9e5906327fa5f20297bdf5edc064ebe4773",
+  "pairs_sha256": "4fe39fcf8a16b122f0f6f1fc9ec1acf4d9e397571983418dae348c7d104563b5",
+  "report_sha256": "6f01730b070370d10e749efce06593b0afaab9bfbc84760031f312bfbf436799",
+  "same_environment_scoring_replay_byte_identical": true,
+  "additional_independent_seeds_from_replay": 0,
+  "changed_target_count": 768,
+  "identical_target_count": 192,
+  "early_excluded": 50,
+  "history_length_each_condition_bytes": 64,
+  "negative_control_max_abs_difference": 0.0,
+  "checkpoint_origin": "rebuilt once; all six files and tensor identities exactly matched original selection",
+  "original_selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+  "environment": {
+    "python": "3.12.14",
+    "stdlib_html_parser_sha256": "a4c5558209ffe6d677dbe18e4a4b2d34672c73aee46e39b1d118846afa62a9ff",
+    "stdlib_html_entities_sha256": "d9c65fb2828dbc1f3e399058a341d51e9375ec5bca95a8e92599c41bd5b78bde"
+  },
+  "tests": {
+    "passed": 107,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": "passed",
+  "format": "passed",
+  "compileall": "passed",
+  "warning": "Optional NumPy absent; no NumPy operations used.",
+  "real_control_score_attempts": 1,
+  "score_replays": 1,
+  "post_score_tuning": 0,
+  "original_model_source_and_prior_data_selection_reports_unchanged_from_base": "d4f0a3e425cf7d9d56bada1cdd8a15d1b522f568"
+}
