@@ -48,3 +48,15 @@ source offsets, individual target byte IDs and digests, not documentation bodies
 The Python standard-library HTMLParser documentation/source is an API reference:
 https://docs.python.org/3.12/library/html.parser.html . Python uses the PSF license;
 no documentation example or parser implementation is copied into this project.
+
+## Bounded inference cache
+
+Hugging Face Transformers v4.57.1 official cache documentation is a conceptual
+reference for K/V reuse, cache positions and growing masks, not copied source:
+https://huggingface.co/docs/transformers/v4.57.1/cache_explanation . Its tag resolved
+to commit `a47e6666f8f9a61e44a5d149c5e3d230e6c8053c`; repository Apache-2.0 license:
+https://github.com/huggingface/transformers/blob/a47e6666f8f9a61e44a5d149c5e3d230e6c8053c/LICENSE .
+No Transformers dependency, code, documentation excerpt or external model weight
+is bundled. New caching implementation/tests are original MIT. Original Flask
+train/validation and license are downloaded only to restore the project's own
+previous checkpoint; no new corpus or private user data is used.

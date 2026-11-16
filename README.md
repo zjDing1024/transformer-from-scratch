@@ -4,6 +4,20 @@
 
 这是独立的机制实现项目。**尚未实现完整 encoder-decoder 训练，也没有复现论文的 WMT/BLEU 指标。** 历史小型合成实验保留；新增真实技术文本的99,968参数因果语言模型、固定文档划分、验证集选模、bigram基线及独立测试评分。不代表语言理解或个人技能已掌握。
 
+## 可审计 KV-cache 推理（2026-11-17，UTC+08:00）
+
+新增有界CPU推理会话：权重快照、prefill、单token/分块append、reset，以及可安装的
+`transformer-cached-generate` 命令。原模型与训练路径不改，不是重复SQLite评分。
+
+- 恢复一份原checkpoint，文件与tensor摘要均完全匹配；与完整前缀forward比较，
+  最大logit绝对差 **1.072884e-5**，通过预设 **atol=rtol=1e-5组合容差**，不是逐bit相同。
+- 两行各16步greedy字节完全一致，报告新进程重放逐字节一致；**163项CPU测试通过**。
+- 严格总上下文预算，不偷偷滑窗或重置位置；仅同长无padding批次、CPU float32/64。
+  未测试吞吐/延迟，不宣称提速或生产服务能力；生成仍重复、不连贯。
+
+[接口、运行命令、精确结果与边界](docs/cached-inference.md) ·
+[验证协议](docs/inference-protocol.md) · [逐chunk/逐步报告](results/inference-v1/report.json)。
+
 ## 同目标、等历史长度格式对照（2026-11-16，UTC+08:00）
 
 对同一批SQLite prose目标，分别输入紧邻的64字节raw或保守纯文本投影历史，只评分末位目标，
@@ -138,11 +152,11 @@ assert y.shape == x.shape
 
 ## 性能与取舍
 
-注意力的计算随 `L*S` 增长，保存权重需要 `O(B*H*L*S)` 内存。代码优先可读性和数值检查，不提供吞吐优势或生产性能结论。没有 FlashAttention、KV cache、变长批处理内核或分布式训练。
+注意力的计算随 `L*S` 增长，保存权重需要 `O(B*H*L*S)` 内存。代码优先可读性和数值检查，不提供吞吐优势或生产性能结论。新增基础KV cache仅验证有界推理正确性；没有 FlashAttention、变长批处理内核或分布式训练。
 
 ## 下一步
 
-1. 已完成causal decoder-only真实文本路径；下一步将训练/生成封装为installed入口并完善checkpoint恢复。
+1. 已完成causal decoder-only真实文本路径、可安装的有界缓存生成入口与单checkpoint精确恢复；训练入口封装仍待完成。
 2. 已完成冻结的三seed配对位置编码消融及新文档留出；后续另立协议/新评估集，不能将本次test回流调参。
 3. 再评估pre-norm/长上下文与fused SDPA；cross-attention翻译模型仍未实现。
 

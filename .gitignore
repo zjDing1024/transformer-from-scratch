@@ -23,3 +23,6 @@ results/sqlite-transfer-replay/
 results/position-rebuilt-1116/
 results/sqlite-format-local/
 results/sqlite-format-replay/
+
+results/inference-local/
+results/inference-replay/

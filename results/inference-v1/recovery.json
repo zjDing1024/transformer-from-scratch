@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "origin": "rebuilt from original train/validation recipe, not retained original file",
+  "selection_sha256": "4a12794b6df715539657cbb951a7a52c4423f7102a578eaf7ca52c7739da4b9b",
+  "manifest_sha256": "eca32c8bae2565a907eeb2e02f314d8efa112853c595e477da17fdb1dda033bc",
+  "checked_original_fields": [
+    "seed",
+    "arm",
+    "selected_step",
+    "validation_nll",
+    "steps",
+    "target_exposures",
+    "parameter_count",
+    "initial_state_sha256",
+    "sample_schedule_sha256",
+    "selected_state_sha256",
+    "checkpoint",
+    "checkpoint_sha256",
+    "max_preclip_gradient_norm",
+    "clipped_steps",
+    "finite_training_steps",
+    "curve"
+  ],
+  "mismatches": [],
+  "artifact_sha256_match": true,
+  "tensor_sha256_match": true,
+  "run": {
+    "seed": 20261114,
+    "arm": "sinusoidal",
+    "selected_step": 600,
+    "validation_nll": 2.4641404732875714,
+    "steps": 600,
+    "target_exposures": 614400,
+    "parameter_count": 99968,
+    "initial_state_sha256": "ffa08b72f33c50d4fd78096e3b24a259585e782055c31cf389ff9f62161849b4",
+    "sample_schedule_sha256": "8558c9d72d4a79d9387c25498b8ea77af97c4f2b21b5cc3143c9d72e9d64c95d",
+    "selected_state_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3",
+    "checkpoint": "20261114-sinusoidal.pt",
+    "checkpoint_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
+    "max_preclip_gradient_norm": 3.710296869277954,
+    "clipped_steps": 19,
+    "finite_training_steps": 600,
+    "curve": [
+      {
+        "step": 100,
+        "train_last_batch_nll": 2.7512104511260986,
+        "validation": {
+          "nll_sum": 16002.940200805664,
+          "tokens": 5926,
+          "nll": 2.700462403105917,
+          "perplexity": 14.88661375004991,
+          "bits_per_byte": 3.8959437170679996
+        }
+      },
+      {
+        "step": 200,
+        "train_last_batch_nll": 2.5041303634643555,
+        "validation": {
+          "nll_sum": 15390.303329467773,
+          "tokens": 5926,
+          "nll": 2.597081223332395,
+          "perplexity": 13.424497685333117,
+          "bits_per_byte": 3.7467962016874887
+        }
+      },
+      {
+        "step": 300,
+        "train_last_batch_nll": 2.473789691925049,
+        "validation": {
+          "nll_sum": 14961.281700134277,
+          "tokens": 5926,
+          "nll": 2.524684728338555,
+          "perplexity": 12.486957859012772,
+          "bits_per_byte": 3.642350137382133
+        }
+      },
+      {
+        "step": 400,
+        "train_last_batch_nll": 2.418919086456299,
+        "validation": {
+          "nll_sum": 14820.0844039917,
+          "tokens": 5926,
+          "nll": 2.5008579824488186,
+          "perplexity": 12.19295081196055,
+          "bits_per_byte": 3.607975409246489
+        }
+      },
+      {
+        "step": 500,
+        "train_last_batch_nll": 2.3183343410491943,
+        "validation": {
+          "nll_sum": 14802.838920593262,
+          "tokens": 5926,
+          "nll": 2.497947843502069,
+          "perplexity": 12.157519211372849,
+          "bits_per_byte": 3.6037769662197157
+        }
+      },
+      {
+        "step": 600,
+        "train_last_batch_nll": 2.3028764724731445,
+        "validation": {
+          "nll_sum": 14602.496444702148,
+          "tokens": 5926,
+          "nll": 2.4641404732875714,
+          "perplexity": 11.753375468943808,
+          "bits_per_byte": 3.5550032408657626
+        }
+      }
+    ],
+    "training_and_validation_seconds": 15.156123162999847
+  }
+}

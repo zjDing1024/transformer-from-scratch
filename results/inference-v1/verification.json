@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "tests": {
+    "tests": "163",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0"
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "compileall": "passed",
+  "report_sha256": "d3c74ffed1bab405781a3b2ca901441b30280841703b25347c9833645031b1ad",
+  "replay_byte_identical": true,
+  "original_checkpoint_artifact_and_tensor_match": true,
+  "installed_wheel": {
+    "no_network_build": true,
+    "no_dependency_install": true,
+    "outside_checkout": true,
+    "entrypoint": "transformer-cached-generate",
+    "output_matches_audited_greedy": true,
+    "wheel_sha256": "7092ddbad3788c5249786d4c256dd469c2387af5874567aa1fa7e5caff69861a"
+  },
+  "changed_preexisting_files": [
+    ".gitignore",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "pyproject.toml"
+  ],
+  "prior_scientific_artifacts_unchanged": true,
+  "test_warning": "optional NumPy unavailable; unused by this project",
+  "result_limit": "finite CPU correctness cases only; no performance or language-quality claim"
+}
