@@ -27,8 +27,8 @@ from transformer_core.inference import CachedByteDecoder, greedy_cached
 model = ByteLanguageModel().eval()  # random weights here, API example only
 session = CachedByteDecoder(model, max_context=64)
 first = session.prefill(torch.tensor([[84, 104, 101]]))  # [1,3,256]
-next_logits = session.append(torch.tensor([[32]]))       # [1,1,256]
-chunk = session.append(torch.tensor([[97, 112]]))        # [1,2,256]
+next_logits = session.append(torch.tensor([[32]]))  # [1,1,256]
+chunk = session.append(torch.tensor([[97, 112]]))  # [1,2,256]
 print(session.cache_info())  # shapes/length/KV tensor payload, no writable aliases
 session.reset()
 ids = greedy_cached(model, torch.tensor([[84, 104, 101]]), count=8, max_context=64)
