@@ -3,8 +3,8 @@
   "base_commit": "1d7a4d4f2e085c1f0abc447e3f063590f6c23c71",
   "checkpoint_seed": 20261114,
   "checkpoint_arm": "sinusoidal",
-  "checkpoint_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
-  "tensor_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3",
+  "checkpoint_sha256": "baec64d4ee594bc7062d039b3e3e75f58f6dda98cc00c569407e642706ff6601",
+  "tensor_sha256": "a66094c4eaa1d7cbd7cc7f96b1d854cc9488c16f210e761bded1018b6a31a5b1",
   "dtype": "float32",
   "max_context": 64,
   "torch_version": "2.14.1+cpu",
@@ -42,5 +42,9 @@
       ],
       "generated_per_row": 32
     }
-  ]
+  ],
+  "original_requested_checkpoint_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
+  "original_requested_tensor_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3",
+  "checkpoint_origin": "single already-rebuilt candidate; NOT original artifact or original tensor identity",
+  "original_identity_matched": false
 }

@@ -234,6 +234,7 @@ def main():
         environment=environment(),
         source_sha256={p: file_digest(ROOT / p) for p in sources},
         checkpoint_verified=True,
+        checkpoint_verification_scope="frozen amended candidate, NOT original identity",
         started_utc=datetime.now(timezone.utc).isoformat(),
         status="started; parity and timing incomplete",
     )

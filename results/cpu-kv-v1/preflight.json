@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "original identity failed; amended same-candidate A/B allowed before timing",
+  "prior_local_file_available": false,
+  "training_attempts": 1,
+  "additional_training_after_mismatch": 0,
+  "original": {
+    "artifact_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
+    "tensor_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3"
+  },
+  "candidate": {
+    "artifact_sha256": "baec64d4ee594bc7062d039b3e3e75f58f6dda98cc00c569407e642706ff6601",
+    "tensor_sha256": "a66094c4eaa1d7cbd7cc7f96b1d854cc9488c16f210e761bded1018b6a31a5b1"
+  },
+  "matching_initial_state_sha256": "ffa08b72f33c50d4fd78096e3b24a259585e782055c31cf389ff9f62161849b4",
+  "matching_sample_schedule_sha256": "8558c9d72d4a79d9387c25498b8ea77af97c4f2b21b5cc3143c9d72e9d64c95d",
+  "original_selected_step": 600,
+  "candidate_selected_step": 600,
+  "original_validation_nll": 2.4641404732875714,
+  "candidate_validation_nll": 2.4723024011020356,
+  "mismatch_fields": [
+    "validation_nll",
+    "selected_state_sha256",
+    "checkpoint_sha256",
+    "max_preclip_gradient_norm",
+    "clipped_steps",
+    "curve"
+  ],
+  "cause": "unestablished; do not infer a specific hardware or kernel cause",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "torch": "2.14.1+cpu",
+  "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+  "quality_evaluation": "none; no held-out or SQLite scores; no model ranking"
+}

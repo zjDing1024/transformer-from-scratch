@@ -10,9 +10,22 @@ training and scientific reports are unchanged. New benchmark code is original MI
 For this tiny CPU model and specified finite requests, what does the existing
 snapshot-owned cache path cost compared with full-prefix recomputation? This is
 not an attention-only benchmark or evidence of general speedup/production capacity.
-Use the exact restored original seed20261114/sinusoidal checkpoint; verify file
-and tensor identity against the original selection before measurement. Rebuilding
-it with the old recipe is recovery, not new model training evidence.
+The original-identity preflight FAILED before any benchmark timing. One attempt to
+rebuild seed20261114/sinusoidal with the unchanged600-step recipe had the same
+initial-state and sampling-schedule digests and selected step600, but different
+final weights/artifact and training trace. No retained original file was available.
+The cause is not established; do not attribute it to hardware or promise cross-host
+bitwise training reproducibility. Full expected/actual hashes and differences are
+preserved in the preflight/recovery-mismatch artifacts.
+
+AMENDMENT FROZEN BEFORE TIMING: use exactly that ONE already-built candidate for
+BOTH arms, with its own file/tensor hashes fixed in JSON. No second training run,
+ranking, quality testing, hyperparameter adjustment or outcome-based selection.
+This is same-weight engineering timing of a known DIFFERENT checkpoint, not a
+successful original-artifact reconstruction or a reproduction of yesterday's exact
+trained-model benchmark. Verify the amended candidate's two digests before timing.
+The provisional original-identity protocol and failed recovery are retained in
+local commit history; only this explicit amended protocol may proceed.
 
 Cases are fixed: batch1 and batch2 with16-byte prompts and16 emitted bytes, plus
 batch2 with32-byte prompts and32 emitted bytes. Prompt bytes are fixed in JSON;
