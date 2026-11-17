@@ -60,3 +60,15 @@ No Transformers dependency, code, documentation excerpt or external model weight
 is bundled. New caching implementation/tests are original MIT. Original Flask
 train/validation and license are downloaded only to restore the project's own
 previous checkpoint; no new corpus or private user data is used.
+
+## CPU benchmark reference
+
+PyTorch v2.9.1's official Timer source supplied concepts about warmup, thread
+control and repeated measurements, not copied code or a benchmark dependency:
+https://github.com/pytorch/pytorch/blob/v2.9.1/torch/utils/benchmark/utils/timer.py .
+Its BSD-style license: https://github.com/pytorch/pytorch/blob/v2.9.1/LICENSE .
+Reference version2.9.1 is distinct from the actual2.14.1+cpu runtime. The benchmark
+harness/auditor/tests are original MIT. Linux getrusage documentation is cited for
+process high-water RSS, units and exec semantics, without copying documentation:
+https://man7.org/linux/man-pages/man2/getrusage.2.html . No additional corpus,
+private data, external model or paid service is used by the benchmark.

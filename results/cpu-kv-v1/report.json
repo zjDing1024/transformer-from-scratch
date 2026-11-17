@@ -1,0 +1,2918 @@
+{
+  "schema_version": 1,
+  "config": {
+    "schema_version": 1,
+    "base_commit": "1d7a4d4f2e085c1f0abc447e3f063590f6c23c71",
+    "checkpoint_seed": 20261114,
+    "checkpoint_arm": "sinusoidal",
+    "checkpoint_sha256": "baec64d4ee594bc7062d039b3e3e75f58f6dda98cc00c569407e642706ff6601",
+    "tensor_sha256": "a66094c4eaa1d7cbd7cc7f96b1d854cc9488c16f210e761bded1018b6a31a5b1",
+    "dtype": "float32",
+    "max_context": 64,
+    "torch_version": "2.14.1+cpu",
+    "intraop_threads": 1,
+    "interop_threads": 1,
+    "warmup_pairs": 5,
+    "paired_repetitions": 30,
+    "requests_per_timed_sample": 5,
+    "constructor_warmups": 5,
+    "constructor_repetitions": 30,
+    "memory_workers_per_case_arm": 3,
+    "parity_atol": 1e-05,
+    "parity_rtol": 1e-05,
+    "cases": [
+      {
+        "id": "b1-p16-g16",
+        "prompt_hex": [
+          "546865206170706c69636174696f6e20"
+        ],
+        "generated_per_row": 16
+      },
+      {
+        "id": "b2-p16-g16",
+        "prompt_hex": [
+          "546865206170706c69636174696f6e20",
+          "4854545020726571756573743a202020"
+        ],
+        "generated_per_row": 16
+      },
+      {
+        "id": "b2-p32-g32",
+        "prompt_hex": [
+          "546865206170706c69636174696f6e20546865206170706c69636174696f6e20",
+          "4854545020726571756573743a2020204854545020726571756573743a202020"
+        ],
+        "generated_per_row": 32
+      }
+    ],
+    "original_requested_checkpoint_sha256": "adab1bc0d8fdf760ab2bf567d6d3ff6dccafaf8f4c0c7dff4aab866133a0a00b",
+    "original_requested_tensor_sha256": "28b7836441b6f150dc677b221a66d43959c7767c9e3ece4d46095efc0a3f6ff3",
+    "checkpoint_origin": "single already-rebuilt candidate; NOT original artifact or original tensor identity",
+    "original_identity_matched": false
+  },
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "cpu_count": 9,
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "intraop_threads": 1,
+    "interop_threads": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "gc_enabled": true,
+    "clock": {
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "resolution_seconds": 1e-09,
+      "monotonic": true
+    },
+    "shared_host": true,
+    "exclusive_hardware": false,
+    "cpu_frequency_controlled": false
+  },
+  "source_sha256": {
+    "src/transformer_core/benchmark.py": "6286e11bdfee4bc3bd7c330e939ff2e84fab0fe8ab895b4e346ad7279016b079",
+    "examples/benchmark_inference.py": "c96415475a839148f5e448a1bb2fc8d4a723a2311ef1b5ceb864bb0bc033e204",
+    "docs/cpu-kv-protocol.md": "a8324b45361d9ca06971c06dc5725f3666e292ef13f0bea4090e9b261435dd38",
+    "experiments/cpu-kv-v1.json": "3a2c02a499c7047df62714b20ffdbb63749387e1c052db7310e02a771cb56a61",
+    "src/transformer_core/inference.py": "3674a3e20e20e2059426bc808a264b8bfb71708b6146bd7b908967501035caa6",
+    "src/transformer_core/language_model.py": "baa4aeed5ea3af0fb4ff919c1f8af6a489666115906509c2894f04a6964d5542",
+    "src/transformer_core/inference_cli.py": "bf26d005ba1061e5da21ec127fa2529cbf0c2eb11193da4c7419b6677e4451ab",
+    "src/transformer_core/attention.py": "0d2900beccf004fe12ba70bab68c24ab8291cb85268efb8edf247328607a6358"
+  },
+  "checkpoint_verified": true,
+  "checkpoint_verification_scope": "frozen amended candidate, NOT original identity",
+  "started_utc": "2026-11-17T16:07:19.621331+00:00",
+  "status": "complete; descriptive shared-host timings only",
+  "new_session_constructor": {
+    "samples_ns": [
+      3390280,
+      2989275,
+      2835711,
+      3483796,
+      3604111,
+      4597060,
+      3428491,
+      4056732,
+      4348579,
+      3352747,
+      2924398,
+      2838882,
+      3065741,
+      4769055,
+      3091600,
+      2948789,
+      2787339,
+      2791109,
+      3775639,
+      3461459,
+      4169593,
+      3070381,
+      3870353,
+      3262096,
+      4388065,
+      3372901,
+      3552145,
+      3660260,
+      4242083,
+      3498734
+    ],
+    "summary_ns": {
+      "n": 30,
+      "median": 3444975.0,
+      "p90_nearest_rank": 4348579,
+      "minimum": 2787339,
+      "maximum": 4769055
+    },
+    "scope": "new-session validation/snapshot construction; NOT cold process or request"
+  },
+  "cases": [
+    {
+      "case_id": "b1-p16-g16",
+      "parity_before_and_after": {
+        "last_logits_max_absolute_error": 3.337860107421875e-06,
+        "per_step_max_abs": [
+          0.0,
+          2.86102294921875e-06,
+          1.430511474609375e-06,
+          1.9073486328125e-06,
+          2.384185791015625e-06,
+          2.86102294921875e-06,
+          2.86102294921875e-06,
+          1.9073486328125e-06,
+          2.86102294921875e-06,
+          2.86102294921875e-06,
+          2.86102294921875e-06,
+          3.337860107421875e-06,
+          1.9073486328125e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06
+        ],
+        "exact_output_ids": true,
+        "output_hex": [
+          "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074"
+        ],
+        "final_cache": {
+          "length": 31,
+          "batch": 1,
+          "max_context": 64,
+          "layers": [
+            {
+              "key": [
+                1,
+                4,
+                31,
+                16
+              ],
+              "value": [
+                1,
+                4,
+                31,
+                16
+              ]
+            },
+            {
+              "key": [
+                1,
+                4,
+                31,
+                16
+              ],
+              "value": [
+                1,
+                4,
+                31,
+                16
+              ]
+            }
+          ],
+          "kv_payload_bytes": 31744
+        },
+        "analytic_work": {
+          "forward_calls": 16,
+          "cached_prefill_calls": 1,
+          "cached_append_calls": 15,
+          "full_prefix_positions_per_row": 376,
+          "cached_positions_per_row": 31,
+          "full_dense_qk_entries_per_row_head_layer": 9176,
+          "cached_dense_qk_entries_per_row_head_layer": 616,
+          "final_cached_positions": 31,
+          "final_kv_payload_bytes": 31744,
+          "concatenation_output_payload_bytes": 368640,
+          "old_prefix_payload_copied_bytes": 353280
+        }
+      },
+      "warm_prefill": {
+        "samples": [
+          {
+            "index": 0,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1403332.0,
+              "cached": 1367070.8
+            }
+          },
+          {
+            "index": 1,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1678115.4,
+              "full_prefix": 1548020.6
+            }
+          },
+          {
+            "index": 2,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1144937.2,
+              "cached": 1374092.4
+            }
+          },
+          {
+            "index": 3,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1149281.2,
+              "full_prefix": 1382897.4
+            }
+          },
+          {
+            "index": 4,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1524049.8,
+              "cached": 2046736.4
+            }
+          },
+          {
+            "index": 5,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1457701.6,
+              "full_prefix": 1530723.4
+            }
+          },
+          {
+            "index": 6,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1395361.2,
+              "cached": 1664580.6
+            }
+          },
+          {
+            "index": 7,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1854312.8,
+              "full_prefix": 2577586.4
+            }
+          },
+          {
+            "index": 8,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1590412.6,
+              "cached": 1664571.8
+            }
+          },
+          {
+            "index": 9,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1315314.6,
+              "full_prefix": 2211143.6
+            }
+          },
+          {
+            "index": 10,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1956078.8,
+              "cached": 2498487.8
+            }
+          },
+          {
+            "index": 11,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 2418097.8,
+              "full_prefix": 1610492.8
+            }
+          },
+          {
+            "index": 12,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1392393.6,
+              "cached": 1603271.4
+            }
+          },
+          {
+            "index": 13,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1667499.6,
+              "full_prefix": 1438018.2
+            }
+          },
+          {
+            "index": 14,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1449933.8,
+              "cached": 1417413.0
+            }
+          },
+          {
+            "index": 15,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1450436.6,
+              "full_prefix": 2269237.0
+            }
+          },
+          {
+            "index": 16,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1874702.0,
+              "cached": 1434382.2
+            }
+          },
+          {
+            "index": 17,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1710553.6,
+              "full_prefix": 1399384.6
+            }
+          },
+          {
+            "index": 18,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1635772.6,
+              "cached": 1395852.0
+            }
+          },
+          {
+            "index": 19,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1247201.2,
+              "full_prefix": 1662196.8
+            }
+          },
+          {
+            "index": 20,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1525455.0,
+              "cached": 1443547.0
+            }
+          },
+          {
+            "index": 21,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1374313.2,
+              "full_prefix": 1785140.0
+            }
+          },
+          {
+            "index": 22,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2825874.4,
+              "cached": 1634948.4
+            }
+          },
+          {
+            "index": 23,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1708866.4,
+              "full_prefix": 1581299.0
+            }
+          },
+          {
+            "index": 24,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1650175.4,
+              "cached": 1553471.6
+            }
+          },
+          {
+            "index": 25,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1228544.6,
+              "full_prefix": 1580360.6
+            }
+          },
+          {
+            "index": 26,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1152772.6,
+              "cached": 1679510.6
+            }
+          },
+          {
+            "index": 27,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1452082.4,
+              "full_prefix": 1505713.2
+            }
+          },
+          {
+            "index": 28,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1454637.0,
+              "cached": 1976764.4
+            }
+          },
+          {
+            "index": 29,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1461456.6,
+              "full_prefix": 1454193.8
+            }
+          }
+        ],
+        "summary_ns": {
+          "full_prefix": {
+            "n": 30,
+            "median": 1539372.0,
+            "p90_nearest_rank": 2211143.6,
+            "minimum": 1144937.2,
+            "maximum": 2825874.4
+          },
+          "cached": {
+            "n": 30,
+            "median": 1507464.1,
+            "p90_nearest_rank": 1976764.4,
+            "minimum": 1149281.2,
+            "maximum": 2498487.8
+          }
+        },
+        "paired_cached_over_full_ratio": {
+          "n": 30,
+          "median": 0.9758657392971926,
+          "p90_nearest_rank": 1.3429590030457008,
+          "minimum": 0.5785637181893151,
+          "maximum": 1.5014645206734236
+        },
+        "measurement": "each sample is a batch mean, not an individual-request percentile"
+      },
+      "warm_request": {
+        "samples": [
+          {
+            "index": 0,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 24010872.2,
+              "cached": 19876713.0
+            }
+          },
+          {
+            "index": 1,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 19614342.8,
+              "full_prefix": 29776151.8
+            }
+          },
+          {
+            "index": 2,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 27516613.8,
+              "cached": 20751800.8
+            }
+          },
+          {
+            "index": 3,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 23125022.4,
+              "full_prefix": 30165621.0
+            }
+          },
+          {
+            "index": 4,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 23617139.0,
+              "cached": 20110050.0
+            }
+          },
+          {
+            "index": 5,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 18015439.8,
+              "full_prefix": 22821426.6
+            }
+          },
+          {
+            "index": 6,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 25982748.8,
+              "cached": 18349476.6
+            }
+          },
+          {
+            "index": 7,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 19807936.0,
+              "full_prefix": 27829229.6
+            }
+          },
+          {
+            "index": 8,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 36070081.4,
+              "cached": 35135248.0
+            }
+          },
+          {
+            "index": 9,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 22051985.6,
+              "full_prefix": 42693854.2
+            }
+          },
+          {
+            "index": 10,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 58481186.8,
+              "cached": 48311112.8
+            }
+          },
+          {
+            "index": 11,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 20609440.6,
+              "full_prefix": 28961182.0
+            }
+          },
+          {
+            "index": 12,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 31330006.4,
+              "cached": 19019193.4
+            }
+          },
+          {
+            "index": 13,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 18200202.2,
+              "full_prefix": 24956060.4
+            }
+          },
+          {
+            "index": 14,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 25450657.8,
+              "cached": 20157961.4
+            }
+          },
+          {
+            "index": 15,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17463440.2,
+              "full_prefix": 27991198.8
+            }
+          },
+          {
+            "index": 16,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 25861458.8,
+              "cached": 27406145.2
+            }
+          },
+          {
+            "index": 17,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 22538181.2,
+              "full_prefix": 24156054.2
+            }
+          },
+          {
+            "index": 18,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 26693359.0,
+              "cached": 36401974.0
+            }
+          },
+          {
+            "index": 19,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17854700.6,
+              "full_prefix": 24583959.2
+            }
+          },
+          {
+            "index": 20,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 22188742.8,
+              "cached": 21772728.4
+            }
+          },
+          {
+            "index": 21,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 21726113.2,
+              "full_prefix": 28147651.0
+            }
+          },
+          {
+            "index": 22,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 25987653.6,
+              "cached": 19202184.8
+            }
+          },
+          {
+            "index": 23,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17714288.2,
+              "full_prefix": 22832405.6
+            }
+          },
+          {
+            "index": 24,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 24070617.0,
+              "cached": 17932522.6
+            }
+          },
+          {
+            "index": 25,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 18794231.0,
+              "full_prefix": 23760003.0
+            }
+          },
+          {
+            "index": 26,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 27531960.4,
+              "cached": 21011551.2
+            }
+          },
+          {
+            "index": 27,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17331810.2,
+              "full_prefix": 31157048.8
+            }
+          },
+          {
+            "index": 28,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 27512974.2,
+              "cached": 16170456.8
+            }
+          },
+          {
+            "index": 29,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17924490.8,
+              "full_prefix": 28666194.4
+            }
+          }
+        ],
+        "summary_ns": {
+          "full_prefix": {
+            "n": 30,
+            "median": 27103166.6,
+            "p90_nearest_rank": 31330006.4,
+            "minimum": 22188742.8,
+            "maximum": 58481186.8
+          },
+          "cached": {
+            "n": 30,
+            "median": 19842324.5,
+            "p90_nearest_rank": 27406145.2,
+            "minimum": 16170456.8,
+            "maximum": 48311112.8
+          }
+        },
+        "paired_cached_over_full_ratio": {
+          "n": 30,
+          "median": 0.7586623893316671,
+          "p90_nearest_rank": 0.9740828585987056,
+          "minimum": 0.5165142855619721,
+          "maximum": 1.3637090034266575
+        },
+        "measurement": "each sample is a batch mean, not an individual-request percentile"
+      }
+    },
+    {
+      "case_id": "b2-p16-g16",
+      "parity_before_and_after": {
+        "last_logits_max_absolute_error": 3.337860107421875e-06,
+        "per_step_max_abs": [
+          0.0,
+          3.337860107421875e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          2.86102294921875e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          3.337860107421875e-06,
+          2.384185791015625e-06,
+          2.86102294921875e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06
+        ],
+        "exact_output_ids": true,
+        "output_hex": [
+          "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074",
+          "4854545020726571756573743a20202060606060606060606060606060606060"
+        ],
+        "final_cache": {
+          "length": 31,
+          "batch": 2,
+          "max_context": 64,
+          "layers": [
+            {
+              "key": [
+                2,
+                4,
+                31,
+                16
+              ],
+              "value": [
+                2,
+                4,
+                31,
+                16
+              ]
+            },
+            {
+              "key": [
+                2,
+                4,
+                31,
+                16
+              ],
+              "value": [
+                2,
+                4,
+                31,
+                16
+              ]
+            }
+          ],
+          "kv_payload_bytes": 63488
+        },
+        "analytic_work": {
+          "forward_calls": 16,
+          "cached_prefill_calls": 1,
+          "cached_append_calls": 15,
+          "full_prefix_positions_per_row": 376,
+          "cached_positions_per_row": 31,
+          "full_dense_qk_entries_per_row_head_layer": 9176,
+          "cached_dense_qk_entries_per_row_head_layer": 616,
+          "final_cached_positions": 31,
+          "final_kv_payload_bytes": 63488,
+          "concatenation_output_payload_bytes": 737280,
+          "old_prefix_payload_copied_bytes": 706560
+        }
+      },
+      "warm_prefill": {
+        "samples": [
+          {
+            "index": 0,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1148841.4,
+              "cached": 1526109.2
+            }
+          },
+          {
+            "index": 1,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1622070.8,
+              "full_prefix": 1922338.2
+            }
+          },
+          {
+            "index": 2,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1830648.6,
+              "cached": 1786395.4
+            }
+          },
+          {
+            "index": 3,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 2557952.6,
+              "full_prefix": 1827610.0
+            }
+          },
+          {
+            "index": 4,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1772021.4,
+              "cached": 1342822.2
+            }
+          },
+          {
+            "index": 5,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1294816.0,
+              "full_prefix": 1205535.6
+            }
+          },
+          {
+            "index": 6,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1253411.0,
+              "cached": 1382538.2
+            }
+          },
+          {
+            "index": 7,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1304366.0,
+              "full_prefix": 1544589.0
+            }
+          },
+          {
+            "index": 8,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1775347.0,
+              "cached": 2091571.4
+            }
+          },
+          {
+            "index": 9,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1629702.0,
+              "full_prefix": 1639606.6
+            }
+          },
+          {
+            "index": 10,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1815931.4,
+              "cached": 2229351.0
+            }
+          },
+          {
+            "index": 11,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 2082525.8,
+              "full_prefix": 1185197.4
+            }
+          },
+          {
+            "index": 12,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1179923.4,
+              "cached": 1296986.2
+            }
+          },
+          {
+            "index": 13,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1386539.2,
+              "full_prefix": 1159021.6
+            }
+          },
+          {
+            "index": 14,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1419409.6,
+              "cached": 1531597.2
+            }
+          },
+          {
+            "index": 15,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1407531.6,
+              "full_prefix": 1593586.8
+            }
+          },
+          {
+            "index": 16,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1811962.2,
+              "cached": 1802553.8
+            }
+          },
+          {
+            "index": 17,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1781089.4,
+              "full_prefix": 1709494.4
+            }
+          },
+          {
+            "index": 18,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1723446.8,
+              "cached": 1539638.4
+            }
+          },
+          {
+            "index": 19,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 2523480.8,
+              "full_prefix": 1189179.8
+            }
+          },
+          {
+            "index": 20,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1822654.0,
+              "cached": 1709049.6
+            }
+          },
+          {
+            "index": 21,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1672802.6,
+              "full_prefix": 1986687.2
+            }
+          },
+          {
+            "index": 22,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1796687.0,
+              "cached": 1732277.8
+            }
+          },
+          {
+            "index": 23,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1464902.4,
+              "full_prefix": 1435535.8
+            }
+          },
+          {
+            "index": 24,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1235403.8,
+              "cached": 1367902.8
+            }
+          },
+          {
+            "index": 25,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1216120.4,
+              "full_prefix": 1161523.2
+            }
+          },
+          {
+            "index": 26,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1265312.2,
+              "cached": 1368396.2
+            }
+          },
+          {
+            "index": 27,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1660026.6,
+              "full_prefix": 1581344.6
+            }
+          },
+          {
+            "index": 28,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1330469.0,
+              "cached": 1511150.6
+            }
+          },
+          {
+            "index": 29,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1553257.6,
+              "full_prefix": 1510448.6
+            }
+          }
+        ],
+        "summary_ns": {
+          "full_prefix": {
+            "n": 30,
+            "median": 1562966.8,
+            "p90_nearest_rank": 1827610.0,
+            "minimum": 1148841.4,
+            "maximum": 1986687.2
+          },
+          "cached": {
+            "n": 30,
+            "median": 1546448.0,
+            "p90_nearest_rank": 2091571.4,
+            "minimum": 1216120.4,
+            "maximum": 2557952.6
+          }
+        },
+        "paired_cached_over_full_ratio": {
+          "n": 30,
+          "median": 1.0483806101895878,
+          "p90_nearest_rank": 1.3283898021084548,
+          "minimum": 0.7577911869461622,
+          "maximum": 2.122034699883062
+        },
+        "measurement": "each sample is a batch mean, not an individual-request percentile"
+      },
+      "warm_request": {
+        "samples": [
+          {
+            "index": 0,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 28205186.6,
+              "cached": 17661194.8
+            }
+          },
+          {
+            "index": 1,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17266768.8,
+              "full_prefix": 29755201.8
+            }
+          },
+          {
+            "index": 2,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 26308554.8,
+              "cached": 20200719.4
+            }
+          },
+          {
+            "index": 3,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17213433.8,
+              "full_prefix": 27413689.8
+            }
+          },
+          {
+            "index": 4,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 26271352.6,
+              "cached": 23197937.2
+            }
+          },
+          {
+            "index": 5,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 19522226.8,
+              "full_prefix": 29859892.8
+            }
+          },
+          {
+            "index": 6,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 26234759.6,
+              "cached": 18564617.6
+            }
+          },
+          {
+            "index": 7,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17474431.6,
+              "full_prefix": 25399939.6
+            }
+          },
+          {
+            "index": 8,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 26910980.8,
+              "cached": 17510759.2
+            }
+          },
+          {
+            "index": 9,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 20180172.4,
+              "full_prefix": 24603594.6
+            }
+          },
+          {
+            "index": 10,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 27435278.2,
+              "cached": 17607204.8
+            }
+          },
+          {
+            "index": 11,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 19259595.2,
+              "full_prefix": 25116143.0
+            }
+          },
+          {
+            "index": 12,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 27285828.6,
+              "cached": 16366703.2
+            }
+          },
+          {
+            "index": 13,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17172719.4,
+              "full_prefix": 29085853.8
+            }
+          },
+          {
+            "index": 14,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 24681171.6,
+              "cached": 19171550.2
+            }
+          },
+          {
+            "index": 15,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 18311648.8,
+              "full_prefix": 27059090.0
+            }
+          },
+          {
+            "index": 16,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 26299818.0,
+              "cached": 22417985.4
+            }
+          },
+          {
+            "index": 17,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 20019532.2,
+              "full_prefix": 38084060.0
+            }
+          },
+          {
+            "index": 18,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 28484694.4,
+              "cached": 21544239.0
+            }
+          },
+          {
+            "index": 19,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 22836908.2,
+              "full_prefix": 31479779.4
+            }
+          },
+          {
+            "index": 20,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 31693522.2,
+              "cached": 21085544.4
+            }
+          },
+          {
+            "index": 21,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 20385451.0,
+              "full_prefix": 36635817.4
+            }
+          },
+          {
+            "index": 22,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 32003831.2,
+              "cached": 21896160.6
+            }
+          },
+          {
+            "index": 23,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 23239438.2,
+              "full_prefix": 27789287.0
+            }
+          },
+          {
+            "index": 24,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 50456004.6,
+              "cached": 30477142.0
+            }
+          },
+          {
+            "index": 25,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 41164719.4,
+              "full_prefix": 58196916.0
+            }
+          },
+          {
+            "index": 26,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 58589996.4,
+              "cached": 25647323.4
+            }
+          },
+          {
+            "index": 27,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 23535777.0,
+              "full_prefix": 33811371.8
+            }
+          },
+          {
+            "index": 28,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 36076786.6,
+              "cached": 19140808.8
+            }
+          },
+          {
+            "index": 29,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 17249900.6,
+              "full_prefix": 26717379.8
+            }
+          }
+        ],
+        "summary_ns": {
+          "full_prefix": {
+            "n": 30,
+            "median": 27997236.8,
+            "p90_nearest_rank": 38084060.0,
+            "minimum": 24603594.6,
+            "maximum": 58589996.4
+          },
+          "cached": {
+            "n": 30,
+            "median": 19770879.5,
+            "p90_nearest_rank": 23535777.0,
+            "minimum": 16366703.2,
+            "maximum": 41164719.4
+          }
+        },
+        "paired_cached_over_full_ratio": {
+          "n": 30,
+          "median": 0.6710116315242511,
+          "p90_nearest_rank": 0.8202123603516047,
+          "minimum": 0.4377423617660437,
+          "maximum": 0.8830126698539305
+        },
+        "measurement": "each sample is a batch mean, not an individual-request percentile"
+      }
+    },
+    {
+      "case_id": "b2-p32-g32",
+      "parity_before_and_after": {
+        "last_logits_max_absolute_error": 3.337860107421875e-06,
+        "per_step_max_abs": [
+          0.0,
+          1.9073486328125e-06,
+          1.9073486328125e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          3.337860107421875e-06,
+          2.384185791015625e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          3.337860107421875e-06,
+          2.86102294921875e-06,
+          3.337860107421875e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          3.337860107421875e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.86102294921875e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06,
+          3.337860107421875e-06,
+          2.384185791015625e-06,
+          2.384185791015625e-06
+        ],
+        "exact_output_ids": true,
+        "output_hex": [
+          "546865206170706c69636174696f6e20546865206170706c69636174696f6e20696f6e206174696f6e2074696e2074696e2074696e2074696e2074696e207469",
+          "4854545020726571756573743a2020204854545020726571756573743a202020607e666c61736b2e756573746865737468657374686520617374686520617374"
+        ],
+        "final_cache": {
+          "length": 63,
+          "batch": 2,
+          "max_context": 64,
+          "layers": [
+            {
+              "key": [
+                2,
+                4,
+                63,
+                16
+              ],
+              "value": [
+                2,
+                4,
+                63,
+                16
+              ]
+            },
+            {
+              "key": [
+                2,
+                4,
+                63,
+                16
+              ],
+              "value": [
+                2,
+                4,
+                63,
+                16
+              ]
+            }
+          ],
+          "kv_payload_bytes": 129024
+        },
+        "analytic_work": {
+          "forward_calls": 32,
+          "cached_prefill_calls": 1,
+          "cached_append_calls": 31,
+          "full_prefix_positions_per_row": 1520,
+          "cached_positions_per_row": 63,
+          "full_dense_qk_entries_per_row_head_layer": 74928,
+          "cached_dense_qk_entries_per_row_head_layer": 2512,
+          "final_cached_positions": 63,
+          "final_kv_payload_bytes": 129024,
+          "concatenation_output_payload_bytes": 3047424,
+          "old_prefix_payload_copied_bytes": 2983936
+        }
+      },
+      "warm_prefill": {
+        "samples": [
+          {
+            "index": 0,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2588538.0,
+              "cached": 3665538.4
+            }
+          },
+          {
+            "index": 1,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1847803.6,
+              "full_prefix": 2637336.6
+            }
+          },
+          {
+            "index": 2,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 3252730.8,
+              "cached": 4381383.8
+            }
+          },
+          {
+            "index": 3,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1833368.4,
+              "full_prefix": 3442469.2
+            }
+          },
+          {
+            "index": 4,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2598842.6,
+              "cached": 1710391.4
+            }
+          },
+          {
+            "index": 5,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1646513.0,
+              "full_prefix": 1681684.6
+            }
+          },
+          {
+            "index": 6,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1524520.6,
+              "cached": 1742015.8
+            }
+          },
+          {
+            "index": 7,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1630269.4,
+              "full_prefix": 1699959.2
+            }
+          },
+          {
+            "index": 8,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2627406.2,
+              "cached": 8134106.8
+            }
+          },
+          {
+            "index": 9,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1446944.2,
+              "full_prefix": 1422409.8
+            }
+          },
+          {
+            "index": 10,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1548293.8,
+              "cached": 2734212.2
+            }
+          },
+          {
+            "index": 11,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1824358.4,
+              "full_prefix": 2072573.6
+            }
+          },
+          {
+            "index": 12,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2141520.2,
+              "cached": 2838435.4
+            }
+          },
+          {
+            "index": 13,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 2530674.0,
+              "full_prefix": 1640593.4
+            }
+          },
+          {
+            "index": 14,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2265515.6,
+              "cached": 1740364.0
+            }
+          },
+          {
+            "index": 15,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1917198.6,
+              "full_prefix": 3157905.4
+            }
+          },
+          {
+            "index": 16,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2667429.0,
+              "cached": 6088943.0
+            }
+          },
+          {
+            "index": 17,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 2025367.2,
+              "full_prefix": 1637083.0
+            }
+          },
+          {
+            "index": 18,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2020954.2,
+              "cached": 1909512.0
+            }
+          },
+          {
+            "index": 19,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 2135837.0,
+              "full_prefix": 1678044.8
+            }
+          },
+          {
+            "index": 20,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2290847.8,
+              "cached": 3224275.0
+            }
+          },
+          {
+            "index": 21,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 3364165.8,
+              "full_prefix": 2278759.8
+            }
+          },
+          {
+            "index": 22,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 1854688.6,
+              "cached": 3277355.2
+            }
+          },
+          {
+            "index": 23,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 2495354.6,
+              "full_prefix": 3554147.8
+            }
+          },
+          {
+            "index": 24,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 4294553.2,
+              "cached": 6581419.2
+            }
+          },
+          {
+            "index": 25,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 3009342.0,
+              "full_prefix": 4404519.2
+            }
+          },
+          {
+            "index": 26,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2351360.2,
+              "cached": 4578672.0
+            }
+          },
+          {
+            "index": 27,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 3124469.6,
+              "full_prefix": 2026890.8
+            }
+          },
+          {
+            "index": 28,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 2139308.4,
+              "cached": 2771472.2
+            }
+          },
+          {
+            "index": 29,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 1933088.2,
+              "full_prefix": 2741765.6
+            }
+          }
+        ],
+        "summary_ns": {
+          "full_prefix": {
+            "n": 30,
+            "median": 2272137.7,
+            "p90_nearest_rank": 3442469.2,
+            "minimum": 1422409.8,
+            "maximum": 4404519.2
+          },
+          "cached": {
+            "n": 30,
+            "median": 2513014.3,
+            "p90_nearest_rank": 4578672.0,
+            "minimum": 1446944.2,
+            "maximum": 8134106.8
+          }
+        },
+        "paired_cached_over_full_ratio": {
+          "n": 30,
+          "median": 1.2549966905214975,
+          "p90_nearest_rank": 1.7670649401737843,
+          "minimum": 0.532573653818021,
+          "maximum": 3.095869530946528
+        },
+        "measurement": "each sample is a batch mean, not an individual-request percentile"
+      },
+      "warm_request": {
+        "samples": [
+          {
+            "index": 0,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 94280525.8,
+              "cached": 40870414.0
+            }
+          },
+          {
+            "index": 1,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 46083966.6,
+              "full_prefix": 82301504.8
+            }
+          },
+          {
+            "index": 2,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 78513035.4,
+              "cached": 34980563.2
+            }
+          },
+          {
+            "index": 3,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 44843926.4,
+              "full_prefix": 73336155.0
+            }
+          },
+          {
+            "index": 4,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 73657947.8,
+              "cached": 41971364.4
+            }
+          },
+          {
+            "index": 5,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 40980919.0,
+              "full_prefix": 67085590.2
+            }
+          },
+          {
+            "index": 6,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 71247785.0,
+              "cached": 35185556.4
+            }
+          },
+          {
+            "index": 7,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 32981257.2,
+              "full_prefix": 74926626.2
+            }
+          },
+          {
+            "index": 8,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 86957242.2,
+              "cached": 40289005.8
+            }
+          },
+          {
+            "index": 9,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 39244810.2,
+              "full_prefix": 98409789.8
+            }
+          },
+          {
+            "index": 10,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 124365153.0,
+              "cached": 64975156.0
+            }
+          },
+          {
+            "index": 11,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 46007289.4,
+              "full_prefix": 91116135.0
+            }
+          },
+          {
+            "index": 12,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 81281724.0,
+              "cached": 34976961.8
+            }
+          },
+          {
+            "index": 13,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 38691859.2,
+              "full_prefix": 73532021.6
+            }
+          },
+          {
+            "index": 14,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 79962378.4,
+              "cached": 49146894.0
+            }
+          },
+          {
+            "index": 15,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 57318123.8,
+              "full_prefix": 199250165.4
+            }
+          },
+          {
+            "index": 16,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 131742326.0,
+              "cached": 40942023.4
+            }
+          },
+          {
+            "index": 17,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 40899274.4,
+              "full_prefix": 83490745.6
+            }
+          },
+          {
+            "index": 18,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 68403615.6,
+              "cached": 35114439.8
+            }
+          },
+          {
+            "index": 19,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 35881432.2,
+              "full_prefix": 67783142.8
+            }
+          },
+          {
+            "index": 20,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 68220494.0,
+              "cached": 34874590.8
+            }
+          },
+          {
+            "index": 21,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 36118915.8,
+              "full_prefix": 79331179.8
+            }
+          },
+          {
+            "index": 22,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 80399888.8,
+              "cached": 47576457.4
+            }
+          },
+          {
+            "index": 23,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 44757241.4,
+              "full_prefix": 73061063.2
+            }
+          },
+          {
+            "index": 24,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 69770133.8,
+              "cached": 35817699.2
+            }
+          },
+          {
+            "index": 25,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 42443533.0,
+              "full_prefix": 80856403.0
+            }
+          },
+          {
+            "index": 26,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 97482051.8,
+              "cached": 42242533.2
+            }
+          },
+          {
+            "index": 27,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 44204378.6,
+              "full_prefix": 86402813.4
+            }
+          },
+          {
+            "index": 28,
+            "order": [
+              "full_prefix",
+              "cached"
+            ],
+            "ns_per_call": {
+              "full_prefix": 143803150.8,
+              "cached": 84940098.0
+            }
+          },
+          {
+            "index": 29,
+            "order": [
+              "cached",
+              "full_prefix"
+            ],
+            "ns_per_call": {
+              "cached": 88218962.2,
+              "full_prefix": 93341515.6
+            }
+          }
+        ],
+        "summary_ns": {
+          "full_prefix": {
+            "n": 30,
+            "median": 80628145.9,
+            "p90_nearest_rank": 124365153.0,
+            "minimum": 67085590.2,
+            "maximum": 199250165.4
+          },
+          "cached": {
+            "n": 30,
+            "median": 40961471.2,
+            "p90_nearest_rank": 57318123.8,
+            "minimum": 32981257.2,
+            "maximum": 88218962.2
+          }
+        },
+        "paired_cached_over_full_ratio": {
+          "n": 30,
+          "median": 0.5124749804646229,
+          "p90_nearest_rank": 0.6114845590145815,
+          "minimum": 0.28766914037402347,
+          "maximum": 0.9451203104312997
+        },
+        "measurement": "each sample is a batch mean, not an individual-request percentile"
+      }
+    }
+  ],
+  "timings_finished_utc": "2026-11-17T16:07:59.207640+00:00",
+  "memory_workers": [
+    {
+      "arm": "full_prefix",
+      "case_id": "b1-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 0,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b1-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074"
+      ],
+      "kv_payload_bytes": 31744,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 0,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b1-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074"
+      ],
+      "kv_payload_bytes": 31744,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 1,
+      "order": [
+        "cached",
+        "full_prefix"
+      ]
+    },
+    {
+      "arm": "full_prefix",
+      "case_id": "b1-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 1,
+      "order": [
+        "cached",
+        "full_prefix"
+      ]
+    },
+    {
+      "arm": "full_prefix",
+      "case_id": "b1-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 2,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b1-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074"
+      ],
+      "kv_payload_bytes": 31744,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 2,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "full_prefix",
+      "case_id": "b2-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074",
+        "4854545020726571756573743a20202060606060606060606060606060606060"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 0,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b2-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074",
+        "4854545020726571756573743a20202060606060606060606060606060606060"
+      ],
+      "kv_payload_bytes": 63488,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 0,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b2-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074",
+        "4854545020726571756573743a20202060606060606060606060606060606060"
+      ],
+      "kv_payload_bytes": 63488,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 1,
+      "order": [
+        "cached",
+        "full_prefix"
+      ]
+    },
+    {
+      "arm": "full_prefix",
+      "case_id": "b2-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074",
+        "4854545020726571756573743a20202060606060606060606060606060606060"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 1,
+      "order": [
+        "cached",
+        "full_prefix"
+      ]
+    },
+    {
+      "arm": "full_prefix",
+      "case_id": "b2-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074",
+        "4854545020726571756573743a20202060606060606060606060606060606060"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 2,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b2-p16-g16",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e2074696f6e2074696f6e2074696f6e2074",
+        "4854545020726571756573743a20202060606060606060606060606060606060"
+      ],
+      "kv_payload_bytes": 63488,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 2,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "full_prefix",
+      "case_id": "b2-p32-g32",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e20696f6e206174696f6e2074696e2074696e2074696e2074696e2074696e207469",
+        "4854545020726571756573743a2020204854545020726571756573743a202020607e666c61736b2e756573746865737468657374686520617374686520617374"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 0,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b2-p32-g32",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e20696f6e206174696f6e2074696e2074696e2074696e2074696e2074696e207469",
+        "4854545020726571756573743a2020204854545020726571756573743a202020607e666c61736b2e756573746865737468657374686520617374686520617374"
+      ],
+      "kv_payload_bytes": 129024,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 0,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b2-p32-g32",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e20696f6e206174696f6e2074696e2074696e2074696e2074696e2074696e207469",
+        "4854545020726571756573743a2020204854545020726571756573743a202020607e666c61736b2e756573746865737468657374686520617374686520617374"
+      ],
+      "kv_payload_bytes": 129024,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 1,
+      "order": [
+        "cached",
+        "full_prefix"
+      ]
+    },
+    {
+      "arm": "full_prefix",
+      "case_id": "b2-p32-g32",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e20696f6e206174696f6e2074696e2074696e2074696e2074696e2074696e207469",
+        "4854545020726571756573743a2020204854545020726571756573743a202020607e666c61736b2e756573746865737468657374686520617374686520617374"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 1,
+      "order": [
+        "cached",
+        "full_prefix"
+      ]
+    },
+    {
+      "arm": "full_prefix",
+      "case_id": "b2-p32-g32",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e20696f6e206174696f6e2074696e2074696e2074696e2074696e2074696e207469",
+        "4854545020726571756573743a2020204854545020726571756573743a202020607e666c61736b2e756573746865737468657374686520617374686520617374"
+      ],
+      "kv_payload_bytes": 0,
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "repeat": 2,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    },
+    {
+      "arm": "cached",
+      "case_id": "b2-p32-g32",
+      "peak_rss_kib": {
+        "after_model_load": 294548,
+        "after_session_setup": 294548,
+        "after_request": 294548
+      },
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e20696f6e206174696f6e2074696e2074696e2074696e2074696e2074696e207469",
+        "4854545020726571756573743a2020204854545020726571756573743a202020607e666c61736b2e756573746865737468657374686520617374686520617374"
+      ],
+      "kv_payload_bytes": 129024,
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "repeat": 2,
+      "order": [
+        "full_prefix",
+        "cached"
+      ]
+    }
+  ],
+  "finished_utc": "2026-11-17T16:09:17.850728+00:00"
+}

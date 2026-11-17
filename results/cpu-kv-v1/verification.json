@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "base_commit": "1d7a4d4f2e085c1f0abc447e3f063590f6c23c71",
+  "protocol_freeze_local_commit": "d83491b3dc8ef1865d6463638f51d4f57646dbb1",
+  "tests": {
+    "tests": "191",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "compileall": "passed",
+  "independent_review": "contract, candidate file/tensor identity, frozen source hashes, all statistics and workers passed; RSS inconclusive",
+  "full_original_checkpoint_restoration": false,
+  "training_attempts": 1,
+  "timing_attempts": 1,
+  "latency_reruns": 0,
+  "prior_scientific_and_model_files_unchanged": true,
+  "changed_preexisting_files": [
+    ".gitignore",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "report_sha256": "fe36d0eba996cb3763902b58c81878b8bf41620a5c34415fc1101f5f4da02bd0",
+  "summary_sha256": "a619982fc6e18637ba5dfac1bec56a8bc3a7606992527f9c82aa3e625804440e",
+  "rss_has_no_discriminating_result": true,
+  "performance_scope": "descriptive single-host fixed-case warm path; not a universal speedup",
+  "optional_warning": "NumPy missing; unused"
+}

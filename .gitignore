@@ -26,3 +26,6 @@ results/sqlite-format-replay/
 
 results/inference-local/
 results/inference-replay/
+
+results/cpu-kv-measured/
+results/cpu-kv-local/

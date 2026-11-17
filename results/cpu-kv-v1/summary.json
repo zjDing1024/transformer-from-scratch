@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "inference_performed": false,
+  "constructor_median_ms": 3.444975,
+  "constructor_p90_ms": 4.348579,
+  "original_checkpoint_identity_matched": false,
+  "cases": [
+    {
+      "case_id": "b1-p16-g16",
+      "max_logit_error": 3.337860107421875e-06,
+      "exact_generated_ids": 16,
+      "kv_payload_bytes": 31744,
+      "warm_prefill": {
+        "full_prefix": {
+          "median": 1.539372,
+          "p90_nearest_rank": 2.2111436,
+          "minimum": 1.1449372,
+          "maximum": 2.8258744
+        },
+        "cached": {
+          "median": 1.5074641000000002,
+          "p90_nearest_rank": 1.9767644,
+          "minimum": 1.1492812,
+          "maximum": 2.4984878
+        },
+        "paired_cached_over_full_median": 0.9758657392971926,
+        "units": "milliseconds per call, statistics of five-call means"
+      },
+      "warm_request": {
+        "full_prefix": {
+          "median": 27.1031666,
+          "p90_nearest_rank": 31.3300064,
+          "minimum": 22.1887428,
+          "maximum": 58.481186799999996
+        },
+        "cached": {
+          "median": 19.8423245,
+          "p90_nearest_rank": 27.4061452,
+          "minimum": 16.1704568,
+          "maximum": 48.3111128
+        },
+        "paired_cached_over_full_median": 0.7586623893316671,
+        "units": "milliseconds per call, statistics of five-call means"
+      },
+      "process_peak_rss_kib_after_request": {
+        "full_prefix": [
+          294548,
+          294548,
+          294548
+        ],
+        "cached": [
+          294548,
+          294548,
+          294548
+        ]
+      }
+    },
+    {
+      "case_id": "b2-p16-g16",
+      "max_logit_error": 3.337860107421875e-06,
+      "exact_generated_ids": 32,
+      "kv_payload_bytes": 63488,
+      "warm_prefill": {
+        "full_prefix": {
+          "median": 1.5629668,
+          "p90_nearest_rank": 1.82761,
+          "minimum": 1.1488414,
+          "maximum": 1.9866872
+        },
+        "cached": {
+          "median": 1.546448,
+          "p90_nearest_rank": 2.0915714,
+          "minimum": 1.2161203999999999,
+          "maximum": 2.5579526
+        },
+        "paired_cached_over_full_median": 1.0483806101895878,
+        "units": "milliseconds per call, statistics of five-call means"
+      },
+      "warm_request": {
+        "full_prefix": {
+          "median": 27.9972368,
+          "p90_nearest_rank": 38.08406,
+          "minimum": 24.6035946,
+          "maximum": 58.5899964
+        },
+        "cached": {
+          "median": 19.7708795,
+          "p90_nearest_rank": 23.535777,
+          "minimum": 16.3667032,
+          "maximum": 41.164719399999996
+        },
+        "paired_cached_over_full_median": 0.6710116315242511,
+        "units": "milliseconds per call, statistics of five-call means"
+      },
+      "process_peak_rss_kib_after_request": {
+        "full_prefix": [
+          294548,
+          294548,
+          294548
+        ],
+        "cached": [
+          294548,
+          294548,
+          294548
+        ]
+      }
+    },
+    {
+      "case_id": "b2-p32-g32",
+      "max_logit_error": 3.337860107421875e-06,
+      "exact_generated_ids": 64,
+      "kv_payload_bytes": 129024,
+      "warm_prefill": {
+        "full_prefix": {
+          "median": 2.2721377,
+          "p90_nearest_rank": 3.4424692,
+          "minimum": 1.4224098,
+          "maximum": 4.4045192
+        },
+        "cached": {
+          "median": 2.5130143,
+          "p90_nearest_rank": 4.578672,
+          "minimum": 1.4469442,
+          "maximum": 8.1341068
+        },
+        "paired_cached_over_full_median": 1.2549966905214975,
+        "units": "milliseconds per call, statistics of five-call means"
+      },
+      "warm_request": {
+        "full_prefix": {
+          "median": 80.6281459,
+          "p90_nearest_rank": 124.365153,
+          "minimum": 67.0855902,
+          "maximum": 199.25016540000001
+        },
+        "cached": {
+          "median": 40.961471200000005,
+          "p90_nearest_rank": 57.318123799999995,
+          "minimum": 32.9812572,
+          "maximum": 88.2189622
+        },
+        "paired_cached_over_full_median": 0.5124749804646229,
+        "units": "milliseconds per call, statistics of five-call means"
+      },
+      "process_peak_rss_kib_after_request": {
+        "full_prefix": [
+          294548,
+          294548,
+          294548
+        ],
+        "cached": [
+          294548,
+          294548,
+          294548
+        ]
+      }
+    }
+  ]
+}
