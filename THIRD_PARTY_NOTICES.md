@@ -72,3 +72,14 @@ harness/auditor/tests are original MIT. Linux getrusage documentation is cited f
 process high-water RSS, units and exec semantics, without copying documentation:
 https://man7.org/linux/man-pages/man2/getrusage.2.html . No additional corpus,
 private data, external model or paid service is used by the benchmark.
+
+## Portable CPU fixture and process-memory diagnostic
+
+The new fixture, canonical serialization, launcher, memory parser and tests are
+original MIT code, with no trained/external model weights. Linux v6.18 official
+proc documentation and accounting code were conceptual references, pinned at
+`7d0a66e4bb9081d75c82ec4957c50034cb0ea449`; full URLs and source hashes are in
+`results/portable-cpu-v1/source-references.json`. Linux's COPYING identifies
+GPL-2.0 WITH Linux-syscall-note. No Linux implementation/source text is copied,
+vendored or linked. The existing PyTorch BSD-style dependency and Python standard
+library retain their licenses. No additional runtime dependency or corpus download.

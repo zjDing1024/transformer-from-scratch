@@ -1,0 +1,1049 @@
+{
+  "schema_version": 1,
+  "config": {
+    "schema_version": 1,
+    "fixture": {
+      "name": "byte-lm-portable-f32-v1",
+      "model": {
+        "width": 64,
+        "heads": 4,
+        "hidden": 128,
+        "layers": 2,
+        "use_positions": true
+      },
+      "artifact_size_bytes": 403088,
+      "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+      "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+      "parameters": 99968,
+      "trained": false,
+      "historical_checkpoint": false
+    },
+    "max_context": 64,
+    "parity_atol": 1e-05,
+    "parity_rtol": 1e-05,
+    "cases": [
+      {
+        "id": "b2-p16-g16",
+        "prompt_hex": [
+          "546865206170706c69636174696f6e20",
+          "4854545020726571756573743a202020"
+        ],
+        "generated_per_row": 16
+      },
+      {
+        "id": "b2-p32-g32",
+        "prompt_hex": [
+          "546865206170706c69636174696f6e20546865206170706c69636174696f6e20",
+          "4854545020726571756573743a2020204854545020726571756573743a202020"
+        ],
+        "generated_per_row": 32
+      }
+    ],
+    "memory_workers_per_case_arm": 1,
+    "positive_control_bytes": 16777216,
+    "minimum_positive_growth_kib": 12288,
+    "post_reset_alignment_kib": 2048
+  },
+  "lightweight_launcher_no_torch": true,
+  "source_sha256": {
+    "transformer_core/portable_fixture.py": "2940716f69752977d4c841ebe16b49dbea3568ce2d8b9339bca07826af15f8e4",
+    "transformer_core/portable_parity.py": "b5dca3dd51bc78296f6733d5270ba64338b949d3d7b3fdd0e1d5b5b6769451ed",
+    "transformer_core/inference.py": "3674a3e20e20e2059426bc808a264b8bfb71708b6146bd7b908967501035caa6",
+    "transformer_core/benchmark.py": "6286e11bdfee4bc3bd7c330e939ff2e84fab0fe8ab895b4e346ad7279016b079",
+    "transformer_diagnostics/cli.py": "38c89c16bdd3c70befb7b64e3819fdc4710715cd2d9dd3651fb4e92a0d24a76b",
+    "transformer_diagnostics/proc_memory.py": "598a16a6027bb71da5798e609d7cd004bca6f5c36113ae899a06b01c4104632c",
+    "transformer_diagnostics/data/portable-v1.json": "5fcc0776b1aa69bdac13a296921992ec272bbf990e4ae11099f8771fb88d44eb"
+  },
+  "fixture": {
+    "name": "byte-lm-portable-f32-v1",
+    "model": {
+      "width": 64,
+      "heads": 4,
+      "hidden": 128,
+      "layers": 2,
+      "use_positions": true
+    },
+    "artifact_size_bytes": 403088,
+    "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+    "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+    "parameters": 99968,
+    "trained": false,
+    "historical_checkpoint": false
+  },
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "threads": 1,
+    "interop_threads": 1,
+    "device": "cpu",
+    "dtype": "float32"
+  },
+  "parity": {
+    "status": "passed",
+    "teacher_forced": [
+      {
+        "chunks": [
+          64
+        ],
+        "max_absolute_error": 0.0
+      },
+      {
+        "chunks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "max_absolute_error": 9.5367431640625e-07
+      },
+      {
+        "chunks": [
+          5,
+          13,
+          1,
+          17,
+          28
+        ],
+        "max_absolute_error": 8.344650268554688e-07
+      }
+    ],
+    "cases": [
+      {
+        "id": "b2-p16-g16",
+        "max_absolute_error": 7.152557373046875e-07,
+        "per_step_max_absolute_error": [
+          0.0,
+          4.172325134277344e-07,
+          5.364418029785156e-07,
+          7.152557373046875e-07,
+          5.960464477539062e-07,
+          5.960464477539062e-07,
+          6.556510925292969e-07,
+          5.960464477539062e-07,
+          5.960464477539062e-07,
+          4.76837158203125e-07,
+          5.960464477539062e-07,
+          6.556510925292969e-07,
+          4.76837158203125e-07,
+          5.960464477539062e-07,
+          4.172325134277344e-07,
+          6.556510925292969e-07
+        ],
+        "exact_greedy_ids": true,
+        "output_hex": [
+          "546865206170706c69636174696f6e203a849f6a7108893fd2d14b755a22b16a",
+          "4854545020726571756573743a2020203aff72bf9f3affbf9f3a849f3a849f3a"
+        ],
+        "analytic_work": {
+          "forward_calls": 16,
+          "cached_prefill_calls": 1,
+          "cached_append_calls": 15,
+          "full_prefix_positions_per_row": 376,
+          "cached_positions_per_row": 31,
+          "full_dense_qk_entries_per_row_head_layer": 9176,
+          "cached_dense_qk_entries_per_row_head_layer": 616,
+          "final_cached_positions": 31,
+          "final_kv_payload_bytes": 63488,
+          "concatenation_output_payload_bytes": 737280,
+          "old_prefix_payload_copied_bytes": 706560
+        },
+        "cache": {
+          "length": 31,
+          "batch": 2,
+          "max_context": 64,
+          "layers": [
+            {
+              "key": [
+                2,
+                4,
+                31,
+                16
+              ],
+              "value": [
+                2,
+                4,
+                31,
+                16
+              ]
+            },
+            {
+              "key": [
+                2,
+                4,
+                31,
+                16
+              ],
+              "value": [
+                2,
+                4,
+                31,
+                16
+              ]
+            }
+          ],
+          "kv_payload_bytes": 63488
+        }
+      },
+      {
+        "id": "b2-p32-g32",
+        "max_absolute_error": 1.0728836059570312e-06,
+        "per_step_max_absolute_error": [
+          0.0,
+          4.76837158203125e-07,
+          4.805624485015869e-07,
+          8.344650268554688e-07,
+          5.364418029785156e-07,
+          5.960464477539062e-07,
+          9.5367431640625e-07,
+          5.960464477539062e-07,
+          7.152557373046875e-07,
+          5.364418029785156e-07,
+          9.5367431640625e-07,
+          4.76837158203125e-07,
+          5.960464477539062e-07,
+          5.960464477539062e-07,
+          5.960464477539062e-07,
+          7.152557373046875e-07,
+          4.470348358154297e-07,
+          7.152557373046875e-07,
+          6.258487701416016e-07,
+          4.76837158203125e-07,
+          5.662441253662109e-07,
+          7.748603820800781e-07,
+          7.152557373046875e-07,
+          5.960464477539062e-07,
+          1.0728836059570312e-06,
+          4.76837158203125e-07,
+          8.940696716308594e-07,
+          6.556510925292969e-07,
+          8.344650268554688e-07,
+          5.960464477539062e-07,
+          4.76837158203125e-07,
+          8.940696716308594e-07
+        ],
+        "exact_greedy_ids": true,
+        "output_hex": [
+          "546865206170706c69636174696f6e20546865206170706c69636174696f6e203a847b07bad0e7c9a35a22f4197e21697e42a58ad29195ff9f6a7108891972a8",
+          "4854545020726571756573743a2020204854545020726571756573743a2020203aff72bf9f3affa7e6b34f831f96ffbf236a715d41132cbf236ab4cd4f01eabf"
+        ],
+        "analytic_work": {
+          "forward_calls": 32,
+          "cached_prefill_calls": 1,
+          "cached_append_calls": 31,
+          "full_prefix_positions_per_row": 1520,
+          "cached_positions_per_row": 63,
+          "full_dense_qk_entries_per_row_head_layer": 74928,
+          "cached_dense_qk_entries_per_row_head_layer": 2512,
+          "final_cached_positions": 63,
+          "final_kv_payload_bytes": 129024,
+          "concatenation_output_payload_bytes": 3047424,
+          "old_prefix_payload_copied_bytes": 2983936
+        },
+        "cache": {
+          "length": 63,
+          "batch": 2,
+          "max_context": 64,
+          "layers": [
+            {
+              "key": [
+                2,
+                4,
+                63,
+                16
+              ],
+              "value": [
+                2,
+                4,
+                63,
+                16
+              ]
+            },
+            {
+              "key": [
+                2,
+                4,
+                63,
+                16
+              ],
+              "value": [
+                2,
+                4,
+                63,
+                16
+              ]
+            }
+          ],
+          "kv_payload_bytes": 129024
+        }
+      }
+    ],
+    "atol": 1e-05,
+    "rtol": 1e-05,
+    "bitwise_logits_required": false,
+    "claim": "finite CPU correctness fixtures, not training quality or arbitrary-prompt proof"
+  },
+  "memory_status": "observed",
+  "memory_workers": [
+    {
+      "fixture": {
+        "name": "byte-lm-portable-f32-v1",
+        "model": {
+          "width": 64,
+          "heads": 4,
+          "hidden": 128,
+          "layers": 2,
+          "use_positions": true
+        },
+        "artifact_size_bytes": 403088,
+        "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+        "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+        "parameters": 99968,
+        "trained": false,
+        "historical_checkpoint": false
+      },
+      "environment": {
+        "python": "3.12.14",
+        "torch": "2.14.1+cpu",
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "threads": 1,
+        "interop_threads": 1,
+        "device": "cpu",
+        "dtype": "float32"
+      },
+      "case_id": "b2-p16-g16",
+      "arm": "full_prefix",
+      "request_window_status": {
+        "status": "observed",
+        "scope": "process RSS/HWM, not tensor allocation or exclusive model memory"
+      },
+      "after_model": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 283388
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 283388
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 283052
+        }
+      },
+      "after_setup": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 283392
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 283392
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 283052
+        }
+      },
+      "request_reset": {
+        "status": "available",
+        "method": "own /proc/self/clear_refs mode 5"
+      },
+      "request_baseline": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 283392
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 283392
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 283052
+        }
+      },
+      "after_request": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 291140
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 291140
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 290892
+        }
+      },
+      "raw_rss_change_kib": {
+        "status": "available",
+        "value_kib": 7748
+      },
+      "raw_hwm_minus_baseline_rss_kib": {
+        "status": "available",
+        "value_kib": 7748
+      },
+      "request_phase_peak_kib": {
+        "status": "available",
+        "value_kib": 291140
+      },
+      "raw_delta_scope": "snapshot differences only; NOT allocations or verified phase metrics",
+      "positive_control": {
+        "status": "passed",
+        "allocation_bytes": 16777216,
+        "minimum_growth_kib": 12288,
+        "reset": {
+          "status": "available",
+          "method": "own /proc/self/clear_refs mode 5"
+        },
+        "baseline": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 291140
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 291140
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 290892
+          }
+        },
+        "while_live": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 307528
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 307528
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 307276
+          }
+        },
+        "after_release": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 291144
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 307276
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 307276
+          }
+        },
+        "rss_growth_kib": {
+          "status": "available",
+          "value_kib": 16388
+        },
+        "hwm_growth_kib": {
+          "status": "available",
+          "value_kib": 16388
+        },
+        "scope": "coarse resident-memory response; does NOT validate KiB-sized KV resolution"
+      },
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "kv_payload_bytes": 0,
+      "output_hex": [
+        "546865206170706c69636174696f6e203a849f6a7108893fd2d14b755a22b16a",
+        "4854545020726571756573743a2020203aff72bf9f3affbf9f3a849f3a849f3a"
+      ]
+    },
+    {
+      "fixture": {
+        "name": "byte-lm-portable-f32-v1",
+        "model": {
+          "width": 64,
+          "heads": 4,
+          "hidden": 128,
+          "layers": 2,
+          "use_positions": true
+        },
+        "artifact_size_bytes": 403088,
+        "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+        "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+        "parameters": 99968,
+        "trained": false,
+        "historical_checkpoint": false
+      },
+      "environment": {
+        "python": "3.12.14",
+        "torch": "2.14.1+cpu",
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "threads": 1,
+        "interop_threads": 1,
+        "device": "cpu",
+        "dtype": "float32"
+      },
+      "case_id": "b2-p16-g16",
+      "arm": "cached",
+      "request_window_status": {
+        "status": "observed",
+        "scope": "process RSS/HWM, not tensor allocation or exclusive model memory"
+      },
+      "after_model": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 283452
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 283452
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 283148
+        }
+      },
+      "after_setup": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 286140
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 286140
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 285884
+        }
+      },
+      "request_reset": {
+        "status": "available",
+        "method": "own /proc/self/clear_refs mode 5"
+      },
+      "request_baseline": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 286140
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 286140
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 285884
+        }
+      },
+      "after_request": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 292412
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 292412
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 292056
+        }
+      },
+      "raw_rss_change_kib": {
+        "status": "available",
+        "value_kib": 6272
+      },
+      "raw_hwm_minus_baseline_rss_kib": {
+        "status": "available",
+        "value_kib": 6272
+      },
+      "request_phase_peak_kib": {
+        "status": "available",
+        "value_kib": 292412
+      },
+      "raw_delta_scope": "snapshot differences only; NOT allocations or verified phase metrics",
+      "positive_control": {
+        "status": "passed",
+        "allocation_bytes": 16777216,
+        "minimum_growth_kib": 12288,
+        "reset": {
+          "status": "available",
+          "method": "own /proc/self/clear_refs mode 5"
+        },
+        "baseline": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 292412
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 292412
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 292056
+          }
+        },
+        "while_live": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 308800
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 308800
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 308440
+          }
+        },
+        "after_release": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 292416
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 308440
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 308440
+          }
+        },
+        "rss_growth_kib": {
+          "status": "available",
+          "value_kib": 16388
+        },
+        "hwm_growth_kib": {
+          "status": "available",
+          "value_kib": 16388
+        },
+        "scope": "coarse resident-memory response; does NOT validate KiB-sized KV resolution"
+      },
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "kv_payload_bytes": 63488,
+      "output_hex": [
+        "546865206170706c69636174696f6e203a849f6a7108893fd2d14b755a22b16a",
+        "4854545020726571756573743a2020203aff72bf9f3affbf9f3a849f3a849f3a"
+      ]
+    },
+    {
+      "fixture": {
+        "name": "byte-lm-portable-f32-v1",
+        "model": {
+          "width": 64,
+          "heads": 4,
+          "hidden": 128,
+          "layers": 2,
+          "use_positions": true
+        },
+        "artifact_size_bytes": 403088,
+        "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+        "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+        "parameters": 99968,
+        "trained": false,
+        "historical_checkpoint": false
+      },
+      "environment": {
+        "python": "3.12.14",
+        "torch": "2.14.1+cpu",
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "threads": 1,
+        "interop_threads": 1,
+        "device": "cpu",
+        "dtype": "float32"
+      },
+      "case_id": "b2-p32-g32",
+      "arm": "cached",
+      "request_window_status": {
+        "status": "observed",
+        "scope": "process RSS/HWM, not tensor allocation or exclusive model memory"
+      },
+      "after_model": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 283376
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 283376
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 283092
+        }
+      },
+      "after_setup": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 286064
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 286064
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 285700
+        }
+      },
+      "request_reset": {
+        "status": "available",
+        "method": "own /proc/self/clear_refs mode 5"
+      },
+      "request_baseline": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 286064
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 286064
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 285700
+        }
+      },
+      "after_request": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 292252
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 292252
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 291872
+        }
+      },
+      "raw_rss_change_kib": {
+        "status": "available",
+        "value_kib": 6188
+      },
+      "raw_hwm_minus_baseline_rss_kib": {
+        "status": "available",
+        "value_kib": 6188
+      },
+      "request_phase_peak_kib": {
+        "status": "available",
+        "value_kib": 292252
+      },
+      "raw_delta_scope": "snapshot differences only; NOT allocations or verified phase metrics",
+      "positive_control": {
+        "status": "passed",
+        "allocation_bytes": 16777216,
+        "minimum_growth_kib": 12288,
+        "reset": {
+          "status": "available",
+          "method": "own /proc/self/clear_refs mode 5"
+        },
+        "baseline": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 292252
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 292252
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 291872
+          }
+        },
+        "while_live": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 308640
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 308640
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 308256
+          }
+        },
+        "after_release": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 292256
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 308256
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 308256
+          }
+        },
+        "rss_growth_kib": {
+          "status": "available",
+          "value_kib": 16388
+        },
+        "hwm_growth_kib": {
+          "status": "available",
+          "value_kib": 16388
+        },
+        "scope": "coarse resident-memory response; does NOT validate KiB-sized KV resolution"
+      },
+      "source_model_retained": true,
+      "snapshot_owned": true,
+      "kv_payload_bytes": 129024,
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e203a847b07bad0e7c9a35a22f4197e21697e42a58ad29195ff9f6a7108891972a8",
+        "4854545020726571756573743a2020204854545020726571756573743a2020203aff72bf9f3affa7e6b34f831f96ffbf236a715d41132cbf236ab4cd4f01eabf"
+      ]
+    },
+    {
+      "fixture": {
+        "name": "byte-lm-portable-f32-v1",
+        "model": {
+          "width": 64,
+          "heads": 4,
+          "hidden": 128,
+          "layers": 2,
+          "use_positions": true
+        },
+        "artifact_size_bytes": 403088,
+        "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+        "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+        "parameters": 99968,
+        "trained": false,
+        "historical_checkpoint": false
+      },
+      "environment": {
+        "python": "3.12.14",
+        "torch": "2.14.1+cpu",
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "threads": 1,
+        "interop_threads": 1,
+        "device": "cpu",
+        "dtype": "float32"
+      },
+      "case_id": "b2-p32-g32",
+      "arm": "full_prefix",
+      "request_window_status": {
+        "status": "observed",
+        "scope": "process RSS/HWM, not tensor allocation or exclusive model memory"
+      },
+      "after_model": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 283392
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 283392
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 283232
+        }
+      },
+      "after_setup": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 283396
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 283396
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 283232
+        }
+      },
+      "request_reset": {
+        "status": "available",
+        "method": "own /proc/self/clear_refs mode 5"
+      },
+      "request_baseline": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 283396
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 283396
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 283232
+        }
+      },
+      "after_request": {
+        "VmRSS": {
+          "status": "available",
+          "value_kib": 291544
+        },
+        "VmHWM": {
+          "status": "available",
+          "value_kib": 291544
+        },
+        "ru_maxrss": {
+          "status": "available",
+          "value_kib": 291240
+        }
+      },
+      "raw_rss_change_kib": {
+        "status": "available",
+        "value_kib": 8148
+      },
+      "raw_hwm_minus_baseline_rss_kib": {
+        "status": "available",
+        "value_kib": 8148
+      },
+      "request_phase_peak_kib": {
+        "status": "available",
+        "value_kib": 291544
+      },
+      "raw_delta_scope": "snapshot differences only; NOT allocations or verified phase metrics",
+      "positive_control": {
+        "status": "passed",
+        "allocation_bytes": 16777216,
+        "minimum_growth_kib": 12288,
+        "reset": {
+          "status": "available",
+          "method": "own /proc/self/clear_refs mode 5"
+        },
+        "baseline": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 291544
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 291544
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 291240
+          }
+        },
+        "while_live": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 307932
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 307932
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 307624
+          }
+        },
+        "after_release": {
+          "VmRSS": {
+            "status": "available",
+            "value_kib": 291548
+          },
+          "VmHWM": {
+            "status": "available",
+            "value_kib": 307624
+          },
+          "ru_maxrss": {
+            "status": "available",
+            "value_kib": 307624
+          }
+        },
+        "rss_growth_kib": {
+          "status": "available",
+          "value_kib": 16388
+        },
+        "hwm_growth_kib": {
+          "status": "available",
+          "value_kib": 16388
+        },
+        "scope": "coarse resident-memory response; does NOT validate KiB-sized KV resolution"
+      },
+      "source_model_retained": true,
+      "snapshot_owned": false,
+      "kv_payload_bytes": 0,
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e203a847b07bad0e7c9a35a22f4197e21697e42a58ad29195ff9f6a7108891972a8",
+        "4854545020726571756573743a2020204854545020726571756573743a2020203aff72bf9f3affa7e6b34f831f96ffbf236a715d41132cbf236ab4cd4f01eabf"
+      ]
+    }
+  ],
+  "timing_performed": false,
+  "training_performed": false,
+  "scope": "finite parity/process metrics only; no savings, speed or quality claim"
+}

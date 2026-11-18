@@ -29,3 +29,6 @@ results/inference-replay/
 
 results/cpu-kv-measured/
 results/cpu-kv-local/
+
+results/portable-cpu-local/
+*.plm

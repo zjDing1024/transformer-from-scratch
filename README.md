@@ -4,6 +4,26 @@
 
 这是独立的机制实现项目。**尚未实现完整 encoder-decoder 训练，也没有复现论文的 WMT/BLEU 指标。** 历史小型合成实验保留；新增真实技术文本的99,968参数因果语言模型、固定文档划分、验证集选模、bigram基线及独立测试评分。不代表语言理解或个人技能已掌握。
 
+## 无checkpoint依赖的CPU检查器（2026-11-19，UTC+08:00）
+
+新增可安装的 `transformer-cpu-check`：无需训练、下载语料或旧权重，即可再生一份
+**明确另命名、未训练的固定权重fixture**，核对canonical artifact与tensor双摘要，再跑缓存/完整前缀parity。
+
+- 210项CPU测试通过；wheel在仓库外真实运行，身份、parity与源码指纹匹配。
+- Linux按阶段记录VmRSS/VmHWM，4个独立16MiB正控均响应；缺失、拒绝或正控失败明确标记unavailable。
+- 不重跑历史600步，不掩盖原权重恢复失败，不把进程峰值当K/V字节或宣称内存节省；没有新增延迟测试。
+
+```bash
+python -m pip install .
+transformer-cpu-check --parity-only --output parity.json
+# Linux可选阶段内存观察，默认命令还会执行粗粒度正控：
+transformer-cpu-check --output memory.json
+```
+
+[独立运行、精确结果与限制](docs/portable-cpu-check.md) ·
+[预检方案](docs/portable-cpu-protocol.md) · [完整记录](results/portable-cpu-v1/report.json)。
+CI新增真正的parity-only执行，不依赖发布JSON，也不使用易变RSS阈值。
+
 ## 同语义CPU缓存基准（2026-11-18，UTC+08:00）
 
 三组固定请求，按30组交替顺序配对计时；每组各5次完整请求，parity检查在计时外。

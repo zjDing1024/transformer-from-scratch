@@ -1,0 +1,39 @@
+{
+  "project": "Linux",
+  "tag": "v6.18",
+  "peeled_commit": "7d0a66e4bb9081d75c82ec4957c50034cb0ea449",
+  "license": "GPL-2.0 WITH Linux-syscall-note",
+  "use": "conceptual reference only; no copied source",
+  "files": [
+    {
+      "path": "Documentation/filesystems/proc.rst",
+      "url": "https://github.com/torvalds/linux/blob/7d0a66e4bb9081d75c82ec4957c50034cb0ea449/Documentation/filesystems/proc.rst",
+      "sha256": "7ac56d2456ae37e36a91d20ec0179cce01f76de67893d3717e2e4de40fbb860c",
+      "bytes": 105171
+    },
+    {
+      "path": "fs/proc/task_mmu.c",
+      "url": "https://github.com/torvalds/linux/blob/7d0a66e4bb9081d75c82ec4957c50034cb0ea449/fs/proc/task_mmu.c",
+      "sha256": "4570cfbbe56e36b63e7e0657c18a8320db34939ec552a29c9eeff7a3c5bc97cf",
+      "bytes": 83086
+    },
+    {
+      "path": "fs/exec.c",
+      "url": "https://github.com/torvalds/linux/blob/7d0a66e4bb9081d75c82ec4957c50034cb0ea449/fs/exec.c",
+      "sha256": "08569e409280653fe47c1bc44835297cfd9621094bde7cd487f10239b46eff1d",
+      "bytes": 51521
+    },
+    {
+      "path": "kernel/sys.c",
+      "url": "https://github.com/torvalds/linux/blob/7d0a66e4bb9081d75c82ec4957c50034cb0ea449/kernel/sys.c",
+      "sha256": "0b656f8809d781b7e684a1a4c4144d925684c69e9f6050c41c6374c5206d2c8d",
+      "bytes": 73523
+    },
+    {
+      "path": "COPYING",
+      "url": "https://github.com/torvalds/linux/blob/7d0a66e4bb9081d75c82ec4957c50034cb0ea449/COPYING",
+      "sha256": "fb5a425bd3b3cd6071a3a9aff9909a859e7c1158d54d32e07658398cd67eb6a0",
+      "bytes": 496
+    }
+  ]
+}

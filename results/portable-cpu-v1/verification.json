@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "base_commit": "518d9fc09d64e19f37cf245e82574abb5521113f",
+  "pre_measurement_commit": "0b18363",
+  "tests": {
+    "tests": "210",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "compileall": "passed",
+  "source_fixture_and_wheel_identity_match": true,
+  "source_fixture_and_wheel_parity_object_match": true,
+  "source_file_hashes_match": true,
+  "installed_wheel": {
+    "offline_build": true,
+    "no_new_dependencies": true,
+    "executed_outside_checkout": true,
+    "entrypoint": "transformer-cpu-check",
+    "mode": "parity-only",
+    "sha256": "6489348fd06cfa68ba0d42ab38d140cd6f1ea585c91f7b0afa3e0248bcb293e6"
+  },
+  "real_memory_runs": 1,
+  "real_memory_workers": 4,
+  "real_positive_controls": 4,
+  "positive_controls_passed": 4,
+  "training_runs": 0,
+  "latency_runs": 0,
+  "old_scientific_results_and_model_code_unchanged": true,
+  "changed_preexisting_files": [
+    ".github/workflows/tests.yml",
+    ".gitignore",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "pyproject.toml"
+  ],
+  "report_sha256": "3c8b487f92694f33b382aa8e51eded805900491509ab3361d44a5977bcf06d09",
+  "ci_change": "actual fresh fixture generation and parity-only CLI added; no OS memory assertions or controls",
+  "remote_ci_status": "not run by this local worker; publisher must verify exact remote commit",
+  "limitation": "single-host finite fixtures/process readings, no model quality, GPU, speed or memory-saving claim"
+}
