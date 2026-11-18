@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "fixture": {
+    "name": "byte-lm-portable-f32-v1",
+    "model": {
+      "width": 64,
+      "heads": 4,
+      "hidden": 128,
+      "layers": 2,
+      "use_positions": true
+    },
+    "artifact_size_bytes": 403088,
+    "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+    "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+    "parameters": 99968,
+    "trained": false,
+    "historical_checkpoint": false
+  },
+  "max_context": 64,
+  "parity_atol": 1e-05,
+  "parity_rtol": 1e-05,
+  "cases": [
+    {
+      "id": "b2-p16-g16",
+      "prompt_hex": [
+        "546865206170706c69636174696f6e20",
+        "4854545020726571756573743a202020"
+      ],
+      "generated_per_row": 16
+    },
+    {
+      "id": "b2-p32-g32",
+      "prompt_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e20",
+        "4854545020726571756573743a2020204854545020726571756573743a202020"
+      ],
+      "generated_per_row": 32
+    }
+  ],
+  "memory_workers_per_case_arm": 1,
+  "positive_control_bytes": 16777216,
+  "minimum_positive_growth_kib": 12288,
+  "post_reset_alignment_kib": 2048
+}

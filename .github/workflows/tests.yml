@@ -20,3 +20,4 @@ jobs:
           python -m ruff format --check .
           python -m pytest -q
           python examples/verify_mechanisms.py --output results/ci.json
+          python -m transformer_diagnostics.cli --parity-only --output results/ci-portable.json
