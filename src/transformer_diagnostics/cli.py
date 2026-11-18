@@ -109,8 +109,14 @@ def worker(mode, case_id=None, arm=None):
         request_reset=reset,
         request_baseline=baseline,
         after_request=after_request,
-        rss_change_kib=difference(after_request, baseline, "VmRSS"),
-        phase_peak_above_baseline_rss_kib=peak_above_rss(after_request, baseline),
+        raw_rss_change_kib=difference(after_request, baseline, "VmRSS"),
+        raw_hwm_minus_baseline_rss_kib=peak_above_rss(after_request, baseline),
+        request_phase_peak_kib=(
+            after_request["VmHWM"]
+            if observation["status"] == "observed"
+            else dict(status="unavailable", reason="request window/control not verified")
+        ),
+        raw_delta_scope="snapshot differences only; NOT allocations or verified phase metrics",
         positive_control=control,
         source_model_retained=True,
         snapshot_owned=session is not None,
@@ -133,7 +139,7 @@ def invoke(mode, case_id=None, arm=None):
     if case_id is not None:
         args += ["--case-id", case_id, "--arm", arm]
     env = dict(os.environ, OMP_NUM_THREADS="1", MKL_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1")
-    completed = subprocess.run(args, env=env, capture_output=True, text=True)
+    completed = subprocess.run(args, env=env, capture_output=True, text=True, timeout=120)
     if completed.returncode:
         raise RuntimeError(f"{mode} worker failed: {completed.stderr[-1500:]}")
     return json.loads(completed.stdout)
