@@ -6,6 +6,8 @@ import time
 
 import torch
 
+from .allocation_scopes import scope
+
 
 def validate_request(prompt, count, max_context):
     if (
@@ -31,7 +33,8 @@ def full_prefix_request(model, prompt, count, max_context=64):
     with torch.autocast(device_type="cpu", enabled=False):
         for _ in range(count):
             token = model(sequence)[:, -1].argmax(-1, keepdim=True)
-            sequence = torch.cat((sequence, token), dim=1)
+            with scope("token_cat", arm="full_prefix", length=sequence.shape[1] + 1):
+                sequence = torch.cat((sequence, token), dim=1)
     return sequence
 
 
@@ -44,7 +47,8 @@ def cached_request(session, prompt, count, max_context=64):
     logits = session.prefill(sequence)
     for index in range(count):
         token = logits[:, -1].argmax(-1, keepdim=True)
-        sequence = torch.cat((sequence, token), dim=1)
+        with scope("token_cat", arm="cached", length=sequence.shape[1] + 1):
+            sequence = torch.cat((sequence, token), dim=1)
         if index + 1 < count:
             logits = session.append(token)
     return sequence

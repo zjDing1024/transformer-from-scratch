@@ -9,6 +9,7 @@ import math
 
 import torch
 
+from .allocation_scopes import scope
 from .attention import scaled_dot_product_attention
 from .language_model import ByteLanguageModel
 
@@ -37,9 +38,11 @@ class CachedByteDecoder:
             {torch.float64},
         ):
             raise ValueError("only uniform CPU float32/float64 model weights are supported")
-        if any(not torch.isfinite(p).all() for p in parameters):
-            raise ValueError("model weights must be finite")
-        self._model = copy.deepcopy(model).requires_grad_(False)
+        with scope("finite_validation"):
+            if any(not torch.isfinite(p).all() for p in parameters):
+                raise ValueError("model weights must be finite")
+        with scope("snapshot_deepcopy"):
+            self._model = copy.deepcopy(model).requires_grad_(False)
         self._max_context = max_context
         self.reset()
 
@@ -82,14 +85,16 @@ class CachedByteDecoder:
         """Start an empty sequence and return logits for every supplied token."""
         if self._length:
             raise ValueError("prefill requires an empty session; use append() or reset()")
-        return self._append(tokens)
+        with scope("prefill"):
+            return self._append(tokens)
 
     @torch.inference_mode()
     def append(self, tokens):
         """Append one token or a causal chunk; return logits for NEW positions only."""
         if not self._length:
             raise ValueError("append requires prefill first")
-        return self._append(tokens)
+        with scope("append"):
+            return self._append(tokens)
 
     def _append(self, tokens):
         # Validate and compute transactionally: a failure leaves the old state intact.
@@ -111,8 +116,10 @@ class CachedByteDecoder:
                 value = attention._split(attention.v_proj(x))
                 if start:
                     old_key, old_value = self._cache[index]
-                    key = torch.cat((old_key, key), dim=2)
-                    value = torch.cat((old_value, value), dim=2)
+                    with scope("kv_cat", layer=index, kind="key", start=start, chunk=chunk):
+                        key = torch.cat((old_key, key), dim=2)
+                    with scope("kv_cat", layer=index, kind="value", start=start, chunk=chunk):
+                        value = torch.cat((old_value, value), dim=2)
                 heads, _ = scaled_dot_product_attention(query, key, value, allowed_mask=mask)
                 merged = heads.transpose(1, 2).reshape(
                     tokens.shape[0], chunk, attention.d_model
@@ -148,7 +155,8 @@ def greedy_cached(model, prompt, *, count: int, max_context: int = 64):
         logits = session.prefill(sequence)
         for index in range(count):
             token = logits[:, -1].argmax(-1, keepdim=True)
-            sequence = torch.cat((sequence, token), dim=1)
+            with scope("token_cat", arm="cached", length=sequence.shape[1] + 1):
+                sequence = torch.cat((sequence, token), dim=1)
             if index + 1 < count:
                 logits = session.append(token)
     return sequence

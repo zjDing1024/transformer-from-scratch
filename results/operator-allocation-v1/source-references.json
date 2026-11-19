@@ -1,0 +1,40 @@
+{
+  "project": "PyTorch",
+  "tag": "v2.14.1",
+  "commit": "5c4886908584029761b579af026dcfb627c84070",
+  "license": "BSD-style; see pinned LICENSE",
+  "use": "conceptual reference only, no code copied",
+  "documentation": "https://docs.pytorch.org/docs/2.14/profiler.html",
+  "files": [
+    {
+      "path": "torch/profiler/profiler.py",
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/5c4886908584029761b579af026dcfb627c84070/torch/profiler/profiler.py",
+      "bytes": 71315,
+      "sha256": "48829e86a5a28480b5c6e36529206efee393aace7fbc315020cbb7ced2b6b43e"
+    },
+    {
+      "path": "torch/autograd/profiler.py",
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/5c4886908584029761b579af026dcfb627c84070/torch/autograd/profiler.py",
+      "bytes": 56741,
+      "sha256": "c28c6351f599d1b5870b1bab9cc782ab0f375c7677e947b3878205cdbaad7f87"
+    },
+    {
+      "path": "torch/autograd/profiler_util.py",
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/5c4886908584029761b579af026dcfb627c84070/torch/autograd/profiler_util.py",
+      "bytes": 62788,
+      "sha256": "342c18a1bbb14585f35378b2e0a70c1a4c89d0bdd2264d466b3eb84f2b29be12"
+    },
+    {
+      "path": "torch/nn/parameter.py",
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/5c4886908584029761b579af026dcfb627c84070/torch/nn/parameter.py",
+      "bytes": 12322,
+      "sha256": "01ce0e4a10c54b923388d015113b610289b89e7a8ff4809eab65e06b1bc753a2"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/5c4886908584029761b579af026dcfb627c84070/LICENSE",
+      "bytes": 3464,
+      "sha256": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43"
+    }
+  ]
+}

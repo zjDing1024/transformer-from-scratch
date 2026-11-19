@@ -21,3 +21,4 @@ jobs:
           python -m pytest -q
           python examples/verify_mechanisms.py --output results/ci.json
           python -m transformer_diagnostics.cli --parity-only --output results/ci-portable.json
+          python -m transformer_diagnostics.allocation --smoke --output results/ci-allocation.json

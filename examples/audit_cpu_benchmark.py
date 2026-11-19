@@ -31,7 +31,18 @@ def audit(report):
     assert config["tensor_sha256"] != config["original_requested_tensor_sha256"]
     assert config == json.loads((ROOT / "experiments/cpu-kv-v1.json").read_text())
     for name, sha in report["source_sha256"].items():
-        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == sha, name
+        # Nov20 opt-in ranges change these current sources. Audit the exact
+        # archived versions actually used in this historical run, not new code.
+        archived = {
+            "src/transformer_core/inference.py": "inference.py.txt",
+            "src/transformer_core/benchmark.py": "benchmark.py.txt",
+        }
+        source = (
+            ROOT / "experiments/cpu-kv-v1-source" / archived[name]
+            if name in archived
+            else ROOT / name
+        )
+        assert hashlib.sha256(source.read_bytes()).hexdigest() == sha, name
     constructor = report["new_session_constructor"]
     assert len(constructor["samples_ns"]) == config["constructor_repetitions"]
     assert constructor["summary_ns"] == stats(constructor["samples_ns"])
