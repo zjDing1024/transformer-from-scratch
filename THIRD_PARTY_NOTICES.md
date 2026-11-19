@@ -83,3 +83,12 @@ proc documentation and accounting code were conceptual references, pinned at
 GPL-2.0 WITH Linux-syscall-note. No Linux implementation/source text is copied,
 vendored or linked. The existing PyTorch BSD-style dependency and Python standard
 library retain their licenses. No additional runtime dependency or corpus download.
+
+## CPU operator allocation attribution
+
+PyTorch v2.14.1 official profiler, self-memory accounting and Parameter deepcopy
+sources at `5c4886908584029761b579af026dcfb627c84070` were conceptual references only.
+Pinned URLs, byte counts and hashes, including the BSD-style LICENSE, are recorded
+in `results/operator-allocation-v1/source-references.json`. No upstream code was
+copied or vendored. The new opt-in scopes, analyzer, CLI and tests are original MIT.
+The historical source archive contains this project's own original MIT code.

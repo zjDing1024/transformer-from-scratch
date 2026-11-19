@@ -1,0 +1,44 @@
+{
+  "base_commit": "8f538be45034eb4696c89973937ef1d16a1db178",
+  "local_pre_run_freeze": "a4cee8ae96164526fe3a7ac86ff8b70ad8c405b9",
+  "report_sha256": "b305564bc0490291584e1a4f50fa4d998d1f610cfae83633dc895a60113fd5c7",
+  "primary_profile_runs": 1,
+  "primary_profile_contexts": 15,
+  "primary_model_training_runs": 0,
+  "primary_latency_or_rss_runs": 0,
+  "tests": {
+    "tests": "239",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "ruff": "passed",
+  "format": "passed",
+  "compileall": "passed",
+  "all_prior_result_bytes_unchanged": true,
+  "historical_source_archives_match_old_report_hashes": true,
+  "changed_preexisting_files": [
+    ".github/workflows/tests.yml",
+    ".gitignore",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "examples/audit_cpu_benchmark.py",
+    "pyproject.toml",
+    "src/transformer_core/benchmark.py",
+    "src/transformer_core/inference.py"
+  ],
+  "source_hashes_match": true,
+  "installed_wheel": {
+    "sha256": "3b1228aaa8bb3d5725387385a7315cb73aacf88bb8dffc85f21a5fd10159bd61",
+    "offline_build": true,
+    "no_dependency_download": true,
+    "executed_outside_checkout": true,
+    "actual_profiler_smoke": "passed",
+    "actual_portable_fixture_parity": "passed; full parity object and identities match",
+    "offline_published_report_audit": "passed; exact audit object and source hashes match",
+    "primary_allocation_run_repeated": false
+  },
+  "ci_contract": "29 new attribution/audit tests; actual tiny profiler smoke; existing actual fixture parity; no RSS thresholds or historical timing rerun",
+  "remote_ci_status": "not verified by local worker; publisher must check exact commit",
+  "limits": "untrained fixture; event-level operator self bytes, not full allocation transaction log, live peak, RSS, DRAM traffic, latency or savings"
+}

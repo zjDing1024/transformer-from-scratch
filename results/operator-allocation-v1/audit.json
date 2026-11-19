@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "mode": "offline-record-audit",
+  "inference_performed": false,
+  "snapshot_positive_self_bytes": 399872,
+  "validation_positive_self_bytes": 699951,
+  "cases": [
+    {
+      "id": "b2-p16-g16",
+      "arm": "cached",
+      "count": 16,
+      "status": "passed",
+      "kv_cat_events": 60,
+      "kv_cat_positive_self_bytes": 737280,
+      "token_cat_events": 16,
+      "token_cat_positive_self_bytes": 6272,
+      "final_kv_payload_bytes": 63488
+    },
+    {
+      "id": "b2-p16-g16",
+      "arm": "full_prefix",
+      "count": 16,
+      "status": "passed",
+      "kv_cat_events": 0,
+      "kv_cat_positive_self_bytes": 0,
+      "token_cat_events": 16,
+      "token_cat_positive_self_bytes": 6272,
+      "final_kv_payload_bytes": 0
+    },
+    {
+      "id": "b2-p32-g32",
+      "arm": "cached",
+      "count": 32,
+      "status": "passed",
+      "kv_cat_events": 124,
+      "kv_cat_positive_self_bytes": 3047424,
+      "token_cat_events": 32,
+      "token_cat_positive_self_bytes": 24832,
+      "final_kv_payload_bytes": 129024
+    },
+    {
+      "id": "b2-p32-g32",
+      "arm": "full_prefix",
+      "count": 32,
+      "status": "passed",
+      "kv_cat_events": 0,
+      "kv_cat_positive_self_bytes": 0,
+      "token_cat_events": 32,
+      "token_cat_positive_self_bytes": 24832,
+      "final_kv_payload_bytes": 0
+    },
+    {
+      "id": "b2-p16-g16",
+      "arm": "cached",
+      "count": 1,
+      "status": "passed",
+      "kv_cat_events": 0,
+      "kv_cat_positive_self_bytes": 0,
+      "token_cat_events": 1,
+      "token_cat_positive_self_bytes": 272,
+      "final_kv_payload_bytes": 32768
+    },
+    {
+      "id": "b2-p16-g16",
+      "arm": "full_prefix",
+      "count": 1,
+      "status": "passed",
+      "kv_cat_events": 0,
+      "kv_cat_positive_self_bytes": 0,
+      "token_cat_events": 1,
+      "token_cat_positive_self_bytes": 272,
+      "final_kv_payload_bytes": 0
+    },
+    {
+      "id": "b2-p32-g32",
+      "arm": "cached",
+      "count": 1,
+      "status": "passed",
+      "kv_cat_events": 0,
+      "kv_cat_positive_self_bytes": 0,
+      "token_cat_events": 1,
+      "token_cat_positive_self_bytes": 528,
+      "final_kv_payload_bytes": 65536
+    },
+    {
+      "id": "b2-p32-g32",
+      "arm": "full_prefix",
+      "count": 1,
+      "status": "passed",
+      "kv_cat_events": 0,
+      "kv_cat_positive_self_bytes": 0,
+      "token_cat_events": 1,
+      "token_cat_positive_self_bytes": 528,
+      "final_kv_payload_bytes": 0
+    }
+  ]
+}

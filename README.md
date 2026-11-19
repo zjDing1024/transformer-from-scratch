@@ -4,6 +4,22 @@
 
 这是独立的机制实现项目。**尚未实现完整 encoder-decoder 训练，也没有复现论文的 WMT/BLEU 指标。** 历史小型合成实验保留；新增真实技术文本的99,968参数因果语言模型、固定文档划分、验证集选模、bigram基线及独立测试评分。不代表语言理解或个人技能已掌握。
 
+## CPU 算子分配归因（2026-11-20，UTC+08:00）
+
+新增可安装的 `transformer-allocation-check`，在原固定权重 fixture 上实际记录分配事件：
+
+- 两组缓存请求的 K/V 拼接为 60 / 124 次，正 self 字节合计 737,280 / 3,047,424；单独区分输出 token 拼接。
+- 快照 35 次 clone 的分配归属落在子算子，总计 399,872 字节；权重有限性检查另计，避免 inclusive/self 双重计算。
+- 完整前缀、G=1、prefill、reset 与关闭标注负控均通过；开启标注不改变 parity 与权重身份。
+- 239 项测试通过。默认关闭分析，不把累计算子字节当峰值、RSS、内存节省或提速；历史证据原样保留。
+
+```bash
+transformer-allocation-check --output allocation-local.json
+```
+
+[运行、真实事件与限制](docs/operator-allocation.md) ·
+[预运行方案](docs/operator-allocation-protocol.md) · [完整观测](results/operator-allocation-v1/report.json)。
+
 ## 无checkpoint依赖的CPU检查器（2026-11-19，UTC+08:00）
 
 新增可安装的 `transformer-cpu-check`：无需训练、下载语料或旧权重，即可再生一份
