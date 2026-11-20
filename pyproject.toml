@@ -31,6 +31,7 @@ transformer-cached-generate = "transformer_core.inference_cli:main"
 
 transformer-cpu-check = "transformer_diagnostics.cli:main"
 transformer-allocation-check = "transformer_diagnostics.allocation:main"
+transformer-preallocated-check = "transformer_diagnostics.preallocated:main"
 
 [tool.setuptools.package-data]
 transformer_diagnostics = ["data/*.json"]

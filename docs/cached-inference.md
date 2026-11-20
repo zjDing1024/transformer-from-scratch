@@ -149,7 +149,7 @@ as independent observations. No old scientific artifact or training code changed
 
 The official [HF cache explanation](https://huggingface.co/docs/transformers/v4.57.1/cache_explanation)
 was a conceptual reference, not an imported implementation. Its repository is
-[Apache-2.0](https://github.com/huggingface/transformers/blob/a47e6666f8f9a61e44a5d149c5e3d230e6c8053c/LICENSE).
+[Apache-2.0](https://github.com/huggingface/transformers/blob/8cb5963cc22174954e7dca2c0a3320b7dc2f4edc/LICENSE).
 PyTorch's [inference-mode documentation](https://docs.pytorch.org/docs/2.14/generated/torch.autograd.grad_mode.inference_mode.html)
 explains why eval mode is separately required. All new implementation/tests are
 original MIT code. See [third-party notices](../THIRD_PARTY_NOTICES.md).

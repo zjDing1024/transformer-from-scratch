@@ -1,0 +1,22 @@
+{
+  "project": "Hugging Face Transformers",
+  "tag": "v4.57.1",
+  "tag_object": "a47e6666f8f9a61e44a5d149c5e3d230e6c8053c",
+  "peeled_commit": "8cb5963cc22174954e7dca2c0a3320b7dc2f4edc",
+  "license": "Apache-2.0",
+  "use": "StaticLayer fixed reserve concept only; no source copied or imported; its update is not model-transactional",
+  "files": [
+    {
+      "path": "src/transformers/cache_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/8cb5963cc22174954e7dca2c0a3320b7dc2f4edc/src/transformers/cache_utils.py",
+      "bytes": 67772,
+      "sha256": "f4e11caf14c75bdefa5e3003b93ef0e8b97fb6103375705ad944b0b344d7da8a"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/8cb5963cc22174954e7dca2c0a3320b7dc2f4edc/LICENSE",
+      "bytes": 11418,
+      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049"
+    }
+  ]
+}
