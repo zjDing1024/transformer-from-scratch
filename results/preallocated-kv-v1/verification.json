@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "base_commit": "70c942b57a155529bc31931cc8cd776848d122d6",
+  "local_freeze_commit": "1096745a31a48a761c1d1d57061693a44a55891c",
+  "public_preregistration": false,
+  "primary_full_report_runs": 1,
+  "primary_profiles": 4,
+  "primary_training": false,
+  "primary_timing": false,
+  "primary_rss": false,
+  "primary_report": {
+    "path": "results/preallocated-kv-v1/report.json",
+    "bytes": 169036,
+    "sha256": "71499492bd45906dd0e16f3f045cb6d1b6f078bc4a73f3f715d31a90aadaa6e3"
+  },
+  "tests": {
+    "full_passed": 304,
+    "previous_base_tests": 239,
+    "new_cache_tests": 46,
+    "new_report_and_cli_tests": 19,
+    "full_seconds": 19.08,
+    "warning": "optional NumPy absent; code does not require it",
+    "independent_QA_new_cache_tests_passed": 46,
+    "final_report_cli_tests_passed": 19,
+    "final_report_cli_seconds": 4.77,
+    "final_test_only_portability_change": "Exclude cross-CPU floating error maxima from exact report equality; runtime tolerance, exact IDs and transaction facts remain enforced. Full304 before this assertion-only change; affected19 rerun after."
+  },
+  "style": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "compileall": "passed",
+    "git_diff_check": "passed"
+  },
+  "preserved": {
+    "base_historical_results_and_experiments_files": 40,
+    "base_runtime_files": 18,
+    "all_bytes_unchanged": true,
+    "new_runtime_matches_local_freeze": true
+  },
+  "wheel": {
+    "filename": "transformer_mechanisms-0.1.0-py3-none-any.whl",
+    "bytes": 49944,
+    "sha256": "2cf42bcb2b2e081dfb5359bd20997319182ec5ff96203ae1722732f1700475de",
+    "build": "pip wheel --no-deps --no-build-isolation .",
+    "install": "pip install --no-deps --target <isolated-target> <wheel>",
+    "all_seven_report_source_hashes_match": true
+  },
+  "outside_checkout": {
+    "actual_installed_check_only": "passed",
+    "primary_profile_repeated": false,
+    "fixture_parity_failures_sourcehashes_exactly_equal": true,
+    "parity_file_sha256": "444b732bd5c56d093c639a6ace9aafa0a652a05a2b5c967fbf063abce920e19e",
+    "installed_offline_audit": "passed",
+    "audit_object_exactly_equal": true,
+    "audit_file_sha256": "d9d71ee3f6dfbc0414ecf8311d8e7fc2f716dbc7e1cb10c8d59bb349bbe39928"
+  },
+  "ci": {
+    "pytest_includes_actual_fixture_cli": true,
+    "explicit_new_command": "python -m transformer_diagnostics.preallocated --check-only --output results/ci-preallocated.json",
+    "actual_parity_and_fault_checks": true,
+    "merely_offline_report_audit": false,
+    "primary_resource_profile": false,
+    "remote_status": "not_run_locally; root publishes and verifies remote"
+  }
+}

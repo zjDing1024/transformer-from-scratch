@@ -93,3 +93,14 @@ Pinned URLs, byte counts and hashes, including the BSD-style LICENSE, are record
 in `results/operator-allocation-v1/source-references.json`. No upstream code was
 copied or vendored. The new opt-in scopes, analyzer, CLI and tests are original MIT.
 The historical source archive contains this project's own original MIT code.
+
+## Bounded preallocated K/V
+
+Hugging Face Transformers v4.57.1 StaticLayer, source commit
+`8cb5963cc22174954e7dca2c0a3320b7dc2f4edc`, is an Apache-2.0 conceptual reference
+for fixed reserve and in-place writes. Its annotated tag object is not a source
+commit. Immutable URLs, verified bytes and SHA256 receipts are recorded in
+`results/preallocated-kv-v1/source-references.json`. No source was copied/imported;
+its reset/update policy is not this project's logical transaction contract.
+The opt-in cache, failure controls, diagnostic and tests are original MIT.
+No new external model, dependency, corpus, private data or paid compute is used.

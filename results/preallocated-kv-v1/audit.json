@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "mode": "offline-consistency-audit",
+  "cases": [
+    {
+      "id": "b2-p16-g16",
+      "write_events": 64,
+      "write_site_positive_self_bytes": 0,
+      "logical_write_payload_bytes": 63488,
+      "kv_cat_events": 0,
+      "token_cat_events": 16,
+      "token_cat_positive_self_bytes": 6272,
+      "active_bytes": 63488,
+      "unique_backing_bytes": 131072,
+      "unique_backing_count": 4,
+      "per_storage_bytes": [
+        32768,
+        32768,
+        32768,
+        32768
+      ],
+      "length": 31,
+      "batch": 2
+    },
+    {
+      "id": "b2-p32-g32",
+      "write_events": 128,
+      "write_site_positive_self_bytes": 0,
+      "logical_write_payload_bytes": 129024,
+      "kv_cat_events": 0,
+      "token_cat_events": 32,
+      "token_cat_positive_self_bytes": 24832,
+      "active_bytes": 129024,
+      "unique_backing_bytes": 131072,
+      "unique_backing_count": 4,
+      "per_storage_bytes": [
+        32768,
+        32768,
+        32768,
+        32768
+      ],
+      "length": 63,
+      "batch": 2
+    }
+  ]
+}

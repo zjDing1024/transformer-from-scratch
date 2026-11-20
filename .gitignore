@@ -34,3 +34,5 @@ results/portable-cpu-local/
 *.plm
 
 results/operator-allocation-local/
+
+results/preallocated-kv-local/

@@ -4,6 +4,23 @@
 
 这是独立的机制实现项目。**尚未实现完整 encoder-decoder 训练，也没有复现论文的 WMT/BLEU 指标。** 历史小型合成实验保留；新增真实技术文本的99,968参数因果语言模型、固定文档划分、验证集选模、bigram基线及独立测试评分。不代表语言理解或个人技能已掌握。
 
+## 有界预分配 KV 与失败重试（2026-11-21，UTC+08:00）
+
+新增可选 `PreallocatedByteDecoder`，动态缓存默认路径不变。预留容量后只写新增位置，
+最后一层失败或 NaN 时，不改变已提交前缀、长度与批次；脏尾部不对重试可见。
+
+- 固定 fixture 与动态/完整前缀对照通过，最大 greedy logit 绝对差 **1.072884e-6**，字节完全一致。
+- 迟发异常、NaN、更短不同重试、首次 B2 失败后 B1、NaN 尾部与 reset 控制全部实际通过。
+- 两组请求的固定 backing 为 **131,072 B**，active 为 **63,488 / 129,024 B**；实际观测 **64 / 128** 次 K/V 原位复制，没有 K/V 拼接。
+- 304 项测试通过，wheel 在仓库外实际重放正确性与故障控制。逻辑回滚不等于物理擦除；零算子分配不等于零写入成本，未测延迟、RSS 或内存节省。
+
+```bash
+transformer-preallocated-check --check-only --output preallocated-parity.json
+```
+
+[接口、真实结果与限制](docs/preallocated-kv.md) ·
+[预运行方案](docs/preallocated-kv-protocol.md) · [完整观测](results/preallocated-kv-v1/report.json)。
+
 ## CPU 算子分配归因（2026-11-20，UTC+08:00）
 
 新增可安装的 `transformer-allocation-check`，在原固定权重 fixture 上实际记录分配事件：

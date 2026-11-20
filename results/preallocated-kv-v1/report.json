@@ -1,0 +1,5978 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "fixture": {
+    "name": "byte-lm-portable-f32-v1",
+    "model": {
+      "width": 64,
+      "heads": 4,
+      "hidden": 128,
+      "layers": 2,
+      "use_positions": true
+    },
+    "artifact_size_bytes": 403088,
+    "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+    "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+    "parameters": 99968,
+    "trained": false,
+    "historical_checkpoint": false
+  },
+  "parity": {
+    "status": "passed",
+    "teacher": [
+      {
+        "chunks": [
+          64
+        ],
+        "max_absolute_error": 0.0,
+        "backing_pointers_stable": true,
+        "storage": {
+          "active_bytes": 131072,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 64,
+          "batch": 2
+        }
+      },
+      {
+        "chunks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "max_absolute_error": 9.5367431640625e-07,
+        "backing_pointers_stable": true,
+        "storage": {
+          "active_bytes": 131072,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 64,
+          "batch": 2
+        }
+      },
+      {
+        "chunks": [
+          5,
+          13,
+          1,
+          17,
+          28
+        ],
+        "max_absolute_error": 8.344650268554688e-07,
+        "backing_pointers_stable": true,
+        "storage": {
+          "active_bytes": 131072,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 64,
+          "batch": 2
+        }
+      }
+    ],
+    "cases": [
+      {
+        "id": "b2-p16-g16",
+        "max_absolute_error": 7.152557373046875e-07,
+        "exact_greedy_ids": true,
+        "output_hex": [
+          "546865206170706c69636174696f6e203a849f6a7108893fd2d14b755a22b16a",
+          "4854545020726571756573743a2020203aff72bf9f3affbf9f3a849f3a849f3a"
+        ],
+        "storage": {
+          "active_bytes": 63488,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 31,
+          "batch": 2
+        }
+      },
+      {
+        "id": "b2-p32-g32",
+        "max_absolute_error": 1.0728836059570312e-06,
+        "exact_greedy_ids": true,
+        "output_hex": [
+          "546865206170706c69636174696f6e20546865206170706c69636174696f6e203a847b07bad0e7c9a35a22f4197e21697e42a58ad29195ff9f6a7108891972a8",
+          "4854545020726571756573743a2020204854545020726571756573743a2020203aff72bf9f3affa7e6b34f831f96ffbf236a715d41132cbf236ab4cd4f01eabf"
+        ],
+        "storage": {
+          "active_bytes": 129024,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 63,
+          "batch": 2
+        }
+      }
+    ],
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "failures": {
+    "status": "passed",
+    "late_failures": [
+      {
+        "first_prefill": false,
+        "fault": "raise",
+        "error": "injected late output failure",
+        "late_sites": [
+          "value",
+          "value",
+          "output"
+        ],
+        "committed_prefix_and_metadata_unchanged": true,
+        "inactive_backing_changed": true,
+        "retry_max_absolute_error": 5.960464477539062e-07,
+        "retry_storage": {
+          "active_bytes": 38912,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 19,
+          "batch": 2
+        },
+        "reset_storage": {
+          "active_bytes": 0,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 0,
+          "batch": null
+        },
+        "reset_preserves_bytes_and_pointers": true,
+        "new_batch_after_reset": 1
+      },
+      {
+        "first_prefill": false,
+        "fault": "nan",
+        "error": "nonfinite inference output; logical cache not advanced",
+        "late_sites": [
+          "value",
+          "value",
+          "output"
+        ],
+        "committed_prefix_and_metadata_unchanged": true,
+        "inactive_backing_changed": true,
+        "retry_max_absolute_error": 5.960464477539062e-07,
+        "retry_storage": {
+          "active_bytes": 38912,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 19,
+          "batch": 2
+        },
+        "reset_storage": {
+          "active_bytes": 0,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 0,
+          "batch": null
+        },
+        "reset_preserves_bytes_and_pointers": true,
+        "new_batch_after_reset": 1
+      },
+      {
+        "first_prefill": true,
+        "fault": "raise",
+        "error": "injected late output failure",
+        "late_sites": [
+          "value",
+          "value",
+          "output"
+        ],
+        "committed_prefix_and_metadata_unchanged": true,
+        "inactive_backing_changed": true,
+        "retry_max_absolute_error": 0.0,
+        "retry_storage": {
+          "active_bytes": 2048,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 2,
+          "batch": 1
+        },
+        "reset_storage": {
+          "active_bytes": 0,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 0,
+          "batch": null
+        },
+        "reset_preserves_bytes_and_pointers": true,
+        "new_batch_after_reset": 1
+      },
+      {
+        "first_prefill": true,
+        "fault": "nan",
+        "error": "nonfinite inference output; logical cache not advanced",
+        "late_sites": [
+          "value",
+          "value",
+          "output"
+        ],
+        "committed_prefix_and_metadata_unchanged": true,
+        "inactive_backing_changed": true,
+        "retry_max_absolute_error": 0.0,
+        "retry_storage": {
+          "active_bytes": 2048,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 2,
+          "batch": 1
+        },
+        "reset_storage": {
+          "active_bytes": 0,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 0,
+          "batch": null
+        },
+        "reset_preserves_bytes_and_pointers": true,
+        "new_batch_after_reset": 1
+      }
+    ],
+    "poisoned_tail_and_inactive_batch": {
+      "status": "passed",
+      "max_absolute_error": 5.960464477539062e-07,
+      "active_length": 18,
+      "batch": 1,
+      "valid_prefix_values_equal": true
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "threads": 1,
+    "interop_threads": 1
+  },
+  "measurements": "performed",
+  "training": false,
+  "latency": false,
+  "rss": false,
+  "resource": {
+    "copy_control": {
+      "attribution_status": "observed",
+      "reason": null,
+      "ranges": {
+        "control_copy": 1
+      },
+      "producers": [
+        {
+          "site": "control_copy",
+          "operator": "[scope self]",
+          "count": 1,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "control_copy",
+          "operator": "aten::copy_",
+          "count": 1,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        }
+      ],
+      "selected_events": [],
+      "unscoped_operator_counts": {},
+      "accounting": "sum positive self bytes once by nearest site; inclusive bytes not summed",
+      "write_events": [
+        {
+          "scope": {
+            "site": "control_copy"
+          },
+          "self_bytes": 0
+        }
+      ],
+      "destination_payload_bytes": 24
+    },
+    "constructor": {
+      "attribution_status": "observed",
+      "reason": null,
+      "ranges": {
+        "finite_validation": 1,
+        "snapshot_deepcopy": 1,
+        "static_reserve": 1
+      },
+      "producers": [
+        {
+          "site": "finite_validation",
+          "operator": "[scope self]",
+          "count": 1,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": -100003
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::_local_scalar_dense",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::_to_copy",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::abs",
+          "count": 70,
+          "positive_self_bytes": 399872,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::all",
+          "count": 35,
+          "positive_self_bytes": 35,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::as_strided",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::copy_",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::empty",
+          "count": 70,
+          "positive_self_bytes": 140,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::empty_strided",
+          "count": 35,
+          "positive_self_bytes": 140,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::eq",
+          "count": 35,
+          "positive_self_bytes": 99968,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::fill_",
+          "count": 175,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::is_nonzero",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::isfinite",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": -599808
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::item",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::mul",
+          "count": 35,
+          "positive_self_bytes": 99968,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::ne",
+          "count": 35,
+          "positive_self_bytes": 99828,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::set_",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": -140
+        },
+        {
+          "site": "finite_validation",
+          "operator": "aten::to",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "snapshot_deepcopy",
+          "operator": "[scope self]",
+          "count": 1,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "snapshot_deepcopy",
+          "operator": "aten::clone",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "snapshot_deepcopy",
+          "operator": "aten::copy_",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "snapshot_deepcopy",
+          "operator": "aten::detach",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "snapshot_deepcopy",
+          "operator": "aten::empty_strided",
+          "count": 35,
+          "positive_self_bytes": 399872,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "snapshot_deepcopy",
+          "operator": "aten::fill_",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "snapshot_deepcopy",
+          "operator": "detach",
+          "count": 35,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "static_reserve",
+          "operator": "[scope self]",
+          "count": 1,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "static_reserve",
+          "operator": "aten::empty",
+          "count": 4,
+          "positive_self_bytes": 131072,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "static_reserve",
+          "operator": "aten::fill_",
+          "count": 4,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "static_reserve",
+          "operator": "aten::zero_",
+          "count": 4,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        },
+        {
+          "site": "static_reserve",
+          "operator": "aten::zeros",
+          "count": 4,
+          "positive_self_bytes": 0,
+          "negative_self_bytes": 0
+        }
+      ],
+      "selected_events": [
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 65536
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 16384
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 16384
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 16384
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 16384
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 32768
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 512
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 32768
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 16384
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 16384
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 16384
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 16384
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 32768
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 512
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 32768
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 256
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 65536
+        },
+        {
+          "scope": {
+            "site": "snapshot_deepcopy"
+          },
+          "operator": "aten::clone",
+          "self_bytes": 0,
+          "inclusive_bytes_diagnostic_only": 1024
+        }
+      ],
+      "unscoped_operator_counts": {},
+      "accounting": "sum positive self bytes once by nearest site; inclusive bytes not summed",
+      "write_events": []
+    },
+    "initial_storage": {
+      "active_bytes": 0,
+      "unique_backing_bytes": 131072,
+      "unique_backing_count": 4,
+      "per_storage_bytes": [
+        32768,
+        32768,
+        32768,
+        32768
+      ],
+      "length": 0,
+      "batch": null
+    },
+    "cases": [
+      {
+        "id": "b2-p16-g16",
+        "prompt_length": 16,
+        "count": 16,
+        "check": {
+          "write_events": 64,
+          "write_site_positive_self_bytes": 0,
+          "logical_write_payload_bytes": 63488,
+          "kv_cat_events": 0,
+          "token_cat_events": 16,
+          "token_cat_positive_self_bytes": 6272
+        },
+        "storage": {
+          "active_bytes": 63488,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 31,
+          "batch": 2
+        },
+        "backing_pointers_stable": true,
+        "trace": {
+          "attribution_status": "observed",
+          "reason": null,
+          "ranges": {
+            "append": 15,
+            "prefill": 1,
+            "static_kv_write": 64,
+            "token_cat": 16
+          },
+          "producers": [
+            {
+              "site": "append",
+              "operator": "[scope self]",
+              "count": 15,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -564420
+            },
+            {
+              "site": "append",
+              "operator": "aten::__or__",
+              "count": 15,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_local_scalar_dense",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_reshape_alias",
+              "count": 60,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_softmax",
+              "count": 30,
+              "positive_self_bytes": 23040,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_to_copy",
+              "count": 270,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_unsafe_view",
+              "count": 60,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::abs",
+              "count": 30,
+              "positive_self_bytes": 30720,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::add",
+              "count": 195,
+              "positive_self_bytes": 69360,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::addmm",
+              "count": 195,
+              "positive_self_bytes": 138240,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::alias",
+              "count": 15,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::all",
+              "count": 15,
+              "positive_self_bytes": 15,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::any",
+              "count": 45,
+              "positive_self_bytes": 255,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::arange",
+              "count": 120,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::as_strided",
+              "count": 885,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::bitwise_not",
+              "count": 60,
+              "positive_self_bytes": 11520,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::bitwise_or",
+              "count": 15,
+              "positive_self_bytes": 30,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::bmm",
+              "count": 60,
+              "positive_self_bytes": 38400,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::broadcast_to",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::clamp_min",
+              "count": 30,
+              "positive_self_bytes": 30720,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::clone",
+              "count": 60,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::copy_",
+              "count": 555,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::cos",
+              "count": 15,
+              "positive_self_bytes": 1920,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::div",
+              "count": 45,
+              "positive_self_bytes": 24780,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::div_",
+              "count": 120,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -480
+            },
+            {
+              "site": "append",
+              "operator": "aten::dropout",
+              "count": 135,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::embedding",
+              "count": 15,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::empty",
+              "count": 315,
+              "positive_self_bytes": 50520,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::empty_like",
+              "count": 90,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::empty_strided",
+              "count": 300,
+              "positive_self_bytes": 24120,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::eq",
+              "count": 15,
+              "positive_self_bytes": 7680,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::exp",
+              "count": 15,
+              "positive_self_bytes": 1920,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::expand",
+              "count": 345,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::fill_",
+              "count": 915,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::ge",
+              "count": 15,
+              "positive_self_bytes": 360,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::gt",
+              "count": 15,
+              "positive_self_bytes": 30,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::index_select",
+              "count": 15,
+              "positive_self_bytes": 7680,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::is_nonzero",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::isfinite",
+              "count": 15,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -46080
+            },
+            {
+              "site": "append",
+              "operator": "aten::item",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::linear",
+              "count": 195,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::lt",
+              "count": 15,
+              "positive_self_bytes": 30,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::masked_fill",
+              "count": 60,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::masked_fill_",
+              "count": 60,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::matmul",
+              "count": 60,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::mean",
+              "count": 120,
+              "positive_self_bytes": 960,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::mul",
+              "count": 180,
+              "positive_self_bytes": 80520,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::ne",
+              "count": 15,
+              "positive_self_bytes": 7620,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::pow",
+              "count": 60,
+              "positive_self_bytes": 30720,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::relu",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::reshape",
+              "count": 255,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::resize_",
+              "count": 60,
+              "positive_self_bytes": 4980,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::resolve_conj",
+              "count": 510,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::result_type",
+              "count": 60,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::rsqrt",
+              "count": 60,
+              "positive_self_bytes": 480,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::select",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::set_",
+              "count": 120,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -600
+            },
+            {
+              "site": "append",
+              "operator": "aten::sin",
+              "count": 15,
+              "positive_self_bytes": 1920,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::slice",
+              "count": 90,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::softmax",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::square",
+              "count": 60,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::sub",
+              "count": 60,
+              "positive_self_bytes": 30720,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::sum",
+              "count": 120,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::t",
+              "count": 195,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::to",
+              "count": 555,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::transpose",
+              "count": 345,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::unsqueeze",
+              "count": 45,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::view",
+              "count": 600,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::where",
+              "count": 30,
+              "positive_self_bytes": 23040,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::zero_",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::zeros_like",
+              "count": 30,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "[scope self]",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -546210
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::__or__",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_local_scalar_dense",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_reshape_alias",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_softmax",
+              "count": 2,
+              "positive_self_bytes": 16384,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_to_copy",
+              "count": 18,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_unsafe_view",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::abs",
+              "count": 2,
+              "positive_self_bytes": 32768,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::add",
+              "count": 13,
+              "positive_self_bytes": 74224,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::addmm",
+              "count": 13,
+              "positive_self_bytes": 147456,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::alias",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::all",
+              "count": 1,
+              "positive_self_bytes": 1,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::any",
+              "count": 3,
+              "positive_self_bytes": 257,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::arange",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::as_strided",
+              "count": 59,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::bitwise_not",
+              "count": 4,
+              "positive_self_bytes": 8192,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::bitwise_or",
+              "count": 1,
+              "positive_self_bytes": 32,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::bmm",
+              "count": 4,
+              "positive_self_bytes": 32768,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::broadcast_to",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::clamp_min",
+              "count": 2,
+              "positive_self_bytes": 32768,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::clone",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::copy_",
+              "count": 41,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::cos",
+              "count": 1,
+              "positive_self_bytes": 2048,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::div",
+              "count": 3,
+              "positive_self_bytes": 16500,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::div_",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -32
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::dropout",
+              "count": 9,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::embedding",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::empty",
+              "count": 25,
+              "positive_self_bytes": 69672,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::empty_like",
+              "count": 10,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::empty_strided",
+              "count": 20,
+              "positive_self_bytes": 16456,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::eq",
+              "count": 1,
+              "positive_self_bytes": 8192,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::exp",
+              "count": 1,
+              "positive_self_bytes": 128,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::expand",
+              "count": 23,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::fill_",
+              "count": 65,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::ge",
+              "count": 1,
+              "positive_self_bytes": 256,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::gt",
+              "count": 1,
+              "positive_self_bytes": 32,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::index_select",
+              "count": 1,
+              "positive_self_bytes": 8192,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::is_nonzero",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::isfinite",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -49152
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::item",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::linear",
+              "count": 13,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::lt",
+              "count": 1,
+              "positive_self_bytes": 32,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::masked_fill",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::masked_fill_",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::matmul",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -16384
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::mean",
+              "count": 8,
+              "positive_self_bytes": 1024,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::mul",
+              "count": 12,
+              "positive_self_bytes": 84088,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::ne",
+              "count": 1,
+              "positive_self_bytes": 8188,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::pow",
+              "count": 4,
+              "positive_self_bytes": 32768,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::relu",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::reshape",
+              "count": 17,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::resize_",
+              "count": 4,
+              "positive_self_bytes": 448,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::resolve_conj",
+              "count": 34,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::result_type",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::rsqrt",
+              "count": 4,
+              "positive_self_bytes": 512,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::select",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::set_",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -40
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::sin",
+              "count": 1,
+              "positive_self_bytes": 2048,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::slice",
+              "count": 6,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::softmax",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::square",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::sub",
+              "count": 4,
+              "positive_self_bytes": 32768,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::sum",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::t",
+              "count": 13,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::to",
+              "count": 37,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::transpose",
+              "count": 23,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::unsqueeze",
+              "count": 3,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::view",
+              "count": 36,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::where",
+              "count": 2,
+              "positive_self_bytes": 16384,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::zero_",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::zeros_like",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "static_kv_write",
+              "operator": "[scope self]",
+              "count": 64,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "static_kv_write",
+              "operator": "aten::as_strided",
+              "count": 64,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "static_kv_write",
+              "operator": "aten::copy_",
+              "count": 64,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "static_kv_write",
+              "operator": "aten::slice",
+              "count": 64,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "token_cat",
+              "operator": "[scope self]",
+              "count": 16,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -6016
+            },
+            {
+              "site": "token_cat",
+              "operator": "aten::as_strided",
+              "count": 32,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "token_cat",
+              "operator": "aten::cat",
+              "count": 16,
+              "positive_self_bytes": 6272,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "token_cat",
+              "operator": "aten::narrow",
+              "count": 32,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "token_cat",
+              "operator": "aten::slice",
+              "count": 32,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            }
+          ],
+          "selected_events": [
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 17,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 272,
+              "inclusive_bytes_diagnostic_only": 272
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 18,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 288,
+              "inclusive_bytes_diagnostic_only": 288
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 19,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 304,
+              "inclusive_bytes_diagnostic_only": 304
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 20,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 320,
+              "inclusive_bytes_diagnostic_only": 320
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 21,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 336,
+              "inclusive_bytes_diagnostic_only": 336
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 22,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 352,
+              "inclusive_bytes_diagnostic_only": 352
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 23,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 368,
+              "inclusive_bytes_diagnostic_only": 368
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 24,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 384,
+              "inclusive_bytes_diagnostic_only": 384
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 25,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 400,
+              "inclusive_bytes_diagnostic_only": 400
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 26,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 416,
+              "inclusive_bytes_diagnostic_only": 416
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 27,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 432,
+              "inclusive_bytes_diagnostic_only": 432
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 28,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 448,
+              "inclusive_bytes_diagnostic_only": 448
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 29,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 464,
+              "inclusive_bytes_diagnostic_only": 464
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 30,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 480,
+              "inclusive_bytes_diagnostic_only": 480
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 31,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 496,
+              "inclusive_bytes_diagnostic_only": 496
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 32,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 512,
+              "inclusive_bytes_diagnostic_only": 512
+            }
+          ],
+          "unscoped_operator_counts": {
+            "[memory]": 36,
+            "aten::__or__": 1,
+            "aten::_local_scalar_dense": 1,
+            "aten::any": 1,
+            "aten::argmax": 16,
+            "aten::as_strided": 17,
+            "aten::bitwise_or": 1,
+            "aten::clone": 1,
+            "aten::copy_": 1,
+            "aten::empty_strided": 1,
+            "aten::fill_": 2,
+            "aten::gt": 1,
+            "aten::is_nonzero": 1,
+            "aten::item": 1,
+            "aten::lt": 1,
+            "aten::select": 16
+          },
+          "accounting": "sum positive self bytes once by nearest site; inclusive bytes not summed",
+          "write_events": [
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 16,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 8192,
+                "site": "static_kv_write",
+                "start": 0
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 16,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 8192,
+                "site": "static_kv_write",
+                "start": 0
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 16,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 8192,
+                "site": "static_kv_write",
+                "start": 0
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 16,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 8192,
+                "site": "static_kv_write",
+                "start": 0
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 16
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 16
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 16
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 16
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 17
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 17
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 17
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 17
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 18
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 18
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 18
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 18
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 19
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 19
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 19
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 19
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 20
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 20
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 20
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 20
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 21
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 21
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 21
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 21
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 22
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 22
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 22
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 22
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 23
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 23
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 23
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 23
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 24
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 24
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 24
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 24
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 25
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 25
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 25
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 25
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 26
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 26
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 26
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 26
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 27
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 27
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 27
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 27
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 28
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 28
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 28
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 28
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 29
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 29
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 29
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 29
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 30
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 30
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 30
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 30
+              },
+              "self_bytes": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "b2-p32-g32",
+        "prompt_length": 32,
+        "count": 32,
+        "check": {
+          "write_events": 128,
+          "write_site_positive_self_bytes": 0,
+          "logical_write_payload_bytes": 129024,
+          "kv_cat_events": 0,
+          "token_cat_events": 32,
+          "token_cat_positive_self_bytes": 24832
+        },
+        "storage": {
+          "active_bytes": 129024,
+          "unique_backing_bytes": 131072,
+          "unique_backing_count": 4,
+          "per_storage_bytes": [
+            32768,
+            32768,
+            32768,
+            32768
+          ],
+          "length": 63,
+          "batch": 2
+        },
+        "backing_pointers_stable": true,
+        "trace": {
+          "attribution_status": "observed",
+          "reason": null,
+          "ranges": {
+            "append": 31,
+            "prefill": 1,
+            "static_kv_write": 128,
+            "token_cat": 32
+          },
+          "producers": [
+            {
+              "site": "append",
+              "operator": "[scope self]",
+              "count": 31,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -1530284
+            },
+            {
+              "site": "append",
+              "operator": "aten::__or__",
+              "count": 31,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_local_scalar_dense",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_reshape_alias",
+              "count": 124,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_softmax",
+              "count": 62,
+              "positive_self_bytes": 95232,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_to_copy",
+              "count": 558,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::_unsafe_view",
+              "count": 124,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::abs",
+              "count": 62,
+              "positive_self_bytes": 63488,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::add",
+              "count": 403,
+              "positive_self_bytes": 143344,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::addmm",
+              "count": 403,
+              "positive_self_bytes": 285696,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::alias",
+              "count": 31,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::all",
+              "count": 31,
+              "positive_self_bytes": 31,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::any",
+              "count": 93,
+              "positive_self_bytes": 527,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::arange",
+              "count": 248,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::as_strided",
+              "count": 1829,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::bitwise_not",
+              "count": 124,
+              "positive_self_bytes": 47616,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::bitwise_or",
+              "count": 31,
+              "positive_self_bytes": 62,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::bmm",
+              "count": 124,
+              "positive_self_bytes": 126976,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::broadcast_to",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::clamp_min",
+              "count": 62,
+              "positive_self_bytes": 63488,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::clone",
+              "count": 124,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::copy_",
+              "count": 1147,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::cos",
+              "count": 31,
+              "positive_self_bytes": 3968,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::div",
+              "count": 93,
+              "positive_self_bytes": 98828,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::div_",
+              "count": 248,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -992
+            },
+            {
+              "site": "append",
+              "operator": "aten::dropout",
+              "count": 279,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::embedding",
+              "count": 31,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::empty",
+              "count": 651,
+              "positive_self_bytes": 199640,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::empty_like",
+              "count": 186,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::empty_strided",
+              "count": 620,
+              "positive_self_bytes": 97464,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::eq",
+              "count": 31,
+              "positive_self_bytes": 15872,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::exp",
+              "count": 31,
+              "positive_self_bytes": 3968,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::expand",
+              "count": 713,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::fill_",
+              "count": 1891,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::ge",
+              "count": 31,
+              "positive_self_bytes": 1488,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::gt",
+              "count": 31,
+              "positive_self_bytes": 62,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::index_select",
+              "count": 31,
+              "positive_self_bytes": 15872,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::is_nonzero",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::isfinite",
+              "count": 31,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -95232
+            },
+            {
+              "site": "append",
+              "operator": "aten::item",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::linear",
+              "count": 403,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::lt",
+              "count": 31,
+              "positive_self_bytes": 62,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::masked_fill",
+              "count": 124,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::masked_fill_",
+              "count": 124,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::matmul",
+              "count": 124,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::mean",
+              "count": 248,
+              "positive_self_bytes": 1984,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::mul",
+              "count": 372,
+              "positive_self_bytes": 166408,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::ne",
+              "count": 31,
+              "positive_self_bytes": 15748,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::pow",
+              "count": 124,
+              "positive_self_bytes": 63488,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::relu",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::reshape",
+              "count": 527,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::resize_",
+              "count": 124,
+              "positive_self_bytes": 16244,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::resolve_conj",
+              "count": 1054,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::result_type",
+              "count": 124,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::rsqrt",
+              "count": 124,
+              "positive_self_bytes": 992,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::select",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::set_",
+              "count": 248,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -1240
+            },
+            {
+              "site": "append",
+              "operator": "aten::sin",
+              "count": 31,
+              "positive_self_bytes": 3968,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::slice",
+              "count": 186,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::softmax",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::square",
+              "count": 124,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::sub",
+              "count": 124,
+              "positive_self_bytes": 63488,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::sum",
+              "count": 248,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::t",
+              "count": 403,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::to",
+              "count": 1147,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::transpose",
+              "count": 713,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::unsqueeze",
+              "count": 93,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::view",
+              "count": 1240,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::where",
+              "count": 62,
+              "positive_self_bytes": 95232,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::zero_",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "append",
+              "operator": "aten::zeros_like",
+              "count": 62,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "[scope self]",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -1338178
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::__or__",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_local_scalar_dense",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_reshape_alias",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_softmax",
+              "count": 2,
+              "positive_self_bytes": 65536,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_to_copy",
+              "count": 18,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::_unsafe_view",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::abs",
+              "count": 2,
+              "positive_self_bytes": 65536,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::add",
+              "count": 13,
+              "positive_self_bytes": 148464,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::addmm",
+              "count": 13,
+              "positive_self_bytes": 294912,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::alias",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::all",
+              "count": 1,
+              "positive_self_bytes": 1,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::any",
+              "count": 3,
+              "positive_self_bytes": 513,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::arange",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::as_strided",
+              "count": 59,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::bitwise_not",
+              "count": 4,
+              "positive_self_bytes": 32768,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::bitwise_or",
+              "count": 1,
+              "positive_self_bytes": 64,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::bmm",
+              "count": 4,
+              "positive_self_bytes": 98304,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::broadcast_to",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::clamp_min",
+              "count": 2,
+              "positive_self_bytes": 65536,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::clone",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::copy_",
+              "count": 41,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::cos",
+              "count": 1,
+              "positive_self_bytes": 4096,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::div",
+              "count": 3,
+              "positive_self_bytes": 65652,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::div_",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -32
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::dropout",
+              "count": 9,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::embedding",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::empty",
+              "count": 25,
+              "positive_self_bytes": 204840,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::empty_like",
+              "count": 10,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::empty_strided",
+              "count": 20,
+              "positive_self_bytes": 65608,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::eq",
+              "count": 1,
+              "positive_self_bytes": 16384,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::exp",
+              "count": 1,
+              "positive_self_bytes": 128,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::expand",
+              "count": 23,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::fill_",
+              "count": 65,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::ge",
+              "count": 1,
+              "positive_self_bytes": 1024,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::gt",
+              "count": 1,
+              "positive_self_bytes": 64,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::index_select",
+              "count": 1,
+              "positive_self_bytes": 16384,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::is_nonzero",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::isfinite",
+              "count": 1,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -98304
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::item",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::linear",
+              "count": 13,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::lt",
+              "count": 1,
+              "positive_self_bytes": 64,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::masked_fill",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::masked_fill_",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::matmul",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -32768
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::mean",
+              "count": 8,
+              "positive_self_bytes": 2048,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::mul",
+              "count": 12,
+              "positive_self_bytes": 168056,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::ne",
+              "count": 1,
+              "positive_self_bytes": 16380,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::pow",
+              "count": 4,
+              "positive_self_bytes": 65536,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::relu",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::reshape",
+              "count": 17,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::resize_",
+              "count": 4,
+              "positive_self_bytes": 768,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::resolve_conj",
+              "count": 34,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::result_type",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::rsqrt",
+              "count": 4,
+              "positive_self_bytes": 1024,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::select",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::set_",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -40
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::sin",
+              "count": 1,
+              "positive_self_bytes": 4096,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::slice",
+              "count": 6,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::softmax",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::square",
+              "count": 4,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::sub",
+              "count": 4,
+              "positive_self_bytes": 65536,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::sum",
+              "count": 8,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::t",
+              "count": 13,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::to",
+              "count": 37,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::transpose",
+              "count": 23,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::unsqueeze",
+              "count": 3,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::view",
+              "count": 36,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::where",
+              "count": 2,
+              "positive_self_bytes": 65536,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::zero_",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "prefill",
+              "operator": "aten::zeros_like",
+              "count": 2,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "static_kv_write",
+              "operator": "[scope self]",
+              "count": 128,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "static_kv_write",
+              "operator": "aten::as_strided",
+              "count": 128,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "static_kv_write",
+              "operator": "aten::copy_",
+              "count": 128,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "static_kv_write",
+              "operator": "aten::slice",
+              "count": 128,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "token_cat",
+              "operator": "[scope self]",
+              "count": 32,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": -24320
+            },
+            {
+              "site": "token_cat",
+              "operator": "aten::as_strided",
+              "count": 64,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "token_cat",
+              "operator": "aten::cat",
+              "count": 32,
+              "positive_self_bytes": 24832,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "token_cat",
+              "operator": "aten::narrow",
+              "count": 64,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            },
+            {
+              "site": "token_cat",
+              "operator": "aten::slice",
+              "count": 64,
+              "positive_self_bytes": 0,
+              "negative_self_bytes": 0
+            }
+          ],
+          "selected_events": [
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 33,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 528,
+              "inclusive_bytes_diagnostic_only": 528
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 34,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 544,
+              "inclusive_bytes_diagnostic_only": 544
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 35,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 560,
+              "inclusive_bytes_diagnostic_only": 560
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 36,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 576,
+              "inclusive_bytes_diagnostic_only": 576
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 37,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 592,
+              "inclusive_bytes_diagnostic_only": 592
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 38,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 608,
+              "inclusive_bytes_diagnostic_only": 608
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 39,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 624,
+              "inclusive_bytes_diagnostic_only": 624
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 40,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 640,
+              "inclusive_bytes_diagnostic_only": 640
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 41,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 656,
+              "inclusive_bytes_diagnostic_only": 656
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 42,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 672,
+              "inclusive_bytes_diagnostic_only": 672
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 43,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 688,
+              "inclusive_bytes_diagnostic_only": 688
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 44,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 704,
+              "inclusive_bytes_diagnostic_only": 704
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 45,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 720,
+              "inclusive_bytes_diagnostic_only": 720
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 46,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 736,
+              "inclusive_bytes_diagnostic_only": 736
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 47,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 752,
+              "inclusive_bytes_diagnostic_only": 752
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 48,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 768,
+              "inclusive_bytes_diagnostic_only": 768
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 49,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 784,
+              "inclusive_bytes_diagnostic_only": 784
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 50,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 800,
+              "inclusive_bytes_diagnostic_only": 800
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 51,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 816,
+              "inclusive_bytes_diagnostic_only": 816
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 52,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 832,
+              "inclusive_bytes_diagnostic_only": 832
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 53,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 848,
+              "inclusive_bytes_diagnostic_only": 848
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 54,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 864,
+              "inclusive_bytes_diagnostic_only": 864
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 55,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 880,
+              "inclusive_bytes_diagnostic_only": 880
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 56,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 896,
+              "inclusive_bytes_diagnostic_only": 896
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 57,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 912,
+              "inclusive_bytes_diagnostic_only": 912
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 58,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 928,
+              "inclusive_bytes_diagnostic_only": 928
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 59,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 944,
+              "inclusive_bytes_diagnostic_only": 944
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 60,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 960,
+              "inclusive_bytes_diagnostic_only": 960
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 61,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 976,
+              "inclusive_bytes_diagnostic_only": 976
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 62,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 992,
+              "inclusive_bytes_diagnostic_only": 992
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 63,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 1008,
+              "inclusive_bytes_diagnostic_only": 1008
+            },
+            {
+              "scope": {
+                "arm": "cached",
+                "length": 64,
+                "site": "token_cat"
+              },
+              "operator": "aten::cat",
+              "self_bytes": 1024,
+              "inclusive_bytes_diagnostic_only": 1024
+            }
+          ],
+          "unscoped_operator_counts": {
+            "[memory]": 68,
+            "aten::__or__": 1,
+            "aten::_local_scalar_dense": 1,
+            "aten::any": 1,
+            "aten::argmax": 32,
+            "aten::as_strided": 33,
+            "aten::bitwise_or": 1,
+            "aten::clone": 1,
+            "aten::copy_": 1,
+            "aten::empty_strided": 1,
+            "aten::fill_": 2,
+            "aten::gt": 1,
+            "aten::is_nonzero": 1,
+            "aten::item": 1,
+            "aten::lt": 1,
+            "aten::select": 32
+          },
+          "accounting": "sum positive self bytes once by nearest site; inclusive bytes not summed",
+          "write_events": [
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 32,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 16384,
+                "site": "static_kv_write",
+                "start": 0
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 32,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 16384,
+                "site": "static_kv_write",
+                "start": 0
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 32,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 16384,
+                "site": "static_kv_write",
+                "start": 0
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 32,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 16384,
+                "site": "static_kv_write",
+                "start": 0
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 32
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 32
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 32
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 32
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 33
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 33
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 33
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 33
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 34
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 34
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 34
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 34
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 35
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 35
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 35
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 35
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 36
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 36
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 36
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 36
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 37
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 37
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 37
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 37
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 38
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 38
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 38
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 38
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 39
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 39
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 39
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 39
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 40
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 40
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 40
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 40
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 41
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 41
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 41
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 41
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 42
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 42
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 42
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 42
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 43
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 43
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 43
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 43
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 44
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 44
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 44
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 44
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 45
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 45
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 45
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 45
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 46
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 46
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 46
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 46
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 47
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 47
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 47
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 47
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 48
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 48
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 48
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 48
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 49
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 49
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 49
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 49
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 50
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 50
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 50
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 50
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 51
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 51
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 51
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 51
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 52
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 52
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 52
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 52
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 53
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 53
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 53
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 53
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 54
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 54
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 54
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 54
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 55
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 55
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 55
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 55
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 56
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 56
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 56
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 56
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 57
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 57
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 57
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 57
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 58
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 58
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 58
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 58
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 59
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 59
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 59
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 59
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 60
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 60
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 60
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 60
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 61
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 61
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 61
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 61
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 62
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 0,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 62
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "key",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 62
+              },
+              "self_bytes": 0
+            },
+            {
+              "scope": {
+                "batch": 2,
+                "chunk": 1,
+                "kind": "value",
+                "layer": 1,
+                "logical_bytes": 512,
+                "site": "static_kv_write",
+                "start": 62
+              },
+              "self_bytes": 0
+            }
+          ]
+        }
+      }
+    ],
+    "units": "operator self allocation vs logical writes vs backing bytes; not peak/RSS",
+    "snapshot_tensor_identity_unchanged": true
+  },
+  "source_sha256": {
+    "transformer_core/preallocated.py": "3767a59242d818438e4a4958000824403e5319a19d31fd4c4d3265cff478772f",
+    "transformer_core/inference.py": "9d133ef57184f9d58b2279af2c2c9222ad65ad409bbda4824c0ce19ee935a520",
+    "transformer_core/benchmark.py": "8f42cbccdf532abb7e84a669a260b7cd81584455fe789b1f914fceffd583c0eb",
+    "transformer_core/portable_fixture.py": "2940716f69752977d4c841ebe16b49dbea3568ce2d8b9339bca07826af15f8e4",
+    "transformer_diagnostics/preallocated.py": "82c3874e3127f8a9fc2e783f65fc10e36b10480102e82f9e22ea3ee47d5fb2c5",
+    "transformer_diagnostics/allocation.py": "6e0b529130cfd5f257eefcb2cc29f104b0a0b686d10e8291adf9714394fa59ba",
+    "transformer_diagnostics/data/portable-v1.json": "5fcc0776b1aa69bdac13a296921992ec272bbf990e4ae11099f8771fb88d44eb"
+  }
+}
