@@ -4,6 +4,22 @@
 
 这是独立的机制实现项目。**尚未实现完整 encoder-decoder 训练，也没有复现论文的 WMT/BLEU 指标。** 历史小型合成实验保留；新增真实技术文本的99,968参数因果语言模型、固定文档划分、验证集选模、bigram基线及独立测试评分。不代表语言理解或个人技能已掌握。
 
+## 动态与预分配 KV 的 CPU 实测取舍（2026-11-22，UTC+08:00）
+
+同一未训练 fixture、同输入、同输出，比较快照创建、新会话请求和复用会话请求。
+每组 **30 对交替次序单次计时**，共 150 对；计时前后 logits 与生成字节均通过对照。
+
+- 预分配未在本次获得请求中位数延迟优势：新会话与复用会话的配对耗时比为 **1.048–1.065×**。不同分位数方向不完全一致，不推广为普遍性能结论。
+- 两臂 active 均为 **63,488 / 129,024 B**。动态缓存 reset 后不再持有 K/V，预分配仍持有 **131,072 B**；这不是 RSS 或峰值内存。
+- 保留首次 CPU 绑核前误导入 Torch 的原始记录。修正并冻结后才取得主结果，不按结果选跑次。
+
+```bash
+transformer-cache-tradeoff --check-only --output cache-tradeoff-parity.json
+```
+
+[运行、原始计时与限制](docs/cache-tradeoff.md) ·
+[冻结方案](docs/cache-tradeoff-protocol.md) · [完整记录](results/cache-tradeoff-v1/report.json)。
+
 ## 有界预分配 KV 与失败重试（2026-11-21，UTC+08:00）
 
 新增可选 `PreallocatedByteDecoder`，动态缓存默认路径不变。预留容量后只写新增位置，

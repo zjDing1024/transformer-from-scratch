@@ -1,0 +1,2594 @@
+{
+  "status": "passed",
+  "schema_version": 1,
+  "mode": "paired_timing",
+  "protocol": {
+    "schema_version": 1,
+    "base_commit": "d015d2c4af6b3d858846178bf0a20ec950d21866",
+    "fixture": "byte-lm-portable-f32-v1",
+    "max_context": 64,
+    "max_batch_size": 2,
+    "warmup_pairs_per_cell": 6,
+    "recorded_pairs_per_cell": 30,
+    "clock": "perf_counter_ns",
+    "empty_boundary_pairs": 256,
+    "cells": [
+      {
+        "phase": "constructor_only",
+        "case": null
+      },
+      {
+        "phase": "new_session_request",
+        "case": "b2-p16-g16"
+      },
+      {
+        "phase": "reused_session_request",
+        "case": "b2-p16-g16"
+      },
+      {
+        "phase": "new_session_request",
+        "case": "b2-p32-g32"
+      },
+      {
+        "phase": "reused_session_request",
+        "case": "b2-p32-g32"
+      }
+    ]
+  },
+  "source_sha256": {
+    "transformer_core/allocation_scopes.py": "bf1c40aea63da9b2b45fc293efe1b148243577a2e4b1475b70d128f4cd0f6752",
+    "transformer_core/attention.py": "0d2900beccf004fe12ba70bab68c24ab8291cb85268efb8edf247328607a6358",
+    "transformer_core/benchmark.py": "8f42cbccdf532abb7e84a669a260b7cd81584455fe789b1f914fceffd583c0eb",
+    "transformer_core/inference.py": "9d133ef57184f9d58b2279af2c2c9222ad65ad409bbda4824c0ce19ee935a520",
+    "transformer_core/language_model.py": "baa4aeed5ea3af0fb4ff919c1f8af6a489666115906509c2894f04a6964d5542",
+    "transformer_core/layers.py": "05f3a1178dc8b41be56deb6b7346fe505f9cfc9c661edfb4ba82de701c12a09d",
+    "transformer_core/portable_fixture.py": "2940716f69752977d4c841ebe16b49dbea3568ce2d8b9339bca07826af15f8e4",
+    "transformer_core/preallocated.py": "3767a59242d818438e4a4958000824403e5319a19d31fd4c4d3265cff478772f",
+    "transformer_core/stability.py": "73c38100cc69627b09d4615a2363545b6de40a255509321329b58046c91f85a7",
+    "transformer_diagnostics/cache_tradeoff.py": "9cf0a917355c92ac612be219ae145cbc59041bfdeefd761083473076dc71a2ac",
+    "transformer_diagnostics/data/cache-tradeoff-v1.json": "dc2e59d8fd5cc9e46ec6c46d2902d7803fcc167c89a1a4cfb107d91fd250d21e",
+    "transformer_diagnostics/data/portable-v1.json": "5fcc0776b1aa69bdac13a296921992ec272bbf990e4ae11099f8771fb88d44eb"
+  },
+  "environment": {
+    "affinity": {
+      "initial_eligible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pinned": [
+        0
+      ]
+    },
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "torch_build_commit": "5c4886908584029761b579af026dcfb627c84070",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "intraop_threads": 1,
+    "interop_threads": 1,
+    "deterministic_algorithms": true,
+    "python_cyclic_gc_enabled": true,
+    "profiler": false,
+    "allocation_scopes": false,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "clock": {
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "resolution_seconds": 1e-09,
+      "monotonic": true,
+      "adjustable": false
+    }
+  },
+  "fixture": {
+    "name": "byte-lm-portable-f32-v1",
+    "model": {
+      "width": 64,
+      "heads": 4,
+      "hidden": 128,
+      "layers": 2,
+      "use_positions": true
+    },
+    "artifact_size_bytes": 403088,
+    "artifact_sha256": "72b3fcbbd1233973e8dadd98c7ab8f3d0d33c8b4b4f272d0e55c24cfb381e597",
+    "tensor_sha256": "9ab16b65155a55a2860c6f851f0d69a6ad072885b1342ac0fa4c754d9096813e",
+    "parameters": 99968,
+    "trained": false,
+    "historical_checkpoint": false
+  },
+  "before": [
+    {
+      "case": "b2-p16-g16",
+      "batch": 2,
+      "prompt_length": 16,
+      "generated": 16,
+      "prefill_calls": 1,
+      "append_calls": 15,
+      "last_generated_byte_forwarded": false,
+      "output_hex": [
+        "546865206170706c69636174696f6e203a849f6a7108893fd2d14b755a22b16a",
+        "4854545020726571756573743a2020203aff72bf9f3affbf9f3a849f3a849f3a"
+      ],
+      "exact_ids": true,
+      "max_absolute_logit_error": {
+        "dynamic_vs_full": 7.152557373046875e-07,
+        "preallocated_vs_full": 7.152557373046875e-07,
+        "arm_vs_arm": 0.0
+      },
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "retention": {
+        "dynamic": {
+          "constructed": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 0,
+            "unique_storage_sizes": []
+          },
+          "populated": {
+            "batch": 2,
+            "length": 31,
+            "active_bytes": 63488,
+            "unique_backing_bytes": 63488,
+            "unique_storage_sizes": [
+              15872,
+              15872,
+              15872,
+              15872
+            ]
+          },
+          "reset": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 0,
+            "unique_storage_sizes": []
+          },
+          "backing_stable": false
+        },
+        "preallocated": {
+          "constructed": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "populated": {
+            "batch": 2,
+            "length": 31,
+            "active_bytes": 63488,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "reset": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "backing_stable": true
+        }
+      },
+      "snapshot_identity_unchanged": true
+    },
+    {
+      "case": "b2-p32-g32",
+      "batch": 2,
+      "prompt_length": 32,
+      "generated": 32,
+      "prefill_calls": 1,
+      "append_calls": 31,
+      "last_generated_byte_forwarded": false,
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e203a847b07bad0e7c9a35a22f4197e21697e42a58ad29195ff9f6a7108891972a8",
+        "4854545020726571756573743a2020204854545020726571756573743a2020203aff72bf9f3affa7e6b34f831f96ffbf236a715d41132cbf236ab4cd4f01eabf"
+      ],
+      "exact_ids": true,
+      "max_absolute_logit_error": {
+        "dynamic_vs_full": 1.0728836059570312e-06,
+        "preallocated_vs_full": 1.0728836059570312e-06,
+        "arm_vs_arm": 0.0
+      },
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "retention": {
+        "dynamic": {
+          "constructed": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 0,
+            "unique_storage_sizes": []
+          },
+          "populated": {
+            "batch": 2,
+            "length": 63,
+            "active_bytes": 129024,
+            "unique_backing_bytes": 129024,
+            "unique_storage_sizes": [
+              32256,
+              32256,
+              32256,
+              32256
+            ]
+          },
+          "reset": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 0,
+            "unique_storage_sizes": []
+          },
+          "backing_stable": false
+        },
+        "preallocated": {
+          "constructed": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "populated": {
+            "batch": 2,
+            "length": 63,
+            "active_bytes": 129024,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "reset": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "backing_stable": true
+        }
+      },
+      "snapshot_identity_unchanged": true
+    }
+  ],
+  "empty_boundary": {
+    "samples_ns": [
+      350,
+      210,
+      121,
+      80,
+      100,
+      110,
+      90,
+      60,
+      60,
+      60,
+      70,
+      111,
+      80,
+      60,
+      71,
+      60,
+      60,
+      71,
+      60,
+      70,
+      61,
+      70,
+      70,
+      61,
+      60,
+      70,
+      80,
+      70,
+      60,
+      60,
+      80,
+      60,
+      70,
+      70,
+      60,
+      60,
+      60,
+      60,
+      71,
+      60,
+      70,
+      60,
+      60,
+      60,
+      70,
+      60,
+      60,
+      60,
+      70,
+      60,
+      60,
+      60,
+      60,
+      70,
+      61,
+      60,
+      70,
+      71,
+      60,
+      60,
+      61,
+      70,
+      70,
+      70,
+      60,
+      60,
+      61,
+      60,
+      60,
+      61,
+      60,
+      60,
+      61,
+      70,
+      70,
+      61,
+      60,
+      60,
+      60,
+      60,
+      60,
+      70,
+      70,
+      70,
+      60,
+      60,
+      60,
+      60,
+      60,
+      61,
+      60,
+      70,
+      71,
+      60,
+      60,
+      60,
+      60,
+      80,
+      60,
+      60,
+      70,
+      60,
+      60,
+      60,
+      60,
+      60,
+      70,
+      60,
+      80,
+      70,
+      60,
+      60,
+      60,
+      70,
+      60,
+      60,
+      60,
+      60,
+      70,
+      70,
+      80,
+      60,
+      70,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      70,
+      70,
+      60,
+      70,
+      60,
+      60,
+      60,
+      60,
+      70,
+      60,
+      70,
+      60,
+      60,
+      71,
+      60,
+      60,
+      71,
+      60,
+      60,
+      60,
+      60,
+      71,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      70,
+      60,
+      70,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      70,
+      70,
+      60,
+      60,
+      60,
+      71,
+      70,
+      60,
+      61,
+      70,
+      70,
+      61,
+      60,
+      60,
+      60,
+      60,
+      70,
+      70,
+      70,
+      60,
+      70,
+      70,
+      60,
+      70,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      70,
+      60,
+      70,
+      60,
+      60,
+      60,
+      60,
+      60,
+      71,
+      60,
+      60,
+      61,
+      60,
+      70,
+      61,
+      60,
+      70,
+      80,
+      60,
+      60,
+      61,
+      60,
+      70,
+      61,
+      60,
+      70,
+      61,
+      60,
+      70,
+      61,
+      60,
+      70,
+      60,
+      70,
+      70,
+      61,
+      60,
+      70,
+      71,
+      70,
+      70,
+      71,
+      60,
+      60,
+      60,
+      70,
+      60,
+      60,
+      80,
+      60,
+      60,
+      70,
+      70,
+      60
+    ],
+    "summary_ns": {
+      "n": 256,
+      "minimum": 60,
+      "median": 60.0,
+      "p90_nearest_rank": 71,
+      "maximum": 350
+    }
+  },
+  "cells": [
+    {
+      "phase": "constructor_only",
+      "case": null,
+      "samples": [
+        {
+          "index": 0,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2100423,
+            "preallocated": 2025060
+          }
+        },
+        {
+          "index": 1,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 1978139,
+            "dynamic": 2341796
+          }
+        },
+        {
+          "index": 2,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2372551,
+            "preallocated": 2242126
+          }
+        },
+        {
+          "index": 3,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2009607,
+            "dynamic": 1985870
+          }
+        },
+        {
+          "index": 4,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 1959962,
+            "preallocated": 2167474
+          }
+        },
+        {
+          "index": 5,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2075316,
+            "dynamic": 2003037
+          }
+        },
+        {
+          "index": 6,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2035626,
+            "preallocated": 2254304
+          }
+        },
+        {
+          "index": 7,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2288135,
+            "dynamic": 1981484
+          }
+        },
+        {
+          "index": 8,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2251039,
+            "preallocated": 2109266
+          }
+        },
+        {
+          "index": 9,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2158180,
+            "dynamic": 2097088
+          }
+        },
+        {
+          "index": 10,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2231910,
+            "preallocated": 2162026
+          }
+        },
+        {
+          "index": 11,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2001625,
+            "dynamic": 1996337
+          }
+        },
+        {
+          "index": 12,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 1965400,
+            "preallocated": 2017388
+          }
+        },
+        {
+          "index": 13,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2112321,
+            "dynamic": 2143338
+          }
+        },
+        {
+          "index": 14,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2331661,
+            "preallocated": 2347894
+          }
+        },
+        {
+          "index": 15,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2717379,
+            "dynamic": 2582166
+          }
+        },
+        {
+          "index": 16,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2588626,
+            "preallocated": 2422076
+          }
+        },
+        {
+          "index": 17,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2067855,
+            "dynamic": 2353593
+          }
+        },
+        {
+          "index": 18,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2427454,
+            "preallocated": 2154334
+          }
+        },
+        {
+          "index": 19,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2018040,
+            "dynamic": 2930579
+          }
+        },
+        {
+          "index": 20,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2011580,
+            "preallocated": 2151981
+          }
+        },
+        {
+          "index": 21,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2017529,
+            "dynamic": 2005952
+          }
+        },
+        {
+          "index": 22,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2656478,
+            "preallocated": 2107253
+          }
+        },
+        {
+          "index": 23,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2409277,
+            "dynamic": 2702647
+          }
+        },
+        {
+          "index": 24,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2195376,
+            "preallocated": 2594525
+          }
+        },
+        {
+          "index": 25,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2397830,
+            "dynamic": 2050058
+          }
+        },
+        {
+          "index": 26,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 1946001,
+            "preallocated": 1983728
+          }
+        },
+        {
+          "index": 27,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2229917,
+            "dynamic": 2059222
+          }
+        },
+        {
+          "index": 28,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 2115165,
+            "preallocated": 2214314
+          }
+        },
+        {
+          "index": 29,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 2305881,
+            "dynamic": 2047614
+          }
+        }
+      ],
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 1946001,
+            "median": 2107794.0,
+            "p90_nearest_rank": 2588626,
+            "maximum": 2930579
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 1978139,
+            "median": 2156257.0,
+            "p90_nearest_rank": 2409277,
+            "maximum": 2717379
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.688614775441986,
+          "median": 1.0094574686660653,
+          "p90_nearest_rank": 1.1261307062756944,
+          "maximum": 1.181813502561748
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 19985.0,
+        "preallocated_lower_pairs": 12,
+        "preallocated_higher_pairs": 18,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.0069619897575162,
+          "preallocated": 1.0119529475746147
+        }
+      }
+    },
+    {
+      "phase": "new_session_request",
+      "case": "b2-p16-g16",
+      "samples": [
+        {
+          "index": 0,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12929240,
+            "dynamic": 12572844
+          }
+        },
+        {
+          "index": 1,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12722428,
+            "preallocated": 13580017
+          }
+        },
+        {
+          "index": 2,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 13173907,
+            "dynamic": 11644600
+          }
+        },
+        {
+          "index": 3,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12279014,
+            "preallocated": 12388418
+          }
+        },
+        {
+          "index": 4,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 14396332,
+            "dynamic": 13906857
+          }
+        },
+        {
+          "index": 5,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12346485,
+            "preallocated": 13866426
+          }
+        },
+        {
+          "index": 6,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12029519,
+            "dynamic": 14652767
+          }
+        },
+        {
+          "index": 7,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 13022510,
+            "preallocated": 13032664
+          }
+        },
+        {
+          "index": 8,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 14584694,
+            "dynamic": 12416249
+          }
+        },
+        {
+          "index": 9,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12020896,
+            "preallocated": 13655059
+          }
+        },
+        {
+          "index": 10,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12493035,
+            "dynamic": 12136590
+          }
+        },
+        {
+          "index": 11,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12595618,
+            "preallocated": 13326797
+          }
+        },
+        {
+          "index": 12,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 14117133,
+            "dynamic": 13464042
+          }
+        },
+        {
+          "index": 13,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12246505,
+            "preallocated": 12577051
+          }
+        },
+        {
+          "index": 14,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12697581,
+            "dynamic": 12107115
+          }
+        },
+        {
+          "index": 15,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12885724,
+            "preallocated": 13690562
+          }
+        },
+        {
+          "index": 16,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 13412435,
+            "dynamic": 12855508
+          }
+        },
+        {
+          "index": 17,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 13498794,
+            "preallocated": 12429459
+          }
+        },
+        {
+          "index": 18,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 13640507,
+            "dynamic": 12206675
+          }
+        },
+        {
+          "index": 19,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 14366638,
+            "preallocated": 14772997
+          }
+        },
+        {
+          "index": 20,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12711493,
+            "dynamic": 16115703
+          }
+        },
+        {
+          "index": 21,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 13078202,
+            "preallocated": 12831723
+          }
+        },
+        {
+          "index": 22,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12056329,
+            "dynamic": 12935939
+          }
+        },
+        {
+          "index": 23,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 14331365,
+            "preallocated": 17489906
+          }
+        },
+        {
+          "index": 24,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12916911,
+            "dynamic": 12284972
+          }
+        },
+        {
+          "index": 25,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12040685,
+            "preallocated": 13456451
+          }
+        },
+        {
+          "index": 26,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12565965,
+            "dynamic": 12086053
+          }
+        },
+        {
+          "index": 27,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 13194688,
+            "preallocated": 15652298
+          }
+        },
+        {
+          "index": 28,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 15043753,
+            "dynamic": 15150093
+          }
+        },
+        {
+          "index": 29,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 13014247,
+            "preallocated": 12888588
+          }
+        }
+      ],
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 11644600,
+            "median": 12788968.0,
+            "p90_nearest_rank": 14366638,
+            "maximum": 16115703
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 12029519,
+            "median": 13250352.0,
+            "p90_nearest_rank": 14772997,
+            "maximum": 17489906
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.7887644119527395,
+          "median": 1.0415149854813692,
+          "p90_nearest_rank": 1.1359435270049754,
+          "maximum": 1.2203935912594508
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 523201.0,
+        "preallocated_lower_pairs": 7,
+        "preallocated_higher_pairs": 23,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.0580502679582693,
+          "preallocated": 1.0397079178785662
+        }
+      }
+    },
+    {
+      "phase": "reused_session_request",
+      "case": "b2-p16-g16",
+      "samples": [
+        {
+          "index": 0,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 10233363,
+            "preallocated": 11826393
+          }
+        },
+        {
+          "index": 1,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 10774024,
+            "dynamic": 9803156
+          }
+        },
+        {
+          "index": 2,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 9787463,
+            "preallocated": 10775076
+          }
+        },
+        {
+          "index": 3,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 11265212,
+            "dynamic": 10045710
+          }
+        },
+        {
+          "index": 4,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 10631390,
+            "preallocated": 12049118
+          }
+        },
+        {
+          "index": 5,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12354788,
+            "dynamic": 13276541
+          }
+        },
+        {
+          "index": 6,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 10148274,
+            "preallocated": 14336272
+          }
+        },
+        {
+          "index": 7,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12377251,
+            "dynamic": 10805001
+          }
+        },
+        {
+          "index": 8,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12589289,
+            "preallocated": 10972061
+          }
+        },
+        {
+          "index": 9,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 15275853,
+            "dynamic": 15051606
+          }
+        },
+        {
+          "index": 10,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 10744400,
+            "preallocated": 9939281
+          }
+        },
+        {
+          "index": 11,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 9566461,
+            "dynamic": 15025286
+          }
+        },
+        {
+          "index": 12,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 12191021,
+            "preallocated": 12099194
+          }
+        },
+        {
+          "index": 13,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 11352612,
+            "dynamic": 12746776
+          }
+        },
+        {
+          "index": 14,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 13605004,
+            "preallocated": 14238274
+          }
+        },
+        {
+          "index": 15,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 11020454,
+            "dynamic": 9340282
+          }
+        },
+        {
+          "index": 16,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 9424419,
+            "preallocated": 10319391
+          }
+        },
+        {
+          "index": 17,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 9632189,
+            "dynamic": 9190377
+          }
+        },
+        {
+          "index": 18,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 8998138,
+            "preallocated": 9640933
+          }
+        },
+        {
+          "index": 19,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 13756561,
+            "dynamic": 12051692
+          }
+        },
+        {
+          "index": 20,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 11172753,
+            "preallocated": 10305820
+          }
+        },
+        {
+          "index": 21,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12383401,
+            "dynamic": 12174025
+          }
+        },
+        {
+          "index": 22,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 13493206,
+            "preallocated": 12710200
+          }
+        },
+        {
+          "index": 23,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12324312,
+            "dynamic": 13879286
+          }
+        },
+        {
+          "index": 24,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 14330323,
+            "preallocated": 11388977
+          }
+        },
+        {
+          "index": 25,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 12473555,
+            "dynamic": 14252977
+          }
+        },
+        {
+          "index": 26,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 16271542,
+            "preallocated": 12591553
+          }
+        },
+        {
+          "index": 27,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 11851361,
+            "dynamic": 11590600
+          }
+        },
+        {
+          "index": 28,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 13715600,
+            "preallocated": 11175406
+          }
+        },
+        {
+          "index": 29,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 11164901,
+            "dynamic": 11621375
+          }
+        }
+      ],
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 8998138,
+            "median": 11836533.5,
+            "p90_nearest_rank": 14330323,
+            "maximum": 16271542
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 9566461,
+            "median": 11607685.0,
+            "p90_nearest_rank": 13756561,
+            "maximum": 15275853
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.6366907758028699,
+          "median": 1.0160485638720347,
+          "p90_nearest_rank": 1.1455113238767862,
+          "maximum": 1.4126808164619915
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 216811.5,
+        "preallocated_lower_pairs": 14,
+        "preallocated_higher_pairs": 16,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 0.9924676530374281,
+          "preallocated": 1.0171985846915872
+        }
+      }
+    },
+    {
+      "phase": "new_session_request",
+      "case": "b2-p32-g32",
+      "samples": [
+        {
+          "index": 0,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 23298075,
+            "dynamic": 21412574
+          }
+        },
+        {
+          "index": 1,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 24076644,
+            "preallocated": 26885662
+          }
+        },
+        {
+          "index": 2,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 30112670,
+            "dynamic": 25988924
+          }
+        },
+        {
+          "index": 3,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 24371957,
+            "preallocated": 28276169
+          }
+        },
+        {
+          "index": 4,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 25772930,
+            "dynamic": 23874672
+          }
+        },
+        {
+          "index": 5,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 21787237,
+            "preallocated": 23289052
+          }
+        },
+        {
+          "index": 6,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 23354110,
+            "dynamic": 22681690
+          }
+        },
+        {
+          "index": 7,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 24065977,
+            "preallocated": 27054064
+          }
+        },
+        {
+          "index": 8,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 25192819,
+            "dynamic": 22074999
+          }
+        },
+        {
+          "index": 9,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 22876683,
+            "preallocated": 25379349
+          }
+        },
+        {
+          "index": 10,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 24817286,
+            "dynamic": 23796885
+          }
+        },
+        {
+          "index": 11,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 22507318,
+            "preallocated": 29601238
+          }
+        },
+        {
+          "index": 12,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 24794532,
+            "dynamic": 22412115
+          }
+        },
+        {
+          "index": 13,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 22303553,
+            "preallocated": 26313381
+          }
+        },
+        {
+          "index": 14,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 28015617,
+            "dynamic": 23528011
+          }
+        },
+        {
+          "index": 15,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 22995030,
+            "preallocated": 24526389
+          }
+        },
+        {
+          "index": 16,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 25407172,
+            "dynamic": 23391405
+          }
+        },
+        {
+          "index": 17,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 23383624,
+            "preallocated": 23656033
+          }
+        },
+        {
+          "index": 18,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 26176316,
+            "dynamic": 24310605
+          }
+        },
+        {
+          "index": 19,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 21218674,
+            "preallocated": 25568012
+          }
+        },
+        {
+          "index": 20,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 25377376,
+            "dynamic": 24349944
+          }
+        },
+        {
+          "index": 21,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 22299075,
+            "preallocated": 24666099
+          }
+        },
+        {
+          "index": 22,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 27172201,
+            "dynamic": 23976013
+          }
+        },
+        {
+          "index": 23,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 29131772,
+            "preallocated": 24998979
+          }
+        },
+        {
+          "index": 24,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 24852839,
+            "dynamic": 24430405
+          }
+        },
+        {
+          "index": 25,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 21780828,
+            "preallocated": 23083654
+          }
+        },
+        {
+          "index": 26,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 24330485,
+            "dynamic": 23410884
+          }
+        },
+        {
+          "index": 27,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 22166807,
+            "preallocated": 24327932
+          }
+        },
+        {
+          "index": 28,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 24894842,
+            "dynamic": 23601130
+          }
+        },
+        {
+          "index": 29,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 21854208,
+            "preallocated": 23412747
+          }
+        }
+      ],
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 21218674,
+            "median": 23387514.5,
+            "p90_nearest_rank": 24371957,
+            "maximum": 29131772
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 23083654,
+            "median": 25095899.0,
+            "p90_nearest_rank": 28015617,
+            "maximum": 30112670
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.8581345137535746,
+          "median": 1.0871156631236483,
+          "p90_nearest_rank": 1.1797842702460903,
+          "maximum": 1.3151828218715353
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 1957012.5,
+        "preallocated_lower_pairs": 1,
+        "preallocated_higher_pairs": 29,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.1061489770315585,
+          "preallocated": 1.0795092807976587
+        }
+      }
+    },
+    {
+      "phase": "reused_session_request",
+      "case": "b2-p32-g32",
+      "samples": [
+        {
+          "index": 0,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19796969,
+            "preallocated": 20835999
+          }
+        },
+        {
+          "index": 1,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 20907577,
+            "dynamic": 20615017
+          }
+        },
+        {
+          "index": 2,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 18482325,
+            "preallocated": 20501928
+          }
+        },
+        {
+          "index": 3,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 21077061,
+            "dynamic": 18996037
+          }
+        },
+        {
+          "index": 4,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19221195,
+            "preallocated": 19667795
+          }
+        },
+        {
+          "index": 5,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 20221717,
+            "dynamic": 19799794
+          }
+        },
+        {
+          "index": 6,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19714996,
+            "preallocated": 19702848
+          }
+        },
+        {
+          "index": 7,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 19440144,
+            "dynamic": 18710429
+          }
+        },
+        {
+          "index": 8,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19197469,
+            "preallocated": 20420606
+          }
+        },
+        {
+          "index": 9,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 20841247,
+            "dynamic": 19284290
+          }
+        },
+        {
+          "index": 10,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19494445,
+            "preallocated": 19471421
+          }
+        },
+        {
+          "index": 11,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 19559203,
+            "dynamic": 19371040
+          }
+        },
+        {
+          "index": 12,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19887034,
+            "preallocated": 21434597
+          }
+        },
+        {
+          "index": 13,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 19618051,
+            "dynamic": 19165801
+          }
+        },
+        {
+          "index": 14,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19413244,
+            "preallocated": 20393685
+          }
+        },
+        {
+          "index": 15,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 19933125,
+            "dynamic": 20814126
+          }
+        },
+        {
+          "index": 16,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19257209,
+            "preallocated": 20353275
+          }
+        },
+        {
+          "index": 17,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 21185444,
+            "dynamic": 19878572
+          }
+        },
+        {
+          "index": 18,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19773885,
+            "preallocated": 21627046
+          }
+        },
+        {
+          "index": 19,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 20877872,
+            "dynamic": 19552863
+          }
+        },
+        {
+          "index": 20,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19360033,
+            "preallocated": 20787877
+          }
+        },
+        {
+          "index": 21,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 21779846,
+            "dynamic": 19874787
+          }
+        },
+        {
+          "index": 22,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 18772842,
+            "preallocated": 20052574
+          }
+        },
+        {
+          "index": 23,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 19484460,
+            "dynamic": 19793825
+          }
+        },
+        {
+          "index": 24,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19708906,
+            "preallocated": 20515288
+          }
+        },
+        {
+          "index": 25,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 20472022,
+            "dynamic": 24344345
+          }
+        },
+        {
+          "index": 26,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19979294,
+            "preallocated": 20014776
+          }
+        },
+        {
+          "index": 27,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 23841261,
+            "dynamic": 22218354
+          }
+        },
+        {
+          "index": 28,
+          "order": [
+            "dynamic",
+            "preallocated"
+          ],
+          "duration_ns": {
+            "dynamic": 19713655,
+            "preallocated": 21389830
+          }
+        },
+        {
+          "index": 29,
+          "order": [
+            "preallocated",
+            "dynamic"
+          ],
+          "duration_ns": {
+            "preallocated": 25357296,
+            "dynamic": 20482039
+          }
+        }
+      ],
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 18482325,
+            "median": 19711280.5,
+            "p90_nearest_rank": 20615017,
+            "maximum": 24344345
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 19440144,
+            "median": 20486975.0,
+            "p90_nearest_rank": 21627046,
+            "maximum": 25357296
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.8409354205257936,
+          "median": 1.0547007376788156,
+          "p90_nearest_rank": 1.095853052412587,
+          "maximum": 1.2380259602083563
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 1067548.0,
+        "preallocated_lower_pairs": 5,
+        "preallocated_higher_pairs": 25,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.0569171783927775,
+          "preallocated": 1.03900044194604
+        }
+      }
+    }
+  ],
+  "after": [
+    {
+      "case": "b2-p16-g16",
+      "batch": 2,
+      "prompt_length": 16,
+      "generated": 16,
+      "prefill_calls": 1,
+      "append_calls": 15,
+      "last_generated_byte_forwarded": false,
+      "output_hex": [
+        "546865206170706c69636174696f6e203a849f6a7108893fd2d14b755a22b16a",
+        "4854545020726571756573743a2020203aff72bf9f3affbf9f3a849f3a849f3a"
+      ],
+      "exact_ids": true,
+      "max_absolute_logit_error": {
+        "dynamic_vs_full": 7.152557373046875e-07,
+        "preallocated_vs_full": 7.152557373046875e-07,
+        "arm_vs_arm": 0.0
+      },
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "retention": {
+        "dynamic": {
+          "constructed": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 0,
+            "unique_storage_sizes": []
+          },
+          "populated": {
+            "batch": 2,
+            "length": 31,
+            "active_bytes": 63488,
+            "unique_backing_bytes": 63488,
+            "unique_storage_sizes": [
+              15872,
+              15872,
+              15872,
+              15872
+            ]
+          },
+          "reset": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 0,
+            "unique_storage_sizes": []
+          },
+          "backing_stable": false
+        },
+        "preallocated": {
+          "constructed": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "populated": {
+            "batch": 2,
+            "length": 31,
+            "active_bytes": 63488,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "reset": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "backing_stable": true
+        }
+      },
+      "snapshot_identity_unchanged": true
+    },
+    {
+      "case": "b2-p32-g32",
+      "batch": 2,
+      "prompt_length": 32,
+      "generated": 32,
+      "prefill_calls": 1,
+      "append_calls": 31,
+      "last_generated_byte_forwarded": false,
+      "output_hex": [
+        "546865206170706c69636174696f6e20546865206170706c69636174696f6e203a847b07bad0e7c9a35a22f4197e21697e42a58ad29195ff9f6a7108891972a8",
+        "4854545020726571756573743a2020204854545020726571756573743a2020203aff72bf9f3affa7e6b34f831f96ffbf236a715d41132cbf236ab4cd4f01eabf"
+      ],
+      "exact_ids": true,
+      "max_absolute_logit_error": {
+        "dynamic_vs_full": 1.0728836059570312e-06,
+        "preallocated_vs_full": 1.0728836059570312e-06,
+        "arm_vs_arm": 0.0
+      },
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "retention": {
+        "dynamic": {
+          "constructed": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 0,
+            "unique_storage_sizes": []
+          },
+          "populated": {
+            "batch": 2,
+            "length": 63,
+            "active_bytes": 129024,
+            "unique_backing_bytes": 129024,
+            "unique_storage_sizes": [
+              32256,
+              32256,
+              32256,
+              32256
+            ]
+          },
+          "reset": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 0,
+            "unique_storage_sizes": []
+          },
+          "backing_stable": false
+        },
+        "preallocated": {
+          "constructed": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "populated": {
+            "batch": 2,
+            "length": 63,
+            "active_bytes": 129024,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "reset": {
+            "batch": null,
+            "length": 0,
+            "active_bytes": 0,
+            "unique_backing_bytes": 131072,
+            "unique_storage_sizes": [
+              32768,
+              32768,
+              32768,
+              32768
+            ]
+          },
+          "backing_stable": true
+        }
+      },
+      "snapshot_identity_unchanged": true
+    }
+  ]
+}

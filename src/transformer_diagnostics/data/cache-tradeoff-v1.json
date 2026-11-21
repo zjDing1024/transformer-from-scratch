@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "base_commit": "d015d2c4af6b3d858846178bf0a20ec950d21866",
+  "fixture": "byte-lm-portable-f32-v1",
+  "max_context": 64,
+  "max_batch_size": 2,
+  "warmup_pairs_per_cell": 6,
+  "recorded_pairs_per_cell": 30,
+  "clock": "perf_counter_ns",
+  "empty_boundary_pairs": 256,
+  "cells": [
+    {"phase": "constructor_only", "case": null},
+    {"phase": "new_session_request", "case": "b2-p16-g16"},
+    {"phase": "reused_session_request", "case": "b2-p16-g16"},
+    {"phase": "new_session_request", "case": "b2-p32-g32"},
+    {"phase": "reused_session_request", "case": "b2-p32-g32"}
+  ]
+}

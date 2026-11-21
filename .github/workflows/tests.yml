@@ -23,3 +23,4 @@ jobs:
           python -m transformer_diagnostics.cli --parity-only --output results/ci-portable.json
           python -m transformer_diagnostics.allocation --smoke --output results/ci-allocation.json
           python -m transformer_diagnostics.preallocated --check-only --output results/ci-preallocated.json
+          python -m transformer_diagnostics.cache_tradeoff --check-only --output results/ci-cache-tradeoff.json

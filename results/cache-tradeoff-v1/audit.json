@@ -1,0 +1,191 @@
+{
+  "status": "passed",
+  "mode": "offline_audit",
+  "cells": [
+    {
+      "phase": "constructor_only",
+      "case": null,
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 1943197,
+            "median": 2099542.0,
+            "p90_nearest_rank": 2354204,
+            "maximum": 2759283
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 1969396,
+            "median": 2121700.0,
+            "p90_nearest_rank": 2423448,
+            "maximum": 2947354
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.8179874989263515,
+          "median": 1.0147958252267224,
+          "p90_nearest_rank": 1.1363773626736975,
+          "maximum": 1.3993558133947894
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 29499.5,
+        "preallocated_lower_pairs": 12,
+        "preallocated_higher_pairs": 18,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.0229503601504961,
+          "preallocated": 1.0132630204500144
+        }
+      }
+    },
+    {
+      "phase": "new_session_request",
+      "case": "b2-p16-g16",
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 11495476,
+            "median": 13148313.5,
+            "p90_nearest_rank": 16765093,
+            "maximum": 37330380
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 12274847,
+            "median": 13577117.0,
+            "p90_nearest_rank": 16994052,
+            "maximum": 17968675
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.45523383367648546,
+          "median": 1.0510877604000597,
+          "p90_nearest_rank": 1.1625902336105947,
+          "maximum": 1.2404666182869721
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 630712.0,
+        "preallocated_lower_pairs": 10,
+        "preallocated_higher_pairs": 20,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.0311148378647292,
+          "preallocated": 1.0587943133395437
+        }
+      }
+    },
+    {
+      "phase": "reused_session_request",
+      "case": "b2-p16-g16",
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 9288203,
+            "median": 10753783.5,
+            "p90_nearest_rank": 13424423,
+            "maximum": 15627416
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 10461906,
+            "median": 11747901.0,
+            "p90_nearest_rank": 13117632,
+            "maximum": 16216313
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.7858334992810072,
+          "median": 1.0648659830929532,
+          "p90_nearest_rank": 1.1953101229836822,
+          "maximum": 1.638561408036253
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 691052.5,
+        "preallocated_lower_pairs": 9,
+        "preallocated_higher_pairs": 21,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.0921092171180549,
+          "preallocated": 1.0630162643312198
+        }
+      }
+    },
+    {
+      "phase": "new_session_request",
+      "case": "b2-p32-g32",
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 23380780,
+            "median": 26424248.0,
+            "p90_nearest_rank": 31202490,
+            "maximum": 35400022
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 23381811,
+            "median": 27239927.5,
+            "p90_nearest_rank": 37905193,
+            "maximum": 59879180
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.7910844987440397,
+          "median": 1.0636786409070194,
+          "p90_nearest_rank": 1.3618421496999111,
+          "maximum": 1.8886855125784663
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 1714619.5,
+        "preallocated_lower_pairs": 10,
+        "preallocated_higher_pairs": 20,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.0713292212346748,
+          "preallocated": 1.015746529042854
+        }
+      }
+    },
+    {
+      "phase": "reused_session_request",
+      "case": "b2-p32-g32",
+      "summary": {
+        "arm_ns": {
+          "dynamic": {
+            "n": 30,
+            "minimum": 19689538,
+            "median": 22049896.0,
+            "p90_nearest_rank": 26088254,
+            "maximum": 33235873
+          },
+          "preallocated": {
+            "n": 30,
+            "minimum": 20106253,
+            "median": 23134039.0,
+            "p90_nearest_rank": 25613832,
+            "maximum": 34390346
+          }
+        },
+        "paired_preallocated_over_dynamic": {
+          "n": 30,
+          "minimum": 0.6213277442719799,
+          "median": 1.0483729849103418,
+          "p90_nearest_rank": 1.1981704152232255,
+          "maximum": 1.304640003463901
+        },
+        "paired_preallocated_minus_dynamic_ns_median": 1084143.0,
+        "preallocated_lower_pairs": 8,
+        "preallocated_higher_pairs": 22,
+        "ties": 0,
+        "median_ratio_by_first_arm": {
+          "dynamic": 1.0423977813290222,
+          "preallocated": 1.0533508842169144
+        }
+      }
+    }
+  ]
+}

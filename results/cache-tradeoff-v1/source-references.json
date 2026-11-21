@@ -1,0 +1,20 @@
+{
+  "project": "PyTorch",
+  "commit": "5c4886908584029761b579af026dcfb627c84070",
+  "license": "BSD-style; see upstream LICENSE",
+  "use": "Timer warmup/threadpool/replicate/timer-floor methodology only; no copied source or benchmark dependency",
+  "files": [
+    {
+      "path": "torch/utils/benchmark/utils/timer.py",
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/5c4886908584029761b579af026dcfb627c84070/torch/utils/benchmark/utils/timer.py",
+      "bytes": 20798,
+      "sha256": "cc8507321d5247054e7de987b5c0463d58aa26d0f7d083e7f698923464204813"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/5c4886908584029761b579af026dcfb627c84070/LICENSE",
+      "bytes": 3464,
+      "sha256": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43"
+    }
+  ]
+}

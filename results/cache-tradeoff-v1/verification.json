@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "base": "d015d2c4af6b3d858846178bf0a20ec950d21866",
+  "original_local_freeze": "fdc6ab6417f006bd28c4a2778f975ae42cd84733",
+  "correction_local_freeze": "6a7508377f179920a6bf327faab77ebb70855cef",
+  "public_preregistration": false,
+  "timing_executions": 2,
+  "compliant_primary_runs": 1,
+  "retained_protocol_deviations": 1,
+  "paired_cells": 5,
+  "recorded_pairs_per_cell": 30,
+  "recorded_pairs": 150,
+  "excluded_compliant_samples": 0,
+  "primary": {
+    "bytes": 57676,
+    "sha256": "897b139f13c1fd7f0c5136d404f2afd61d8367e004adf765e3ea572cc67f1897"
+  },
+  "deviation": {
+    "bytes": 57395,
+    "sha256": "8e51aaf8d87136d4587da60444dbf24f694c2a1bb732f23985ce1209c4d6d6fa"
+  },
+  "offline_audit": {
+    "bytes": 5472,
+    "sha256": "4868b8cd7027fb557bdbe2d0336d6b67ad4ae924cb52727d68c8adea7e1c8d4d"
+  },
+  "verification": {
+    "full_pytest_passed": 320,
+    "base_tests": 304,
+    "new_tests": 16,
+    "full_pytest_seconds": 23.16,
+    "first_test_attempt": "317 passed, one subprocess fixture-import test failed because PYTHONPATH was not propagated from pytest/pythonpath. Test-only fix, and two additional regressions then tested in final full suite.",
+    "ruff_lint": true,
+    "ruff_format": true,
+    "compileall": true,
+    "git_diff_check": true,
+    "independent_raw_order_statistics_source_and_retention_audit": "passed",
+    "historical_result_experiment_files_unchanged": 44,
+    "prior_runtime_files_unchanged": 20,
+    "optional_numpy_warning": true
+  },
+  "wheel": {
+    "filename": "transformer_mechanisms-0.1.0-py3-none-any.whl",
+    "bytes": 56744,
+    "sha256": "396836a0715d16d5358325534d2fc96fa1e08ee65ff27841498cc61161d03cbd",
+    "no_index_no_deps_no_build_isolation": true,
+    "all_12_report_hashes_match": true,
+    "outside_actual_check_only": "passed",
+    "outside_check_only_fixture_parity_retention_and_source_equal": true,
+    "outside_audit_without_torch_import": "passed",
+    "outside_audit_bytes_equal": true
+  },
+  "ci": {
+    "actual_fixture_check_only": true,
+    "live_timing": false,
+    "actual_command": "python -m transformer_diagnostics.cache_tradeoff --check-only --output results/ci-cache-tradeoff.json"
+  }
+}

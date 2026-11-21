@@ -104,3 +104,13 @@ commit. Immutable URLs, verified bytes and SHA256 receipts are recorded in
 its reset/update policy is not this project's logical transaction contract.
 The opt-in cache, failure controls, diagnostic and tests are original MIT.
 No new external model, dependency, corpus, private data or paid compute is used.
+
+## Dynamic/preallocated CPU tradeoff
+
+PyTorch's Timer at `5c4886908584029761b579af026dcfb627c84070` is a conceptual
+reference for warmup, threadpool settings, timer overhead and replicates.
+Pin, immutable URLs and SHA-256 receipts of the BSD-style source and license:
+`results/cache-tradeoff-v1/source-references.json`. The benchmark uses
+Python's monotonic perf_counter_ns and the existing Torch dependency; no
+upstream implementation was copied and there is no extra dependency. All new
+project code/tests are original MIT; no external data, model weights or fees.

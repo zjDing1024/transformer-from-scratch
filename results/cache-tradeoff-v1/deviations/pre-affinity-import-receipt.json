@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "protocol_deviation",
+  "eligible_primary": false,
+  "raw_execution_completed": true,
+  "raw_file": "pre-affinity-import.json",
+  "raw_bytes": 57395,
+  "raw_sha256": "8e51aaf8d87136d4587da60444dbf24f694c2a1bb732f23985ce1209c4d6d6fa",
+  "local_freeze_commit": "fdc6ab6417f006bd28c4a2778f975ae42cd84733",
+  "reason": "Before pinning, source hash helper imported transformer_core, whose package initializer imported Torch. Workload calls were after main-thread pin; prior import and inherited native-thread placement were not proven compliant.",
+  "detection": "Offline audit in a Python without Torch exposed hidden import before any raw timing statistics inspection.",
+  "selection": "This raw file is retained, excluded from primary findings by protocol, not by timing values. A separate corrective local freeze preserves the intended before-import condition."
+}
